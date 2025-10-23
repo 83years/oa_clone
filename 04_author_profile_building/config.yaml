@@ -1,0 +1,191 @@
+# ==============================================================================
+# Author Profile Builder Configuration
+# ==============================================================================
+
+# Database Configuration
+database:
+  # Path to the main OpenAlex SQLite database
+  path: "openalex_database.db"
+
+  # Database optimization settings
+  optimization:
+    journal_mode: "WAL"           # Write-Ahead Logging for better concurrency
+    synchronous: "NORMAL"          # Balance between safety and speed
+    cache_size: 10000              # Page cache size
+    temp_store: "memory"           # Store temp tables in memory
+
+  # Table names (customize if your schema differs)
+  tables:
+    authors: "authors"
+    author_name_variants: "AUTHOR_NAME_VARIANTS"
+    institutions: "institutions"
+    author_institutions: "author_institutions"
+
+# API Configuration
+apis:
+  genderize:
+    # Set your API key as environment variable: GENDERIZE_API_KEY
+    # Or uncomment and add here (not recommended for version control)
+    # key: "your_api_key_here"
+    use_env_var: true
+    env_var_name: "GENDERIZE_API_KEY"
+
+    # API rate limiting and batching
+    batch_size: 10                 # Max names per API request (Genderize.io limit)
+    rate_limit_delay: 0.1          # Seconds between requests
+    max_daily_quota: 1000          # Free tier daily limit
+
+    # Retry settings
+    max_retries: 3
+    retry_delay: 60                # Seconds to wait on rate limit (429 error)
+
+# File Paths
+paths:
+  # Output directory for intermediate files
+  output_dir: "output"
+
+  # Cache file for Genderize.io results
+  genderize_cache: "cache/genderize_cache.rds"
+
+  # Intermediate JSON files
+  extracted_names: "output/01_extracted_names.json"
+  predictions_multi: "output/02_predictions_multi.json"
+  predictions_final: "output/03_predictions_final.json"
+
+  # Log file
+  log_file: "logs/author_profile_builder.log"
+
+  # Reports
+  validation_report: "reports/validation_report.html"
+
+# Name Parsing Configuration
+name_parsing:
+  # Minimum forename length to consider valid
+  min_forename_length: 2
+
+  # Skip names that appear to be initials
+  skip_initials: true
+
+  # Unicode normalization (recommended for international names)
+  unicode_normalization: true
+
+  # Supported Unicode ranges for names
+  unicode_ranges:
+    - "Latin-Basic"                # A-Z, a-z
+    - "Latin-1-Supplement"         # À-ÿ
+    - "Latin-Extended-A"           # Ā-ſ
+    - "Latin-Extended-B"           # ƀ-ɏ
+    - "CJK-Unified-Ideographs"     # Chinese/Japanese/Korean
+    - "Hangul"                     # Korean alphabet
+    - "Cyrillic"                   # Russian, etc.
+
+# Gender Prediction Configuration
+gender_prediction:
+  # Method priority order (1 = highest priority)
+  method_priority:
+    cache: 1
+    gender_r: 2
+    gender_guesser: 3
+    genderize_io: 4
+
+  # Gender R package settings
+  gender_r:
+    methods:
+      - "ssa"                      # US Social Security Administration
+      - "ipums"                    # IPUMS census data
+    prefer_method: "ssa"           # Use SSA if available
+
+  # Confidence thresholds
+  confidence:
+    high: 0.8                      # ≥80% = high confidence
+    medium: 0.6                    # 60-79% = medium confidence
+    low: 0.4                       # 40-59% = low confidence
+    # <40% = very low confidence
+
+  # Mismatch detection
+  flag_mismatches: true            # Flag when methods disagree
+  mismatch_threshold: 2            # Flag if 2+ methods disagree
+
+# Processing Configuration
+processing:
+  # Batch processing settings
+  batch_size: 25000                # Records to process per batch
+  update_batch_size: 10000         # Database update batch size
+
+  # Memory management
+  gc_frequency: 5                  # Run garbage collection every N batches
+
+  # Progress reporting
+  progress_interval: 1000          # Report progress every N records
+
+# Logging Configuration
+logging:
+  level: "INFO"                    # DEBUG, INFO, WARN, ERROR
+  console_output: true
+  file_output: true
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+
+# Validation Configuration
+validation:
+  # Generate detailed reports
+  generate_html_report: true
+
+  # Statistics to include
+  include_stats:
+    - "coverage_rate"
+    - "method_breakdown"
+    - "confidence_distribution"
+    - "regional_analysis"
+    - "mismatch_summary"
+    - "top_ambiguous_names"
+
+  # Regional analysis
+  regions:
+    Asia:
+      - "CN"  # China
+      - "JP"  # Japan
+      - "KR"  # South Korea
+      - "IN"  # India
+      - "TW"  # Taiwan
+      - "SG"  # Singapore
+      - "TH"  # Thailand
+      - "MY"  # Malaysia
+      - "ID"  # Indonesia
+      - "PH"  # Philippines
+
+    Western:
+      - "US"  # United States
+      - "GB"  # United Kingdom
+      - "CA"  # Canada
+      - "AU"  # Australia
+      - "DE"  # Germany
+      - "FR"  # France
+      - "NL"  # Netherlands
+      - "SE"  # Sweden
+      - "NO"  # Norway
+      - "DK"  # Denmark
+
+    Europe:
+      - "IT"  # Italy
+      - "ES"  # Spain
+      - "PT"  # Portugal
+      - "PL"  # Poland
+      - "CH"  # Switzerland
+      - "AT"  # Austria
+      - "BE"  # Belgium
+      - "FI"  # Finland
+
+    LatinAmerica:
+      - "BR"  # Brazil
+      - "MX"  # Mexico
+      - "AR"  # Argentina
+      - "CL"  # Chile
+      - "CO"  # Colombia
+
+# Feature Flags
+features:
+  # Enable/disable specific features
+  use_name_variants: true          # Process AUTHOR_NAME_VARIANTS table
+  use_country_context: true        # Use country code for predictions
+  parallel_processing: false       # Enable parallel processing (requires future/furrr)
+  cache_intermediate: true         # Cache intermediate results

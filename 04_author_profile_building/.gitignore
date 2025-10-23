@@ -1,0 +1,48 @@
+# Output directories
+output/
+cache/
+logs/
+reports/
+
+# R files
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Sensitive configuration (if it contains API keys)
+# config.yaml
+
+# Database files (large)
+*.db
+*.sqlite
+*.sqlite3
+
+# JSON data files (can be large)
+*.json
+
+# RDS cache files
+*.rds
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
