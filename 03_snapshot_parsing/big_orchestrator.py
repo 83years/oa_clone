@@ -126,7 +126,7 @@ class Orchestrator:
             self.log(f"Database connected: {version[:50]}...")
             return True
         except Exception as e:
-            self.log(f"ERROR: Database connection failed: {e}")
+            self.log(f"❌ ERROR: Database connection failed: {e}")
             return False
     
     def process_file(self, entity: str, file_path: str, file_num: int, total_files: int) -> bool:
@@ -152,27 +152,27 @@ class Orchestrator:
             )
             
             if result.returncode == 0:
-                self.log(f"  ✓ SUCCESS: {Path(file_path).name}")
+                self.log(f"  ✅ SUCCESS: {Path(file_path).name}")
                 self.state.mark_completed(file_path)
                 self.stats['completed'] += 1
                 return True
             else:
                 error = result.stderr[-200:] if result.stderr else "Unknown error"
-                self.log(f"  ✗ FAILED: {error}")
+                self.log(f"  ❌ FAILED: {error}")
                 self.stats['failed'] += 1
                 return False
-        
+
         except subprocess.TimeoutExpired:
-            self.log(f"  ✗ TIMEOUT after 2 hours")
+            self.log(f"  ❌ TIMEOUT after 2 hours")
             self.stats['failed'] += 1
             return False
-            
+
         except KeyboardInterrupt:
-            self.log("Interrupted by user - state saved")
+            self.log("⚠️  Interrupted by user - state saved")
             raise
-            
+
         except Exception as e:
-            self.log(f"  ✗ ERROR: {e}")
+            self.log(f"  ❌ ERROR: {e}")
             self.stats['failed'] += 1
             return False
     
@@ -185,7 +185,7 @@ class Orchestrator:
         # Check parser exists
         parser = PARSERS.get(entity)
         if not parser or not Path(parser).exists():
-            self.log(f"ERROR: Parser not found: {parser}")
+            self.log(f"❌ ERROR: Parser not found: {parser}")
             return False
         
         # Discover files
@@ -225,9 +225,9 @@ class Orchestrator:
         # Entity summary
         self.log("")
         self.log(f"{entity.upper()} SUMMARY:")
-        self.log(f"  Success: {entity_success}")
-        self.log(f"  Failed: {entity_failed}")
-        
+        self.log(f"  ✅ Success: {entity_success}")
+        self.log(f"  ❌ Failed: {entity_failed}")
+
         return entity_failed == 0
     
     def generate_final_report(self, start_time: datetime):
@@ -244,10 +244,10 @@ class Orchestrator:
         self.log("")
         self.log(f"Entities processed: {len(self.entities)}")
         self.log(f"Total files: {self.stats['total_files']}")
-        self.log(f"  Completed: {self.stats['completed']}")
-        self.log(f"  Skipped: {self.stats['skipped']}")
-        self.log(f"  Failed: {self.stats['failed']}")
-        
+        self.log(f"  ✅ Completed: {self.stats['completed']}")
+        self.log(f"  ⏭️  Skipped: {self.stats['skipped']}")
+        self.log(f"  ❌ Failed: {self.stats['failed']}")
+
         # Database counts
         try:
             conn = psycopg2.connect(**DB_CONFIG)
@@ -267,9 +267,9 @@ class Orchestrator:
             pass
         
         self.log("=" * 80)
-        
+
         if self.stats['failed'] > 0:
-            self.log(f"WARNING: {self.stats['failed']} files failed")
+            self.log(f"⚠️  WARNING: {self.stats['failed']} files failed")
     
     def run(self):
         """Main execution"""

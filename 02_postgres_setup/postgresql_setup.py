@@ -4,11 +4,11 @@ import os
 from datetime import datetime
 
 # Configuration
-DB_HOST = '192.168.1.140'
-DB_PORT = '5433'
-DB_NAME = 'openalex_clone'
-ADMIN_USER = 'lucas'
-ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'OAAdminN89ts%FQSAboi83')
+DB_HOST = '192.168.1.100'
+DB_PORT = '55432'
+DB_NAME = 'OADB'
+ADMIN_USER = 'admin'
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 READONLY_USER = 'user1'
 READONLY_PASSWORD = os.getenv('READONLY_PASSWORD', 'OAUserLetmein!234')
 
@@ -21,21 +21,21 @@ def create_database_and_users():
         host=DB_HOST,
         port=DB_PORT,
         database='postgres',  # Connect to default postgres database
-        user='lucas',  # Your existing admin user
-        password='OAAdminN89ts%FQSAboi83'  # Your existing password
+        user=ADMIN_USER,
+        password=ADMIN_PASSWORD
     )
     conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cursor = conn.cursor()
     
     try:
-        # Check if lucas user needs to be a superuser (for creating databases)
+        # Check if admin user needs to be a superuser (for creating databases)
         print(f"[{datetime.now()}] Checking user privileges...")
-        cursor.execute("SELECT usesuper FROM pg_user WHERE usename = 'lucas';")
+        cursor.execute(f"SELECT usesuper FROM pg_user WHERE usename = '{ADMIN_USER}';")
         is_superuser = cursor.fetchone()[0]
-        
+
         if not is_superuser:
-            print(f"[{datetime.now()}] Granting superuser privileges to lucas...")
-            cursor.execute("ALTER USER lucas WITH SUPERUSER;")
+            print(f"[{datetime.now()}] Granting superuser privileges to {ADMIN_USER}...")
+            cursor.execute(f"ALTER USER {ADMIN_USER} WITH SUPERUSER;")
         
         # Terminate existing connections to the database if it exists
         print(f"[{datetime.now()}] Terminating existing connections...")
@@ -50,7 +50,7 @@ def create_database_and_users():
         print(f"[{datetime.now()}] Dropping existing database if present...")
         cursor.execute(f"DROP DATABASE IF EXISTS {DB_NAME};")
         
-        # Create read-only user (lucas already exists)
+        # Create read-only user (admin user already exists)
         print(f"[{datetime.now()}] Creating read-only user '{READONLY_USER}'...")
         cursor.execute(f"DROP USER IF EXISTS {READONLY_USER};")
         cursor.execute(f"""
@@ -60,7 +60,7 @@ def create_database_and_users():
             CONNECTION LIMIT 5;
         """)
         
-        # Update lucas password if desired
+        # Update admin user password if desired
         print(f"[{datetime.now()}] Updating admin user '{ADMIN_USER}' password...")
         cursor.execute(f"""
             ALTER USER {ADMIN_USER} WITH 

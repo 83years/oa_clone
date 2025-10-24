@@ -1,0 +1,1333 @@
+2025-10-24 20:45:58,649 - INFO - Starting OpenAlex repository download...
+2025-10-24 20:45:58,649 - INFO - Destination: /Volumes/OA_snapshot/24OCT2025
+2025-10-24 20:45:58,649 - WARNING - WARNING: This will download several terabytes of data!
+2025-10-24 20:45:58,649 - INFO - Listing all objects in the OpenAlex bucket...
+2025-10-24 20:45:59,887 - INFO - Found 1000 objects so far...
+2025-10-24 20:46:00,303 - INFO - Found 2000 objects so far...
+2025-10-24 20:46:00,676 - INFO - Found 3000 objects so far...
+2025-10-24 20:46:00,789 - INFO - Found 3115 total objects to process
+2025-10-24 20:46:00,790 - INFO - Starting download of 3115 files using 10 workers...
+2025-10-24 20:46:00,915 - INFO - Downloading LICENSE.txt (0.0 MB)
+2025-10-24 20:46:01,135 - INFO - Successfully downloaded LICENSE.txt
+2025-10-24 20:46:01,209 - INFO - Downloading README.txt (0.0 MB)
+2025-10-24 20:46:01,222 - INFO - Downloading RELEASE_NOTES.txt (0.0 MB)
+2025-10-24 20:46:01,247 - INFO - Downloading data/authors/updated_date=2023-06-26/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,300 - INFO - Downloading data/authors/updated_date=2023-06-13/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,300 - INFO - Downloading data/authors/manifest (0.1 MB)
+2025-10-24 20:46:01,304 - INFO - Downloading data/authors/updated_date=2023-06-14/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,306 - INFO - Downloading browse.html (0.0 MB)
+2025-10-24 20:46:01,306 - INFO - Downloading data/authors/updated_date=2023-06-18/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,309 - INFO - Downloading data/authors/updated_date=2023-06-08/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,311 - INFO - Downloading data/authors/updated_date=2023-06-22/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,401 - INFO - Successfully downloaded README.txt
+2025-10-24 20:46:01,442 - INFO - Successfully downloaded RELEASE_NOTES.txt
+2025-10-24 20:46:01,488 - INFO - Successfully downloaded data/authors/updated_date=2023-06-26/part_000.gz
+2025-10-24 20:46:01,500 - INFO - Successfully downloaded data/authors/updated_date=2023-06-18/part_000.gz
+2025-10-24 20:46:01,518 - INFO - Successfully downloaded data/authors/updated_date=2023-06-22/part_000.gz
+2025-10-24 20:46:01,521 - INFO - Successfully downloaded data/authors/updated_date=2023-06-13/part_000.gz
+2025-10-24 20:46:01,524 - INFO - Successfully downloaded data/authors/updated_date=2023-06-08/part_000.gz
+2025-10-24 20:46:01,526 - INFO - Successfully downloaded data/authors/updated_date=2023-06-14/part_000.gz
+2025-10-24 20:46:01,544 - INFO - Downloading data/authors/updated_date=2023-06-28/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,606 - INFO - Downloading data/authors/updated_date=2023-06-30/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,620 - INFO - Downloading data/authors/updated_date=2023-07-02/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,626 - INFO - Downloading data/authors/updated_date=2023-07-06/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,631 - INFO - Downloading data/authors/updated_date=2023-07-14/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,647 - INFO - Downloading data/authors/updated_date=2023-07-20/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,688 - INFO - Downloading data/authors/updated_date=2023-07-17/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,747 - INFO - Successfully downloaded data/authors/updated_date=2023-06-28/part_000.gz
+2025-10-24 20:46:01,760 - INFO - Downloading data/authors/updated_date=2023-06-27/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,805 - INFO - Successfully downloaded data/authors/updated_date=2023-06-30/part_000.gz
+2025-10-24 20:46:01,815 - INFO - Successfully downloaded data/authors/updated_date=2023-07-06/part_000.gz
+2025-10-24 20:46:01,820 - INFO - Successfully downloaded data/authors/updated_date=2023-07-14/part_000.gz
+2025-10-24 20:46:01,838 - INFO - Successfully downloaded data/authors/manifest
+2025-10-24 20:46:01,844 - INFO - Downloading data/authors/updated_date=2023-07-21/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,850 - INFO - Successfully downloaded data/authors/updated_date=2023-07-02/part_000.gz
+2025-10-24 20:46:01,870 - INFO - Successfully downloaded browse.html
+2025-10-24 20:46:01,896 - INFO - Successfully downloaded data/authors/updated_date=2023-07-17/part_000.gz
+2025-10-24 20:46:01,906 - INFO - Downloading data/authors/updated_date=2023-11-01/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,917 - INFO - Downloading data/authors/updated_date=2023-11-07/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,925 - INFO - Downloading data/authors/updated_date=2023-11-08/part_000.gz (0.4 MB)
+2025-10-24 20:46:01,941 - INFO - Downloading data/authors/updated_date=2024-05-02/part_000.gz (0.0 MB)
+2025-10-24 20:46:01,952 - INFO - Downloading data/authors/updated_date=2024-05-03/part_000.gz (0.1 MB)
+2025-10-24 20:46:01,966 - INFO - Successfully downloaded data/authors/updated_date=2023-06-27/part_000.gz
+2025-10-24 20:46:01,982 - INFO - Downloading data/authors/updated_date=2024-05-05/part_000.gz (0.1 MB)
+2025-10-24 20:46:02,003 - INFO - Downloading data/authors/updated_date=2024-05-06/part_000.gz (13.3 MB)
+2025-10-24 20:46:02,069 - INFO - Downloading data/authors/updated_date=2024-05-07/part_000.gz (178.3 MB)
+2025-10-24 20:46:02,146 - INFO - Successfully downloaded data/authors/updated_date=2023-11-01/part_000.gz
+2025-10-24 20:46:02,152 - INFO - Successfully downloaded data/authors/updated_date=2023-07-20/part_000.gz
+2025-10-24 20:46:02,185 - INFO - Successfully downloaded data/authors/updated_date=2023-11-07/part_000.gz
+2025-10-24 20:46:02,255 - INFO - Downloading data/authors/updated_date=2024-05-08/part_000.gz (187.5 MB)
+2025-10-24 20:46:02,316 - INFO - Successfully downloaded data/authors/updated_date=2024-05-02/part_000.gz
+2025-10-24 20:46:02,419 - INFO - Downloading data/authors/updated_date=2024-05-11/part_000.gz (116.4 MB)
+2025-10-24 20:46:02,988 - INFO - Successfully downloaded data/authors/updated_date=2023-11-08/part_000.gz
+2025-10-24 20:46:03,093 - INFO - Downloading data/authors/updated_date=2024-05-12/part_000.gz (118.8 MB)
+2025-10-24 20:46:03,099 - INFO - Successfully downloaded data/authors/updated_date=2024-05-03/part_000.gz
+2025-10-24 20:46:03,194 - INFO - Downloading data/authors/updated_date=2024-05-09/part_000.gz (116.5 MB)
+2025-10-24 20:46:03,199 - INFO - Downloading data/authors/updated_date=2024-05-13/part_000.gz (112.1 MB)
+2025-10-24 20:46:03,204 - INFO - Downloading data/authors/updated_date=2024-05-10/part_000.gz (108.2 MB)
+2025-10-24 20:46:03,237 - INFO - Successfully downloaded data/authors/updated_date=2023-07-21/part_000.gz
+2025-10-24 20:46:03,255 - INFO - Successfully downloaded data/authors/updated_date=2024-05-05/part_000.gz
+2025-10-24 20:46:03,353 - INFO - Downloading data/authors/updated_date=2024-05-15/part_000.gz (30.4 MB)
+2025-10-24 20:46:03,356 - INFO - Downloading data/authors/updated_date=2024-05-14/part_000.gz (105.6 MB)
+2025-10-24 20:46:21,688 - INFO - Successfully downloaded data/authors/updated_date=2024-05-06/part_000.gz
+2025-10-24 20:46:21,901 - INFO - Downloading data/authors/updated_date=2024-05-16/part_000.gz (5.9 MB)
+2025-10-24 20:46:31,861 - INFO - Successfully downloaded data/authors/updated_date=2024-05-16/part_000.gz
+2025-10-24 20:46:32,076 - INFO - Downloading data/authors/updated_date=2024-05-17/part_000.gz (2.0 MB)
+2025-10-24 20:46:36,212 - INFO - Successfully downloaded data/authors/updated_date=2024-05-17/part_000.gz
+2025-10-24 20:46:36,428 - INFO - Downloading data/authors/updated_date=2024-05-18/part_000.gz (1.6 MB)
+2025-10-24 20:46:39,855 - INFO - Successfully downloaded data/authors/updated_date=2024-05-18/part_000.gz
+2025-10-24 20:46:40,066 - INFO - Downloading data/authors/updated_date=2024-05-19/part_000.gz (2.4 MB)
+2025-10-24 20:46:44,573 - INFO - Successfully downloaded data/authors/updated_date=2024-05-19/part_000.gz
+2025-10-24 20:46:44,798 - INFO - Downloading data/authors/updated_date=2024-05-20/part_000.gz (3.5 MB)
+2025-10-24 20:46:50,937 - INFO - Successfully downloaded data/authors/updated_date=2024-05-20/part_000.gz
+2025-10-24 20:46:51,144 - INFO - Downloading data/authors/updated_date=2024-05-21/part_000.gz (1.6 MB)
+2025-10-24 20:46:51,337 - INFO - Successfully downloaded data/authors/updated_date=2024-05-15/part_000.gz
+2025-10-24 20:46:51,542 - INFO - Downloading data/authors/updated_date=2024-05-22/part_000.gz (1.8 MB)
+2025-10-24 20:46:54,249 - INFO - Successfully downloaded data/authors/updated_date=2024-05-21/part_000.gz
+2025-10-24 20:46:54,466 - INFO - Downloading data/authors/updated_date=2024-05-23/part_000.gz (1.5 MB)
+2025-10-24 20:46:55,039 - INFO - Successfully downloaded data/authors/updated_date=2024-05-22/part_000.gz
+2025-10-24 20:46:55,249 - INFO - Downloading data/authors/updated_date=2024-05-24/part_000.gz (2.0 MB)
+2025-10-24 20:46:57,778 - INFO - Successfully downloaded data/authors/updated_date=2024-05-23/part_000.gz
+2025-10-24 20:46:57,982 - INFO - Downloading data/authors/updated_date=2024-05-25/part_000.gz (2.0 MB)
+2025-10-24 20:46:59,017 - INFO - Successfully downloaded data/authors/updated_date=2024-05-24/part_000.gz
+2025-10-24 20:46:59,231 - INFO - Downloading data/authors/updated_date=2024-05-26/part_000.gz (0.4 MB)
+2025-10-24 20:47:00,892 - INFO - Successfully downloaded data/authors/updated_date=2024-05-26/part_000.gz
+2025-10-24 20:47:01,076 - INFO - Downloading data/authors/updated_date=2024-05-27/part_000.gz (0.3 MB)
+2025-10-24 20:47:01,528 - INFO - Successfully downloaded data/authors/updated_date=2024-05-25/part_000.gz
+2025-10-24 20:47:01,702 - INFO - Downloading data/authors/updated_date=2024-05-28/part_000.gz (0.1 MB)
+2025-10-24 20:47:02,063 - INFO - Successfully downloaded data/authors/updated_date=2024-05-27/part_000.gz
+2025-10-24 20:47:02,262 - INFO - Downloading data/authors/updated_date=2024-05-29/part_000.gz (0.1 MB)
+2025-10-24 20:47:02,282 - INFO - Successfully downloaded data/authors/updated_date=2024-05-28/part_000.gz
+2025-10-24 20:47:02,467 - INFO - Downloading data/authors/updated_date=2024-05-30/part_000.gz (0.0 MB)
+2025-10-24 20:47:02,892 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,893 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,893 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,893 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,910 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,911 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:47:02,914 - INFO - Successfully downloaded data/authors/updated_date=2024-05-29/part_000.gz
+2025-10-24 20:47:02,970 - INFO - Successfully downloaded data/authors/updated_date=2024-05-30/part_000.gz
+2025-10-24 20:47:03,019 - INFO - Downloading data/authors/updated_date=2024-05-31/part_000.gz (0.2 MB)
+2025-10-24 20:47:03,152 - INFO - Downloading data/authors/updated_date=2024-06-01/part_000.gz (0.4 MB)
+2025-10-24 20:47:04,408 - INFO - Successfully downloaded data/authors/updated_date=2024-06-01/part_000.gz
+2025-10-24 20:47:04,598 - INFO - Downloading data/authors/updated_date=2024-06-02/part_000.gz (0.5 MB)
+2025-10-24 20:47:04,765 - INFO - Successfully downloaded data/authors/updated_date=2024-05-31/part_000.gz
+2025-10-24 20:47:04,965 - INFO - Downloading data/authors/updated_date=2024-06-03/part_000.gz (0.4 MB)
+2025-10-24 20:47:06,210 - INFO - Successfully downloaded data/authors/updated_date=2024-06-02/part_000.gz
+2025-10-24 20:47:06,417 - INFO - Downloading data/authors/updated_date=2024-06-04/part_000.gz (0.2 MB)
+2025-10-24 20:47:06,582 - INFO - Successfully downloaded data/authors/updated_date=2024-06-03/part_000.gz
+2025-10-24 20:47:06,791 - INFO - Downloading data/authors/updated_date=2024-06-05/part_000.gz (0.2 MB)
+2025-10-24 20:47:07,441 - INFO - Successfully downloaded data/authors/updated_date=2024-06-05/part_000.gz
+2025-10-24 20:47:07,640 - INFO - Downloading data/authors/updated_date=2024-06-06/part_000.gz (1.2 MB)
+2025-10-24 20:47:07,964 - INFO - Successfully downloaded data/authors/updated_date=2024-06-04/part_000.gz
+2025-10-24 20:47:08,173 - INFO - Downloading data/authors/updated_date=2024-06-07/part_000.gz (2.7 MB)
+2025-10-24 20:47:10,099 - INFO - Successfully downloaded data/authors/updated_date=2024-06-06/part_000.gz
+2025-10-24 20:47:10,305 - INFO - Downloading data/authors/updated_date=2024-06-08/part_000.gz (1.8 MB)
+2025-10-24 20:47:13,717 - INFO - Successfully downloaded data/authors/updated_date=2024-06-08/part_000.gz
+2025-10-24 20:47:13,937 - INFO - Downloading data/authors/updated_date=2024-06-09/part_000.gz (1.9 MB)
+2025-10-24 20:47:14,052 - INFO - Successfully downloaded data/authors/updated_date=2024-06-07/part_000.gz
+2025-10-24 20:47:14,250 - INFO - Downloading data/authors/updated_date=2024-06-10/part_000.gz (2.0 MB)
+2025-10-24 20:47:17,736 - INFO - Successfully downloaded data/authors/updated_date=2024-06-10/part_000.gz
+2025-10-24 20:47:17,816 - INFO - Successfully downloaded data/authors/updated_date=2024-06-09/part_000.gz
+2025-10-24 20:47:17,968 - INFO - Downloading data/authors/updated_date=2024-06-11/part_000.gz (2.1 MB)
+2025-10-24 20:47:18,012 - INFO - Downloading data/authors/updated_date=2024-06-12/part_000.gz (2.2 MB)
+2025-10-24 20:47:21,836 - INFO - Successfully downloaded data/authors/updated_date=2024-06-11/part_000.gz
+2025-10-24 20:47:22,046 - INFO - Downloading data/authors/updated_date=2024-06-13/part_000.gz (2.1 MB)
+2025-10-24 20:47:23,087 - INFO - Successfully downloaded data/authors/updated_date=2024-06-12/part_000.gz
+2025-10-24 20:47:23,282 - INFO - Downloading data/authors/updated_date=2024-06-14/part_000.gz (1.2 MB)
+2025-10-24 20:47:25,879 - INFO - Successfully downloaded data/authors/updated_date=2024-06-13/part_000.gz
+2025-10-24 20:47:25,999 - INFO - Successfully downloaded data/authors/updated_date=2024-06-14/part_000.gz
+2025-10-24 20:47:26,071 - INFO - Downloading data/authors/updated_date=2024-06-15/part_000.gz (0.4 MB)
+2025-10-24 20:47:26,180 - INFO - Downloading data/authors/updated_date=2024-06-16/part_000.gz (0.1 MB)
+2025-10-24 20:47:27,429 - INFO - Successfully downloaded data/authors/updated_date=2024-06-16/part_000.gz
+2025-10-24 20:47:27,646 - INFO - Downloading data/authors/updated_date=2024-06-17/part_000.gz (0.1 MB)
+2025-10-24 20:47:27,784 - INFO - Successfully downloaded data/authors/updated_date=2024-06-15/part_000.gz
+2025-10-24 20:47:27,995 - INFO - Downloading data/authors/updated_date=2024-06-18/part_000.gz (0.1 MB)
+2025-10-24 20:47:28,633 - INFO - Successfully downloaded data/authors/updated_date=2024-06-18/part_000.gz
+2025-10-24 20:47:28,860 - INFO - Downloading data/authors/updated_date=2024-06-19/part_000.gz (0.1 MB)
+2025-10-24 20:47:29,446 - INFO - Successfully downloaded data/authors/updated_date=2024-06-17/part_000.gz
+2025-10-24 20:47:29,758 - INFO - Downloading data/authors/updated_date=2024-06-20/part_000.gz (0.1 MB)
+2025-10-24 20:47:30,066 - INFO - Successfully downloaded data/authors/updated_date=2024-06-19/part_000.gz
+2025-10-24 20:47:30,262 - INFO - Downloading data/authors/updated_date=2024-06-21/part_000.gz (0.1 MB)
+2025-10-24 20:47:30,944 - INFO - Successfully downloaded data/authors/updated_date=2024-06-21/part_000.gz
+2025-10-24 20:47:30,959 - INFO - Successfully downloaded data/authors/updated_date=2024-06-20/part_000.gz
+2025-10-24 20:47:31,157 - INFO - Downloading data/authors/updated_date=2024-06-22/part_000.gz (0.1 MB)
+2025-10-24 20:47:31,173 - INFO - Downloading data/authors/updated_date=2024-06-23/part_000.gz (0.1 MB)
+2025-10-24 20:47:31,997 - INFO - Successfully downloaded data/authors/updated_date=2024-06-22/part_000.gz
+2025-10-24 20:47:32,195 - INFO - Downloading data/authors/updated_date=2024-06-24/part_000.gz (0.1 MB)
+2025-10-24 20:47:32,247 - INFO - Successfully downloaded data/authors/updated_date=2024-06-23/part_000.gz
+2025-10-24 20:47:32,487 - INFO - Downloading data/authors/updated_date=2024-06-25/part_000.gz (0.1 MB)
+2025-10-24 20:47:33,194 - INFO - Successfully downloaded data/authors/updated_date=2024-06-25/part_000.gz
+2025-10-24 20:47:33,359 - INFO - Downloading data/authors/updated_date=2024-06-26/part_000.gz (0.1 MB)
+2025-10-24 20:47:33,987 - INFO - Successfully downloaded data/authors/updated_date=2024-06-26/part_000.gz
+2025-10-24 20:47:34,103 - INFO - Successfully downloaded data/authors/updated_date=2024-06-24/part_000.gz
+2025-10-24 20:47:34,197 - INFO - Downloading data/authors/updated_date=2024-06-27/part_000.gz (0.7 MB)
+2025-10-24 20:47:34,318 - INFO - Downloading data/authors/updated_date=2024-06-28/part_000.gz (0.7 MB)
+2025-10-24 20:47:35,912 - INFO - Successfully downloaded data/authors/updated_date=2024-06-27/part_000.gz
+2025-10-24 20:47:36,054 - INFO - Successfully downloaded data/authors/updated_date=2024-06-28/part_000.gz
+2025-10-24 20:47:36,107 - INFO - Downloading data/authors/updated_date=2024-06-29/part_000.gz (1.0 MB)
+2025-10-24 20:47:36,241 - INFO - Downloading data/authors/updated_date=2024-06-30/part_000.gz (0.4 MB)
+2025-10-24 20:47:38,395 - INFO - Successfully downloaded data/authors/updated_date=2024-06-30/part_000.gz
+2025-10-24 20:47:38,742 - INFO - Downloading data/authors/updated_date=2024-07-01/part_000.gz (0.2 MB)
+2025-10-24 20:47:38,952 - INFO - Successfully downloaded data/authors/updated_date=2024-06-29/part_000.gz
+2025-10-24 20:47:39,127 - INFO - Downloading data/authors/updated_date=2024-07-02/part_000.gz (0.6 MB)
+2025-10-24 20:47:40,623 - INFO - Successfully downloaded data/authors/updated_date=2024-07-02/part_000.gz
+2025-10-24 20:47:40,749 - INFO - Successfully downloaded data/authors/updated_date=2024-07-01/part_000.gz
+2025-10-24 20:47:40,829 - INFO - Downloading data/authors/updated_date=2024-07-03/part_000.gz (0.6 MB)
+2025-10-24 20:47:40,939 - INFO - Downloading data/authors/updated_date=2024-07-04/part_000.gz (0.7 MB)
+2025-10-24 20:47:42,864 - INFO - Successfully downloaded data/authors/updated_date=2024-07-04/part_000.gz
+2025-10-24 20:47:42,879 - INFO - Successfully downloaded data/authors/updated_date=2024-07-03/part_000.gz
+2025-10-24 20:47:43,076 - INFO - Downloading data/authors/updated_date=2024-07-05/part_000.gz (1.1 MB)
+2025-10-24 20:47:43,081 - INFO - Downloading data/authors/updated_date=2024-07-06/part_000.gz (0.7 MB)
+2025-10-24 20:47:44,883 - INFO - Successfully downloaded data/authors/updated_date=2024-07-06/part_000.gz
+2025-10-24 20:47:44,995 - INFO - Successfully downloaded data/authors/updated_date=2024-07-05/part_000.gz
+2025-10-24 20:47:45,089 - INFO - Downloading data/authors/updated_date=2024-07-07/part_000.gz (1.3 MB)
+2025-10-24 20:47:45,191 - INFO - Downloading data/authors/updated_date=2024-07-08/part_000.gz (0.8 MB)
+2025-10-24 20:47:47,550 - INFO - Successfully downloaded data/authors/updated_date=2024-07-07/part_000.gz
+2025-10-24 20:47:47,602 - INFO - Successfully downloaded data/authors/updated_date=2024-07-08/part_000.gz
+2025-10-24 20:47:47,740 - INFO - Downloading data/authors/updated_date=2024-07-09/part_000.gz (2.8 MB)
+2025-10-24 20:47:47,786 - INFO - Downloading data/authors/updated_date=2024-07-10/part_000.gz (2.7 MB)
+2025-10-24 20:47:52,259 - INFO - Successfully downloaded data/authors/updated_date=2024-07-09/part_000.gz
+2025-10-24 20:47:52,462 - INFO - Downloading data/authors/updated_date=2024-07-11/part_000.gz (2.6 MB)
+2025-10-24 20:47:53,198 - INFO - Successfully downloaded data/authors/updated_date=2024-07-10/part_000.gz
+2025-10-24 20:47:53,394 - INFO - Downloading data/authors/updated_date=2024-07-12/part_000.gz (1.2 MB)
+2025-10-24 20:47:55,999 - INFO - Successfully downloaded data/authors/updated_date=2024-07-12/part_000.gz
+2025-10-24 20:47:56,206 - INFO - Downloading data/authors/updated_date=2024-07-13/part_000.gz (1.2 MB)
+2025-10-24 20:47:57,048 - INFO - Successfully downloaded data/authors/updated_date=2024-07-11/part_000.gz
+2025-10-24 20:47:57,248 - INFO - Downloading data/authors/updated_date=2024-07-14/part_000.gz (1.3 MB)
+2025-10-24 20:47:58,319 - INFO - Successfully downloaded data/authors/updated_date=2024-07-13/part_000.gz
+2025-10-24 20:47:58,556 - INFO - Downloading data/authors/updated_date=2024-07-15/part_000.gz (1.9 MB)
+2025-10-24 20:47:59,486 - INFO - Successfully downloaded data/authors/updated_date=2024-07-14/part_000.gz
+2025-10-24 20:47:59,691 - INFO - Downloading data/authors/updated_date=2024-07-16/part_000.gz (0.4 MB)
+2025-10-24 20:48:00,923 - INFO - Successfully downloaded data/authors/updated_date=2024-07-16/part_000.gz
+2025-10-24 20:48:01,114 - INFO - Downloading data/authors/updated_date=2024-07-17/part_000.gz (0.3 MB)
+2025-10-24 20:48:02,020 - INFO - Successfully downloaded data/authors/updated_date=2024-07-15/part_000.gz
+2025-10-24 20:48:02,208 - INFO - Downloading data/authors/updated_date=2024-07-18/part_000.gz (1.4 MB)
+2025-10-24 20:48:02,538 - INFO - Successfully downloaded data/authors/updated_date=2024-07-17/part_000.gz
+2025-10-24 20:48:02,724 - INFO - Downloading data/authors/updated_date=2024-07-19/part_000.gz (1.7 MB)
+2025-10-24 20:48:05,673 - INFO - Successfully downloaded data/authors/updated_date=2024-07-19/part_000.gz
+2025-10-24 20:48:05,729 - INFO - Successfully downloaded data/authors/updated_date=2024-07-18/part_000.gz
+2025-10-24 20:48:05,857 - INFO - Downloading data/authors/updated_date=2024-07-20/part_000.gz (0.8 MB)
+2025-10-24 20:48:05,905 - INFO - Downloading data/authors/updated_date=2024-07-21/part_000.gz (4.8 MB)
+2025-10-24 20:48:07,473 - INFO - Successfully downloaded data/authors/updated_date=2024-07-20/part_000.gz
+2025-10-24 20:48:07,683 - INFO - Downloading data/authors/updated_date=2024-07-22/part_000.gz (2.3 MB)
+2025-10-24 20:48:12,840 - INFO - Successfully downloaded data/authors/updated_date=2024-07-22/part_000.gz
+2025-10-24 20:48:13,061 - INFO - Downloading data/authors/updated_date=2024-07-23/part_000.gz (2.6 MB)
+2025-10-24 20:48:14,285 - INFO - Successfully downloaded data/authors/updated_date=2024-07-21/part_000.gz
+2025-10-24 20:48:14,506 - INFO - Downloading data/authors/updated_date=2024-07-24/part_000.gz (0.4 MB)
+2025-10-24 20:48:16,686 - INFO - Successfully downloaded data/authors/updated_date=2024-07-24/part_000.gz
+2025-10-24 20:48:16,902 - INFO - Downloading data/authors/updated_date=2024-07-25/part_000.gz (1.0 MB)
+2025-10-24 20:48:17,645 - INFO - Successfully downloaded data/authors/updated_date=2024-07-23/part_000.gz
+2025-10-24 20:48:17,863 - INFO - Downloading data/authors/updated_date=2024-07-26/part_000.gz (1.2 MB)
+2025-10-24 20:48:18,977 - INFO - Successfully downloaded data/authors/updated_date=2024-07-25/part_000.gz
+2025-10-24 20:48:19,179 - INFO - Downloading data/authors/updated_date=2024-07-27/part_000.gz (0.9 MB)
+2025-10-24 20:48:20,389 - INFO - Successfully downloaded data/authors/updated_date=2024-07-26/part_000.gz
+2025-10-24 20:48:20,389 - INFO - Progress: 100/3115 (3.2%)
+2025-10-24 20:48:20,390 - INFO - ============================================================
+2025-10-24 20:48:20,390 - INFO - DOWNLOAD STATISTICS
+2025-10-24 20:48:20,390 - INFO - ============================================================
+2025-10-24 20:48:20,390 - INFO - Total files processed: 100
+2025-10-24 20:48:20,390 - INFO - Files downloaded: 100
+2025-10-24 20:48:20,390 - INFO - Files skipped: 0
+2025-10-24 20:48:20,390 - INFO - Files failed: 0
+2025-10-24 20:48:20,390 - INFO - Total data downloaded: 0.13 GB
+2025-10-24 20:48:20,390 - INFO - Time elapsed: 0h 2m
+2025-10-24 20:48:20,390 - INFO - Average download rate: 0.92 MB/s
+2025-10-24 20:48:20,390 - INFO - ============================================================
+2025-10-24 20:48:20,594 - INFO - Downloading data/authors/updated_date=2024-07-28/part_000.gz (1.0 MB)
+2025-10-24 20:48:21,057 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,059 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,059 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,060 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,061 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,061 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,062 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,063 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:21,064 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,064 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:21,065 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:21,065 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:21,065 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:21,070 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:21,213 - INFO - Successfully downloaded data/authors/updated_date=2024-07-27/part_000.gz
+2025-10-24 20:48:21,452 - INFO - Downloading data/authors/updated_date=2024-07-29/part_000.gz (1.3 MB)
+2025-10-24 20:48:23,187 - INFO - Successfully downloaded data/authors/updated_date=2024-07-28/part_000.gz
+2025-10-24 20:48:23,381 - INFO - Downloading data/authors/updated_date=2024-07-30/part_000.gz (0.7 MB)
+2025-10-24 20:48:24,498 - INFO - Successfully downloaded data/authors/updated_date=2024-07-29/part_000.gz
+2025-10-24 20:48:24,697 - INFO - Downloading data/authors/updated_date=2024-07-31/part_000.gz (1.1 MB)
+2025-10-24 20:48:24,856 - INFO - Successfully downloaded data/authors/updated_date=2024-07-30/part_000.gz
+2025-10-24 20:48:25,044 - INFO - Downloading data/authors/updated_date=2024-08-01/part_000.gz (2.9 MB)
+2025-10-24 20:48:27,175 - INFO - Successfully downloaded data/authors/updated_date=2024-07-31/part_000.gz
+2025-10-24 20:48:27,373 - INFO - Downloading data/authors/updated_date=2024-08-02/part_000.gz (1.1 MB)
+2025-10-24 20:48:28,845 - INFO - Successfully downloaded data/authors/updated_date=2024-05-14/part_000.gz
+2025-10-24 20:48:29,053 - INFO - Downloading data/authors/updated_date=2024-08-03/part_000.gz (0.7 MB)
+2025-10-24 20:48:29,607 - INFO - Successfully downloaded data/authors/updated_date=2024-08-02/part_000.gz
+2025-10-24 20:48:29,808 - INFO - Downloading data/authors/updated_date=2024-08-04/part_000.gz (1.9 MB)
+2025-10-24 20:48:30,159 - INFO - Successfully downloaded data/authors/updated_date=2024-08-01/part_000.gz
+2025-10-24 20:48:30,320 - INFO - Successfully downloaded data/authors/updated_date=2024-08-03/part_000.gz
+2025-10-24 20:48:30,359 - INFO - Downloading data/authors/updated_date=2024-08-05/part_000.gz (0.9 MB)
+2025-10-24 20:48:30,509 - INFO - Downloading data/authors/updated_date=2024-08-06/part_000.gz (0.7 MB)
+2025-10-24 20:48:30,599 - INFO - Successfully downloaded data/authors/updated_date=2024-05-10/part_000.gz
+2025-10-24 20:48:30,785 - INFO - Downloading data/authors/updated_date=2024-08-07/part_000.gz (1.4 MB)
+2025-10-24 20:48:31,853 - INFO - Successfully downloaded data/authors/updated_date=2024-08-05/part_000.gz
+2025-10-24 20:48:31,985 - INFO - Successfully downloaded data/authors/updated_date=2024-08-06/part_000.gz
+2025-10-24 20:48:32,030 - INFO - Downloading data/authors/updated_date=2024-08-08/part_000.gz (3.0 MB)
+2025-10-24 20:48:32,189 - INFO - Downloading data/authors/updated_date=2024-08-09/part_000.gz (1.4 MB)
+2025-10-24 20:48:33,055 - INFO - Successfully downloaded data/authors/updated_date=2024-08-04/part_000.gz
+2025-10-24 20:48:33,242 - INFO - Downloading data/authors/updated_date=2024-08-10/part_000.gz (0.7 MB)
+2025-10-24 20:48:33,619 - INFO - Successfully downloaded data/authors/updated_date=2024-08-07/part_000.gz
+2025-10-24 20:48:33,849 - INFO - Downloading data/authors/updated_date=2024-08-11/part_000.gz (0.7 MB)
+2025-10-24 20:48:35,066 - INFO - Successfully downloaded data/authors/updated_date=2024-08-10/part_000.gz
+2025-10-24 20:48:35,260 - INFO - Downloading data/authors/updated_date=2024-08-12/part_000.gz (0.6 MB)
+2025-10-24 20:48:35,423 - INFO - Successfully downloaded data/authors/updated_date=2024-08-11/part_000.gz
+2025-10-24 20:48:35,600 - INFO - Successfully downloaded data/authors/updated_date=2024-08-09/part_000.gz
+2025-10-24 20:48:35,606 - INFO - Downloading data/authors/updated_date=2024-08-13/part_000.gz (0.7 MB)
+2025-10-24 20:48:35,795 - INFO - Downloading data/authors/updated_date=2024-08-14/part_000.gz (0.5 MB)
+2025-10-24 20:48:36,617 - INFO - Successfully downloaded data/authors/updated_date=2024-08-12/part_000.gz
+2025-10-24 20:48:36,780 - INFO - Downloading data/authors/updated_date=2024-08-15/part_000.gz (0.6 MB)
+2025-10-24 20:48:36,955 - INFO - Successfully downloaded data/authors/updated_date=2024-08-08/part_000.gz
+2025-10-24 20:48:36,982 - INFO - Successfully downloaded data/authors/updated_date=2024-08-13/part_000.gz
+2025-10-24 20:48:37,109 - INFO - Downloading data/authors/updated_date=2024-08-16/part_000.gz (0.8 MB)
+2025-10-24 20:48:37,140 - INFO - Downloading data/authors/updated_date=2024-08-17/part_000.gz (1.1 MB)
+2025-10-24 20:48:37,627 - INFO - Successfully downloaded data/authors/updated_date=2024-08-14/part_000.gz
+2025-10-24 20:48:37,800 - INFO - Successfully downloaded data/authors/updated_date=2024-08-15/part_000.gz
+2025-10-24 20:48:37,824 - INFO - Downloading data/authors/updated_date=2024-08-18/part_000.gz (0.8 MB)
+2025-10-24 20:48:37,997 - INFO - Downloading data/authors/updated_date=2024-08-19/part_000.gz (0.6 MB)
+2025-10-24 20:48:38,339 - INFO - Successfully downloaded data/authors/updated_date=2024-05-13/part_000.gz
+2025-10-24 20:48:38,532 - INFO - Downloading data/authors/updated_date=2024-08-20/part_000.gz (0.7 MB)
+2025-10-24 20:48:39,004 - INFO - Successfully downloaded data/authors/updated_date=2024-08-17/part_000.gz
+2025-10-24 20:48:39,100 - INFO - Successfully downloaded data/authors/updated_date=2024-08-19/part_000.gz
+2025-10-24 20:48:39,196 - INFO - Downloading data/authors/updated_date=2024-08-21/part_000.gz (0.7 MB)
+2025-10-24 20:48:39,288 - INFO - Downloading data/authors/updated_date=2024-08-22/part_000.gz (0.7 MB)
+2025-10-24 20:48:39,455 - INFO - Successfully downloaded data/authors/updated_date=2024-08-16/part_000.gz
+2025-10-24 20:48:39,503 - INFO - Successfully downloaded data/authors/updated_date=2024-08-18/part_000.gz
+2025-10-24 20:48:39,621 - INFO - Successfully downloaded data/authors/updated_date=2024-08-20/part_000.gz
+2025-10-24 20:48:39,621 - INFO - Downloading data/authors/updated_date=2024-08-23/part_000.gz (0.4 MB)
+2025-10-24 20:48:39,687 - INFO - Downloading data/authors/updated_date=2024-08-24/part_000.gz (0.4 MB)
+2025-10-24 20:48:39,830 - INFO - Downloading data/authors/updated_date=2024-08-25/part_000.gz (0.2 MB)
+2025-10-24 20:48:40,565 - INFO - Successfully downloaded data/authors/updated_date=2024-08-25/part_000.gz
+2025-10-24 20:48:40,708 - INFO - Successfully downloaded data/authors/updated_date=2024-08-21/part_000.gz
+2025-10-24 20:48:40,708 - INFO - Downloading data/authors/updated_date=2024-08-26/part_000.gz (0.2 MB)
+2025-10-24 20:48:40,854 - INFO - Downloading data/authors/updated_date=2024-08-27/part_000.gz (0.1 MB)
+2025-10-24 20:48:40,884 - INFO - Successfully downloaded data/authors/updated_date=2024-08-22/part_000.gz
+2025-10-24 20:48:40,905 - INFO - Successfully downloaded data/authors/updated_date=2024-08-23/part_000.gz
+2025-10-24 20:48:41,035 - INFO - Downloading data/authors/updated_date=2024-08-28/part_000.gz (0.0 MB)
+2025-10-24 20:48:41,060 - INFO - Downloading data/authors/updated_date=2024-08-29/part_000.gz (0.0 MB)
+2025-10-24 20:48:41,199 - INFO - Successfully downloaded data/authors/updated_date=2024-08-26/part_000.gz
+2025-10-24 20:48:41,316 - INFO - Successfully downloaded data/authors/updated_date=2024-08-27/part_000.gz
+2025-10-24 20:48:41,352 - INFO - Downloading data/authors/updated_date=2024-08-30/part_000.gz (0.0 MB)
+2025-10-24 20:48:41,362 - INFO - Successfully downloaded data/authors/updated_date=2024-08-28/part_000.gz
+2025-10-24 20:48:41,415 - INFO - Successfully downloaded data/authors/updated_date=2024-08-29/part_000.gz
+2025-10-24 20:48:41,448 - INFO - Downloading data/authors/updated_date=2024-08-31/part_000.gz (0.0 MB)
+2025-10-24 20:48:41,477 - INFO - Successfully downloaded data/authors/updated_date=2024-08-24/part_000.gz
+2025-10-24 20:48:41,531 - INFO - Downloading data/authors/updated_date=2024-09-01/part_000.gz (0.2 MB)
+2025-10-24 20:48:41,560 - INFO - Downloading data/authors/updated_date=2024-09-02/part_000.gz (0.2 MB)
+2025-10-24 20:48:41,605 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:41,610 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:41,616 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:41,617 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:41,618 - INFO - Downloading data/authors/updated_date=2024-09-03/part_000.gz (0.2 MB)
+2025-10-24 20:48:41,671 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:41,684 - INFO - Successfully downloaded data/authors/updated_date=2024-08-30/part_000.gz
+2025-10-24 20:48:41,766 - INFO - Successfully downloaded data/authors/updated_date=2024-08-31/part_000.gz
+2025-10-24 20:48:41,817 - INFO - Downloading data/authors/updated_date=2024-09-04/part_000.gz (0.3 MB)
+2025-10-24 20:48:41,824 - INFO - Successfully downloaded data/authors/updated_date=2024-05-09/part_000.gz
+2025-10-24 20:48:41,958 - INFO - Successfully downloaded data/authors/updated_date=2024-09-01/part_000.gz
+2025-10-24 20:48:41,981 - INFO - Downloading data/authors/updated_date=2024-09-05/part_000.gz (0.3 MB)
+2025-10-24 20:48:42,006 - INFO - Downloading data/authors/updated_date=2024-09-06/part_000.gz (0.2 MB)
+2025-10-24 20:48:42,034 - INFO - Successfully downloaded data/authors/updated_date=2024-09-02/part_000.gz
+2025-10-24 20:48:42,092 - INFO - Downloading data/authors/updated_date=2024-09-07/part_000.gz (0.6 MB)
+2025-10-24 20:48:42,192 - INFO - Downloading data/authors/updated_date=2024-09-08/part_000.gz (1.0 MB)
+2025-10-24 20:48:42,212 - INFO - Successfully downloaded data/authors/updated_date=2024-09-03/part_000.gz
+2025-10-24 20:48:42,382 - INFO - Successfully downloaded data/authors/updated_date=2024-09-04/part_000.gz
+2025-10-24 20:48:42,406 - INFO - Downloading data/authors/updated_date=2024-09-09/part_000.gz (0.9 MB)
+2025-10-24 20:48:42,453 - INFO - Successfully downloaded data/authors/updated_date=2024-09-05/part_000.gz
+2025-10-24 20:48:42,532 - INFO - Successfully downloaded data/authors/updated_date=2024-09-06/part_000.gz
+2025-10-24 20:48:42,553 - INFO - Downloading data/authors/updated_date=2024-09-10/part_000.gz (0.9 MB)
+2025-10-24 20:48:42,633 - INFO - Downloading data/authors/updated_date=2024-09-11/part_000.gz (0.9 MB)
+2025-10-24 20:48:42,717 - INFO - Downloading data/authors/updated_date=2024-09-12/part_000.gz (1.0 MB)
+2025-10-24 20:48:43,453 - INFO - Successfully downloaded data/authors/updated_date=2024-05-12/part_000.gz
+2025-10-24 20:48:43,488 - INFO - Successfully downloaded data/authors/updated_date=2024-09-07/part_000.gz
+2025-10-24 20:48:43,634 - INFO - Successfully downloaded data/authors/updated_date=2024-09-08/part_000.gz
+2025-10-24 20:48:43,648 - INFO - Downloading data/authors/updated_date=2024-09-13/part_000.gz (1.0 MB)
+2025-10-24 20:48:43,673 - INFO - Downloading data/authors/updated_date=2024-09-14/part_000.gz (1.0 MB)
+2025-10-24 20:48:43,784 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:43,784 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:43,789 - INFO - Downloading data/authors/updated_date=2024-09-15/part_000.gz (1.1 MB)
+2025-10-24 20:48:43,790 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:43,842 - INFO - Successfully downloaded data/authors/updated_date=2024-09-11/part_000.gz
+2025-10-24 20:48:43,955 - INFO - Downloading data/authors/updated_date=2024-09-16/part_000.gz (0.9 MB)
+2025-10-24 20:48:43,956 - INFO - Successfully downloaded data/authors/updated_date=2024-09-09/part_000.gz
+2025-10-24 20:48:44,130 - INFO - Successfully downloaded data/authors/updated_date=2024-05-11/part_000.gz
+2025-10-24 20:48:44,147 - INFO - Downloading data/authors/updated_date=2024-09-17/part_000.gz (1.0 MB)
+2025-10-24 20:48:44,201 - INFO - Successfully downloaded data/authors/updated_date=2024-09-12/part_000.gz
+2025-10-24 20:48:44,271 - INFO - Downloading data/authors/updated_date=2024-09-18/part_000.gz (1.3 MB)
+2025-10-24 20:48:44,365 - INFO - Downloading data/authors/updated_date=2024-09-19/part_000.gz (0.6 MB)
+2025-10-24 20:48:44,419 - INFO - Successfully downloaded data/authors/updated_date=2024-09-10/part_000.gz
+2025-10-24 20:48:44,616 - INFO - Downloading data/authors/updated_date=2024-09-20/part_000.gz (0.5 MB)
+2025-10-24 20:48:44,803 - INFO - Successfully downloaded data/authors/updated_date=2024-09-13/part_000.gz
+2025-10-24 20:48:44,993 - INFO - Downloading data/authors/updated_date=2024-09-21/part_000.gz (0.7 MB)
+2025-10-24 20:48:45,027 - INFO - Successfully downloaded data/authors/updated_date=2024-09-14/part_000.gz
+2025-10-24 20:48:45,170 - INFO - Successfully downloaded data/authors/updated_date=2024-09-15/part_000.gz
+2025-10-24 20:48:45,186 - INFO - Downloading data/authors/updated_date=2024-09-22/part_000.gz (0.7 MB)
+2025-10-24 20:48:45,240 - INFO - Successfully downloaded data/authors/updated_date=2024-09-16/part_000.gz
+2025-10-24 20:48:45,318 - INFO - Downloading data/authors/updated_date=2024-09-23/part_000.gz (0.7 MB)
+2025-10-24 20:48:45,393 - INFO - Downloading data/authors/updated_date=2024-09-24/part_000.gz (0.4 MB)
+2025-10-24 20:48:45,481 - INFO - Successfully downloaded data/authors/updated_date=2024-09-17/part_000.gz
+2025-10-24 20:48:45,649 - INFO - Downloading data/authors/updated_date=2024-09-25/part_000.gz (0.6 MB)
+2025-10-24 20:48:45,658 - INFO - Successfully downloaded data/authors/updated_date=2024-09-19/part_000.gz
+2025-10-24 20:48:45,802 - INFO - Successfully downloaded data/authors/updated_date=2024-09-18/part_000.gz
+2025-10-24 20:48:45,863 - INFO - Downloading data/authors/updated_date=2024-09-26/part_000.gz (0.6 MB)
+2025-10-24 20:48:45,958 - INFO - Downloading data/authors/updated_date=2024-09-27/part_000.gz (0.6 MB)
+2025-10-24 20:48:45,965 - INFO - Successfully downloaded data/authors/updated_date=2024-09-21/part_000.gz
+2025-10-24 20:48:46,028 - INFO - Successfully downloaded data/authors/updated_date=2024-09-22/part_000.gz
+2025-10-24 20:48:46,110 - INFO - Downloading data/authors/updated_date=2024-09-29/part_000.gz (0.2 MB)
+2025-10-24 20:48:46,132 - INFO - Successfully downloaded data/authors/updated_date=2024-09-20/part_000.gz
+2025-10-24 20:48:46,169 - INFO - Downloading data/authors/updated_date=2024-09-30/part_000.gz (0.5 MB)
+2025-10-24 20:48:46,169 - INFO - Successfully downloaded data/authors/updated_date=2024-09-23/part_000.gz
+2025-10-24 20:48:46,448 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,448 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,448 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,448 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,449 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,449 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,450 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,450 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,450 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,450 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,451 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,451 - INFO - Downloading data/authors/updated_date=2024-10-02/part_000.gz (0.2 MB)
+2025-10-24 20:48:46,451 - INFO - Downloading data/authors/updated_date=2024-10-01/part_000.gz (0.5 MB)
+2025-10-24 20:48:46,451 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,452 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,452 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,453 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,455 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,455 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,456 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,457 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:46,524 - INFO - Successfully downloaded data/authors/updated_date=2024-09-24/part_000.gz
+2025-10-24 20:48:46,528 - INFO - Successfully downloaded data/authors/updated_date=2024-09-25/part_000.gz
+2025-10-24 20:48:46,632 - INFO - Downloading data/authors/updated_date=2024-10-03/part_000.gz (0.2 MB)
+2025-10-24 20:48:46,635 - INFO - Successfully downloaded data/authors/updated_date=2024-09-26/part_000.gz
+2025-10-24 20:48:46,638 - INFO - Downloading data/authors/updated_date=2024-10-04/part_000.gz (0.1 MB)
+2025-10-24 20:48:46,647 - INFO - Successfully downloaded data/authors/updated_date=2024-09-29/part_000.gz
+2025-10-24 20:48:46,723 - INFO - Successfully downloaded data/authors/updated_date=2024-09-27/part_000.gz
+2025-10-24 20:48:46,775 - INFO - Downloading data/authors/updated_date=2024-10-06/part_000.gz (0.1 MB)
+2025-10-24 20:48:46,776 - INFO - Downloading data/authors/updated_date=2024-10-05/part_000.gz (0.1 MB)
+2025-10-24 20:48:46,833 - INFO - Downloading data/authors/updated_date=2024-10-07/part_000.gz (0.1 MB)
+2025-10-24 20:48:46,891 - INFO - Successfully downloaded data/authors/updated_date=2024-10-02/part_000.gz
+2025-10-24 20:48:46,952 - INFO - Successfully downloaded data/authors/updated_date=2024-09-30/part_000.gz
+2025-10-24 20:48:46,961 - INFO - Successfully downloaded data/authors/updated_date=2024-10-01/part_000.gz
+2025-10-24 20:48:46,983 - INFO - Successfully downloaded data/authors/updated_date=2024-10-03/part_000.gz
+2025-10-24 20:48:47,000 - INFO - Downloading data/authors/updated_date=2024-10-08/part_000.gz (0.2 MB)
+2025-10-24 20:48:47,012 - INFO - Successfully downloaded data/authors/updated_date=2024-10-04/part_000.gz
+2025-10-24 20:48:47,059 - INFO - Downloading data/authors/updated_date=2024-10-09/part_000.gz (0.2 MB)
+2025-10-24 20:48:47,070 - INFO - Downloading data/authors/updated_date=2024-10-10/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,116 - INFO - Successfully downloaded data/authors/updated_date=2024-10-06/part_000.gz
+2025-10-24 20:48:47,117 - INFO - Downloading data/authors/updated_date=2024-10-12/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,117 - INFO - Downloading data/authors/updated_date=2024-10-11/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,132 - INFO - Successfully downloaded data/authors/updated_date=2024-10-05/part_000.gz
+2025-10-24 20:48:47,175 - INFO - Successfully downloaded data/authors/updated_date=2024-10-07/part_000.gz
+2025-10-24 20:48:47,220 - INFO - Downloading data/authors/updated_date=2024-10-13/part_000.gz (0.6 MB)
+2025-10-24 20:48:47,236 - INFO - Downloading data/authors/updated_date=2024-10-14/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,281 - INFO - Downloading data/authors/updated_date=2024-10-15/part_000.gz (0.4 MB)
+2025-10-24 20:48:47,318 - INFO - Successfully downloaded data/authors/updated_date=2024-10-08/part_000.gz
+2025-10-24 20:48:47,427 - INFO - Downloading data/authors/updated_date=2024-10-16/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,428 - INFO - Successfully downloaded data/authors/updated_date=2024-10-09/part_000.gz
+2025-10-24 20:48:47,587 - INFO - Downloading data/authors/updated_date=2024-10-17/part_000.gz (0.6 MB)
+2025-10-24 20:48:47,812 - INFO - Successfully downloaded data/authors/updated_date=2024-10-15/part_000.gz
+2025-10-24 20:48:47,832 - INFO - Successfully downloaded data/authors/updated_date=2024-10-12/part_000.gz
+2025-10-24 20:48:47,925 - INFO - Downloading data/authors/updated_date=2024-10-18/part_000.gz (0.5 MB)
+2025-10-24 20:48:47,959 - INFO - Downloading data/authors/updated_date=2024-10-19/part_000.gz (0.7 MB)
+2025-10-24 20:48:48,079 - INFO - Successfully downloaded data/authors/updated_date=2024-10-10/part_000.gz
+2025-10-24 20:48:48,082 - INFO - Successfully downloaded data/authors/updated_date=2024-10-11/part_000.gz
+2025-10-24 20:48:48,088 - INFO - Successfully downloaded data/authors/updated_date=2024-10-14/part_000.gz
+2025-10-24 20:48:48,092 - INFO - Successfully downloaded data/authors/updated_date=2024-10-13/part_000.gz
+2025-10-24 20:48:48,287 - INFO - Downloading data/authors/updated_date=2024-10-23/part_000.gz (3.6 MB)
+2025-10-24 20:48:48,287 - INFO - Downloading data/authors/updated_date=2024-10-21/part_000.gz (1.5 MB)
+2025-10-24 20:48:48,287 - INFO - Downloading data/authors/updated_date=2024-10-22/part_000.gz (2.0 MB)
+2025-10-24 20:48:48,287 - INFO - Successfully downloaded data/authors/updated_date=2024-10-17/part_000.gz
+2025-10-24 20:48:48,315 - INFO - Downloading data/authors/updated_date=2024-10-20/part_000.gz (0.7 MB)
+2025-10-24 20:48:48,442 - INFO - Downloading data/authors/updated_date=2024-10-24/part_000.gz (6.3 MB)
+2025-10-24 20:48:48,528 - INFO - Successfully downloaded data/authors/updated_date=2024-10-19/part_000.gz
+2025-10-24 20:48:48,545 - INFO - Successfully downloaded data/authors/updated_date=2024-10-16/part_000.gz
+2025-10-24 20:48:48,710 - INFO - Downloading data/authors/updated_date=2024-10-25/part_000.gz (0.3 MB)
+2025-10-24 20:48:48,736 - INFO - Downloading data/authors/updated_date=2024-10-26/part_000.gz (0.2 MB)
+2025-10-24 20:48:48,791 - INFO - Successfully downloaded data/authors/updated_date=2024-10-18/part_000.gz
+2025-10-24 20:48:49,018 - INFO - Downloading data/authors/updated_date=2024-10-27/part_000.gz (0.2 MB)
+2025-10-24 20:48:49,377 - INFO - Successfully downloaded data/authors/updated_date=2024-10-20/part_000.gz
+2025-10-24 20:48:49,571 - INFO - Downloading data/authors/updated_date=2024-10-28/part_000.gz (0.1 MB)
+2025-10-24 20:48:49,654 - INFO - Successfully downloaded data/authors/updated_date=2024-10-27/part_000.gz
+2025-10-24 20:48:49,775 - INFO - Successfully downloaded data/authors/updated_date=2024-10-25/part_000.gz
+2025-10-24 20:48:49,849 - INFO - Downloading data/authors/updated_date=2024-10-29/part_000.gz (0.0 MB)
+2025-10-24 20:48:49,909 - INFO - Successfully downloaded data/authors/updated_date=2024-10-26/part_000.gz
+2025-10-24 20:48:49,949 - INFO - Downloading data/authors/updated_date=2024-10-30/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,036 - INFO - Successfully downloaded data/authors/updated_date=2024-10-21/part_000.gz
+2025-10-24 20:48:50,073 - INFO - Downloading data/authors/updated_date=2024-10-31/part_000.gz (0.0 MB)
+2025-10-24 20:48:50,146 - INFO - Successfully downloaded data/authors/updated_date=2024-10-28/part_000.gz
+2025-10-24 20:48:50,186 - INFO - Downloading data/authors/updated_date=2024-11-01/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,277 - INFO - Successfully downloaded data/authors/updated_date=2024-10-29/part_000.gz
+2025-10-24 20:48:50,296 - INFO - Downloading data/authors/updated_date=2024-11-02/part_000.gz (0.0 MB)
+2025-10-24 20:48:50,304 - INFO - Successfully downloaded data/authors/updated_date=2024-10-30/part_000.gz
+2025-10-24 20:48:50,419 - INFO - Successfully downloaded data/authors/updated_date=2024-10-31/part_000.gz
+2025-10-24 20:48:50,450 - INFO - Downloading data/authors/updated_date=2024-11-03/part_000.gz (0.0 MB)
+2025-10-24 20:48:50,457 - INFO - Downloading data/authors/updated_date=2024-11-04/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,584 - INFO - Downloading data/authors/updated_date=2024-11-05/part_000.gz (0.0 MB)
+2025-10-24 20:48:50,621 - INFO - Successfully downloaded data/authors/updated_date=2024-11-02/part_000.gz
+2025-10-24 20:48:50,621 - INFO - Progress: 200/3115 (6.4%)
+2025-10-24 20:48:50,622 - INFO - ============================================================
+2025-10-24 20:48:50,622 - INFO - DOWNLOAD STATISTICS
+2025-10-24 20:48:50,622 - INFO - ============================================================
+2025-10-24 20:48:50,622 - INFO - Total files processed: 200
+2025-10-24 20:48:50,622 - INFO - Files downloaded: 200
+2025-10-24 20:48:50,622 - INFO - Files skipped: 0
+2025-10-24 20:48:50,622 - INFO - Files failed: 0
+2025-10-24 20:48:50,622 - INFO - Total data downloaded: 0.85 GB
+2025-10-24 20:48:50,622 - INFO - Time elapsed: 0h 2m
+2025-10-24 20:48:50,622 - INFO - Average download rate: 5.04 MB/s
+2025-10-24 20:48:50,622 - INFO - ============================================================
+2025-10-24 20:48:50,653 - INFO - Successfully downloaded data/authors/updated_date=2024-11-01/part_000.gz
+2025-10-24 20:48:50,653 - INFO - Successfully downloaded data/authors/updated_date=2024-10-22/part_000.gz
+2025-10-24 20:48:50,772 - INFO - Successfully downloaded data/authors/updated_date=2024-11-04/part_000.gz
+2025-10-24 20:48:50,779 - INFO - Downloading data/authors/updated_date=2024-11-06/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,784 - INFO - Downloading data/authors/updated_date=2024-11-07/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,788 - INFO - Downloading data/authors/updated_date=2024-11-08/part_000.gz (0.1 MB)
+2025-10-24 20:48:50,843 - INFO - Successfully downloaded data/authors/updated_date=2024-11-05/part_000.gz
+2025-10-24 20:48:50,887 - INFO - Successfully downloaded data/authors/updated_date=2024-11-03/part_000.gz
+2025-10-24 20:48:50,918 - INFO - Downloading data/authors/updated_date=2024-11-09/part_000.gz (0.2 MB)
+2025-10-24 20:48:50,965 - INFO - Downloading data/authors/updated_date=2024-11-10/part_000.gz (0.3 MB)
+2025-10-24 20:48:51,007 - INFO - Downloading data/authors/updated_date=2024-11-11/part_000.gz (0.5 MB)
+2025-10-24 20:48:51,140 - INFO - Successfully downloaded data/authors/updated_date=2024-11-07/part_000.gz
+2025-10-24 20:48:51,157 - INFO - Successfully downloaded data/authors/updated_date=2024-11-06/part_000.gz
+2025-10-24 20:48:51,215 - INFO - Successfully downloaded data/authors/updated_date=2024-11-08/part_000.gz
+2025-10-24 20:48:51,336 - INFO - Downloading data/authors/updated_date=2024-11-12/part_000.gz (0.8 MB)
+2025-10-24 20:48:51,343 - INFO - Downloading data/authors/updated_date=2024-11-13/part_000.gz (0.1 MB)
+2025-10-24 20:48:51,452 - INFO - Downloading data/authors/updated_date=2024-11-14/part_000.gz (0.1 MB)
+2025-10-24 20:48:51,573 - INFO - Successfully downloaded data/authors/updated_date=2024-10-23/part_000.gz
+2025-10-24 20:48:51,682 - INFO - Successfully downloaded data/authors/updated_date=2024-11-09/part_000.gz
+2025-10-24 20:48:51,682 - INFO - Downloading data/authors/updated_date=2024-11-15/part_000.gz (0.1 MB)
+2025-10-24 20:48:51,749 - INFO - Successfully downloaded data/authors/updated_date=2024-11-11/part_000.gz
+2025-10-24 20:48:51,754 - INFO - Successfully downloaded data/authors/updated_date=2024-11-13/part_000.gz
+2025-10-24 20:48:51,757 - INFO - Successfully downloaded data/authors/updated_date=2024-11-14/part_000.gz
+2025-10-24 20:48:51,789 - INFO - Successfully downloaded data/authors/updated_date=2024-11-10/part_000.gz
+2025-10-24 20:48:51,809 - INFO - Downloading data/authors/updated_date=2024-11-16/part_000.gz (0.1 MB)
+2025-10-24 20:48:51,869 - INFO - Downloading data/authors/updated_date=2024-11-19/part_000.gz (0.4 MB)
+2025-10-24 20:48:51,876 - INFO - Downloading data/authors/updated_date=2024-11-17/part_000.gz (0.1 MB)
+2025-10-24 20:48:51,879 - INFO - Downloading data/authors/updated_date=2024-11-18/part_000.gz (0.2 MB)
+2025-10-24 20:48:51,898 - INFO - Downloading data/authors/updated_date=2024-11-20/part_000.gz (0.3 MB)
+2025-10-24 20:48:52,055 - INFO - Successfully downloaded data/authors/updated_date=2024-11-15/part_000.gz
+2025-10-24 20:48:52,233 - INFO - Downloading data/authors/updated_date=2024-11-21/part_000.gz (0.5 MB)
+2025-10-24 20:48:52,263 - INFO - Successfully downloaded data/authors/updated_date=2024-11-16/part_000.gz
+2025-10-24 20:48:52,267 - INFO - Successfully downloaded data/authors/updated_date=2024-11-12/part_000.gz
+2025-10-24 20:48:52,323 - INFO - Successfully downloaded data/authors/updated_date=2024-11-17/part_000.gz
+2025-10-24 20:48:52,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:52,373 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:52,376 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:52,380 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:52,381 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:52,395 - INFO - Successfully downloaded data/authors/updated_date=2024-11-19/part_000.gz
+2025-10-24 20:48:52,408 - INFO - Downloading data/authors/updated_date=2024-11-22/part_000.gz (1.1 MB)
+2025-10-24 20:48:52,411 - INFO - Downloading data/authors/updated_date=2024-11-23/part_000.gz (0.8 MB)
+2025-10-24 20:48:52,423 - INFO - Successfully downloaded data/authors/updated_date=2024-11-20/part_000.gz
+2025-10-24 20:48:52,423 - INFO - Downloading data/authors/updated_date=2024-11-24/part_000.gz (0.3 MB)
+2025-10-24 20:48:52,499 - INFO - Downloading data/authors/updated_date=2024-11-25/part_000.gz (0.0 MB)
+2025-10-24 20:48:52,529 - INFO - Downloading data/authors/updated_date=2024-11-26/part_000.gz (0.3 MB)
+2025-10-24 20:48:52,547 - INFO - Successfully downloaded data/authors/updated_date=2024-11-18/part_000.gz
+2025-10-24 20:48:52,659 - INFO - Downloading data/authors/updated_date=2024-11-27/part_000.gz (0.3 MB)
+2025-10-24 20:48:52,918 - INFO - Successfully downloaded data/authors/updated_date=2024-11-24/part_000.gz
+2025-10-24 20:48:53,002 - INFO - Successfully downloaded data/authors/updated_date=2024-11-25/part_000.gz
+2025-10-24 20:48:53,117 - INFO - Downloading data/authors/updated_date=2024-11-28/part_000.gz (0.3 MB)
+2025-10-24 20:48:53,198 - INFO - Downloading data/authors/updated_date=2024-11-29/part_000.gz (0.2 MB)
+2025-10-24 20:48:53,241 - INFO - Successfully downloaded data/authors/updated_date=2024-11-27/part_000.gz
+2025-10-24 20:48:53,273 - INFO - Successfully downloaded data/authors/updated_date=2024-11-21/part_000.gz
+2025-10-24 20:48:53,342 - INFO - Successfully downloaded data/authors/updated_date=2024-11-23/part_000.gz
+2025-10-24 20:48:53,364 - INFO - Downloading data/authors/updated_date=2024-11-30/part_000.gz (0.3 MB)
+2025-10-24 20:48:53,391 - INFO - Downloading data/authors/updated_date=2024-12-01/part_000.gz (0.2 MB)
+2025-10-24 20:48:53,486 - INFO - Downloading data/authors/updated_date=2024-12-02/part_000.gz (0.2 MB)
+2025-10-24 20:48:53,653 - INFO - Successfully downloaded data/authors/updated_date=2024-11-29/part_000.gz
+2025-10-24 20:48:53,667 - INFO - Successfully downloaded data/authors/updated_date=2024-11-26/part_000.gz
+2025-10-24 20:48:53,816 - INFO - Successfully downloaded data/authors/updated_date=2024-11-28/part_000.gz
+2025-10-24 20:48:53,819 - INFO - Successfully downloaded data/authors/updated_date=2024-11-22/part_000.gz
+2025-10-24 20:48:53,825 - INFO - Downloading data/authors/updated_date=2024-12-03/part_000.gz (0.2 MB)
+2025-10-24 20:48:53,839 - INFO - Downloading data/authors/updated_date=2024-12-04/part_000.gz (0.7 MB)
+2025-10-24 20:48:53,904 - INFO - Successfully downloaded data/authors/updated_date=2024-11-30/part_000.gz
+2025-10-24 20:48:53,928 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:53,931 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:53,938 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:53,953 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:53,954 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:48:53,957 - INFO - Downloading data/authors/updated_date=2024-12-05/part_000.gz (8.6 MB)
+2025-10-24 20:48:53,957 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:48:53,965 - INFO - Downloading data/authors/updated_date=2024-12-06/part_000.gz (10.2 MB)
+2025-10-24 20:48:53,989 - INFO - Successfully downloaded data/authors/updated_date=2024-12-02/part_000.gz
+2025-10-24 20:48:54,017 - INFO - Downloading data/authors/updated_date=2024-12-07/part_000.gz (12.7 MB)
+2025-10-24 20:48:54,056 - INFO - Successfully downloaded data/authors/updated_date=2024-10-24/part_000.gz
+2025-10-24 20:48:54,092 - INFO - Successfully downloaded data/authors/updated_date=2024-12-01/part_000.gz
+2025-10-24 20:48:54,128 - INFO - Downloading data/authors/updated_date=2024-12-08/part_000.gz (12.3 MB)
+2025-10-24 20:48:54,170 - INFO - Downloading data/authors/updated_date=2024-12-09/part_000.gz (12.0 MB)
+2025-10-24 20:48:54,212 - INFO - Successfully downloaded data/authors/updated_date=2024-12-03/part_000.gz
+2025-10-24 20:48:54,218 - INFO - Downloading data/authors/updated_date=2024-12-10/part_000.gz (11.3 MB)
+2025-10-24 20:48:54,345 - INFO - Downloading data/authors/updated_date=2024-12-11/part_000.gz (11.1 MB)
+2025-10-24 20:48:55,236 - INFO - Successfully downloaded data/authors/updated_date=2024-12-04/part_000.gz
+2025-10-24 20:48:55,450 - INFO - Downloading data/authors/updated_date=2024-12-12/part_000.gz (10.5 MB)
+2025-10-24 20:49:08,101 - INFO - Successfully downloaded data/authors/updated_date=2024-12-05/part_000.gz
+2025-10-24 20:49:08,293 - INFO - Downloading data/authors/updated_date=2024-12-13/part_000.gz (9.1 MB)
+2025-10-24 20:49:08,680 - INFO - Successfully downloaded data/authors/updated_date=2024-12-06/part_000.gz
+2025-10-24 20:49:08,808 - INFO - Successfully downloaded data/authors/updated_date=2024-12-11/part_000.gz
+2025-10-24 20:49:08,885 - INFO - Downloading data/authors/updated_date=2024-12-14/part_000.gz (9.2 MB)
+2025-10-24 20:49:09,009 - INFO - Downloading data/authors/updated_date=2024-12-15/part_000.gz (2.8 MB)
+2025-10-24 20:49:10,184 - INFO - Successfully downloaded data/authors/updated_date=2024-12-10/part_000.gz
+2025-10-24 20:49:10,797 - INFO - Downloading data/authors/updated_date=2024-12-16/part_000.gz (1.2 MB)
+2025-10-24 20:49:12,208 - INFO - Successfully downloaded data/authors/updated_date=2024-12-12/part_000.gz
+2025-10-24 20:49:12,341 - INFO - Successfully downloaded data/authors/updated_date=2024-12-07/part_000.gz
+2025-10-24 20:49:12,404 - INFO - Downloading data/authors/updated_date=2024-12-17/part_000.gz (1.2 MB)
+2025-10-24 20:49:12,458 - INFO - Successfully downloaded data/authors/updated_date=2024-12-08/part_000.gz
+2025-10-24 20:49:12,529 - INFO - Downloading data/authors/updated_date=2024-12-18/part_000.gz (0.4 MB)
+2025-10-24 20:49:12,658 - INFO - Downloading data/authors/updated_date=2024-12-19/part_000.gz (0.4 MB)
+2025-10-24 20:49:13,504 - INFO - Successfully downloaded data/authors/updated_date=2024-12-16/part_000.gz
+2025-10-24 20:49:13,680 - INFO - Downloading data/authors/updated_date=2024-12-20/part_000.gz (0.4 MB)
+2025-10-24 20:49:13,758 - INFO - Successfully downloaded data/authors/updated_date=2024-12-09/part_000.gz
+2025-10-24 20:49:13,804 - INFO - Successfully downloaded data/authors/updated_date=2024-12-19/part_000.gz
+2025-10-24 20:49:13,875 - INFO - Downloading data/authors/updated_date=2024-12-21/part_000.gz (0.5 MB)
+2025-10-24 20:49:13,933 - INFO - Downloading data/authors/updated_date=2024-12-22/part_000.gz (0.6 MB)
+2025-10-24 20:49:14,095 - INFO - Successfully downloaded data/authors/updated_date=2024-12-18/part_000.gz
+2025-10-24 20:49:14,152 - INFO - Successfully downloaded data/authors/updated_date=2024-12-17/part_000.gz
+2025-10-24 20:49:14,255 - INFO - Downloading data/authors/updated_date=2024-12-23/part_000.gz (0.5 MB)
+2025-10-24 20:49:14,323 - INFO - Downloading data/authors/updated_date=2024-12-24/part_000.gz (0.6 MB)
+2025-10-24 20:49:14,399 - INFO - Successfully downloaded data/authors/updated_date=2024-12-20/part_000.gz
+2025-10-24 20:49:14,525 - INFO - Successfully downloaded data/authors/updated_date=2024-12-15/part_000.gz
+2025-10-24 20:49:14,567 - INFO - Downloading data/authors/updated_date=2024-12-25/part_000.gz (0.4 MB)
+2025-10-24 20:49:14,712 - INFO - Downloading data/authors/updated_date=2024-12-26/part_000.gz (0.5 MB)
+2025-10-24 20:49:14,793 - INFO - Successfully downloaded data/authors/updated_date=2024-12-21/part_000.gz
+2025-10-24 20:49:14,939 - INFO - Downloading data/authors/updated_date=2024-12-27/part_000.gz (0.2 MB)
+2025-10-24 20:49:15,007 - INFO - Successfully downloaded data/authors/updated_date=2024-12-22/part_000.gz
+2025-10-24 20:49:15,194 - INFO - Downloading data/authors/updated_date=2024-12-28/part_000.gz (0.3 MB)
+2025-10-24 20:49:15,382 - INFO - Successfully downloaded data/authors/updated_date=2024-12-23/part_000.gz
+2025-10-24 20:49:15,417 - INFO - Successfully downloaded data/authors/updated_date=2024-12-24/part_000.gz
+2025-10-24 20:49:15,460 - INFO - Successfully downloaded data/authors/updated_date=2024-12-27/part_000.gz
+2025-10-24 20:49:15,485 - INFO - Successfully downloaded data/authors/updated_date=2024-12-25/part_000.gz
+2025-10-24 20:49:15,499 - INFO - Downloading data/authors/updated_date=2024-12-29/part_000.gz (0.2 MB)
+2025-10-24 20:49:15,565 - INFO - Downloading data/authors/updated_date=2024-12-30/part_000.gz (0.1 MB)
+2025-10-24 20:49:15,647 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,659 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,659 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,662 - INFO - Downloading data/authors/updated_date=2025-01-01/part_000.gz (0.0 MB)
+2025-10-24 20:49:15,672 - INFO - Downloading data/authors/updated_date=2024-12-31/part_000.gz (0.0 MB)
+2025-10-24 20:49:15,694 - INFO - Successfully downloaded data/authors/updated_date=2024-12-28/part_000.gz
+2025-10-24 20:49:15,778 - INFO - Successfully downloaded data/authors/updated_date=2024-12-26/part_000.gz
+2025-10-24 20:49:15,812 - INFO - Downloading data/authors/updated_date=2025-01-02/part_000.gz (0.2 MB)
+2025-10-24 20:49:15,918 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,918 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,920 - INFO - Downloading data/authors/updated_date=2025-01-03/part_000.gz (0.2 MB)
+2025-10-24 20:49:15,928 - INFO - Successfully downloaded data/authors/updated_date=2024-12-30/part_000.gz
+2025-10-24 20:49:15,931 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:49:15,942 - INFO - Successfully downloaded data/authors/updated_date=2024-12-31/part_000.gz
+2025-10-24 20:49:15,991 - INFO - Successfully downloaded data/authors/updated_date=2025-01-01/part_000.gz
+2025-10-24 20:49:16,043 - INFO - Downloading data/authors/updated_date=2025-01-04/part_000.gz (0.4 MB)
+2025-10-24 20:49:16,064 - INFO - Downloading data/authors/updated_date=2025-01-05/part_000.gz (0.3 MB)
+2025-10-24 20:49:16,135 - INFO - Downloading data/authors/updated_date=2025-01-06/part_000.gz (0.2 MB)
+2025-10-24 20:49:16,188 - INFO - Successfully downloaded data/authors/updated_date=2024-12-29/part_000.gz
+2025-10-24 20:49:16,277 - INFO - Successfully downloaded data/authors/updated_date=2025-01-02/part_000.gz
+2025-10-24 20:49:16,326 - INFO - Downloading data/authors/updated_date=2025-01-07/part_000.gz (0.2 MB)
+2025-10-24 20:49:16,372 - INFO - Successfully downloaded data/authors/updated_date=2025-01-03/part_000.gz
+2025-10-24 20:49:16,439 - INFO - Downloading data/authors/updated_date=2025-01-08/part_000.gz (0.1 MB)
+2025-10-24 20:49:16,569 - INFO - Downloading data/authors/updated_date=2025-01-09/part_000.gz (0.2 MB)
+2025-10-24 20:49:16,605 - INFO - Successfully downloaded data/authors/updated_date=2025-01-04/part_000.gz
+2025-10-24 20:49:16,643 - INFO - Successfully downloaded data/authors/updated_date=2025-01-05/part_000.gz
+2025-10-24 20:49:16,769 - INFO - Downloading data/authors/updated_date=2025-01-10/part_000.gz (0.1 MB)
+2025-10-24 20:49:16,793 - INFO - Downloading data/authors/updated_date=2025-01-11/part_000.gz (0.1 MB)
+2025-10-24 20:49:16,846 - INFO - Successfully downloaded data/authors/updated_date=2025-01-07/part_000.gz
+2025-10-24 20:49:16,881 - INFO - Successfully downloaded data/authors/updated_date=2025-01-06/part_000.gz
+2025-10-24 20:49:16,955 - INFO - Successfully downloaded data/authors/updated_date=2025-01-08/part_000.gz
+2025-10-24 20:49:16,986 - INFO - Downloading data/authors/updated_date=2025-01-12/part_000.gz (0.1 MB)
+2025-10-24 20:49:17,000 - INFO - Downloading data/authors/updated_date=2025-01-13/part_000.gz (0.1 MB)
+2025-10-24 20:49:17,075 - INFO - Downloading data/authors/updated_date=2025-01-14/part_000.gz (0.1 MB)
+2025-10-24 20:49:17,217 - INFO - Successfully downloaded data/authors/updated_date=2025-01-11/part_000.gz
+2025-10-24 20:49:17,254 - INFO - Successfully downloaded data/authors/updated_date=2025-01-09/part_000.gz
+2025-10-24 20:49:17,361 - INFO - Downloading data/authors/updated_date=2025-01-15/part_000.gz (0.7 MB)
+2025-10-24 20:49:17,421 - INFO - Downloading data/authors/updated_date=2025-01-16/part_000.gz (5.2 MB)
+2025-10-24 20:49:17,441 - INFO - Successfully downloaded data/authors/updated_date=2025-01-13/part_000.gz
+2025-10-24 20:49:17,529 - INFO - Successfully downloaded data/authors/updated_date=2025-01-14/part_000.gz
+2025-10-24 20:49:17,562 - INFO - Downloading data/authors/updated_date=2025-01-17/part_000.gz (5.6 MB)
+2025-10-24 20:49:17,568 - INFO - Successfully downloaded data/authors/updated_date=2025-01-10/part_000.gz
+2025-10-24 20:49:17,657 - INFO - Successfully downloaded data/authors/updated_date=2025-01-12/part_000.gz
+2025-10-24 20:49:17,672 - INFO - Downloading data/authors/updated_date=2025-01-18/part_000.gz (6.3 MB)
+2025-10-24 20:49:17,732 - INFO - Downloading data/authors/updated_date=2025-01-19/part_000.gz (14.2 MB)
+2025-10-24 20:49:17,835 - INFO - Downloading data/authors/updated_date=2025-01-20/part_000.gz (13.7 MB)
+2025-10-24 20:49:17,855 - INFO - Successfully downloaded data/authors/updated_date=2024-12-13/part_000.gz
+2025-10-24 20:49:18,188 - INFO - Downloading data/authors/updated_date=2025-01-21/part_000.gz (12.8 MB)
+2025-10-24 20:49:19,083 - INFO - Successfully downloaded data/authors/updated_date=2025-01-15/part_000.gz
+2025-10-24 20:49:19,300 - INFO - Downloading data/authors/updated_date=2025-01-22/part_000.gz (9.3 MB)
+2025-10-24 20:49:19,538 - INFO - Successfully downloaded data/authors/updated_date=2024-12-14/part_000.gz
+2025-10-24 20:49:19,819 - INFO - Downloading data/authors/updated_date=2025-01-24/part_000.gz (13.2 MB)
+2025-10-24 20:49:26,186 - INFO - Successfully downloaded data/authors/updated_date=2025-01-16/part_000.gz
+2025-10-24 20:49:26,419 - INFO - Downloading data/authors/updated_date=2025-01-25/part_000.gz (17.0 MB)
+2025-10-24 20:49:27,286 - INFO - Successfully downloaded data/authors/updated_date=2025-01-18/part_000.gz
+2025-10-24 20:49:27,544 - INFO - Downloading data/authors/updated_date=2025-01-26/part_000.gz (14.2 MB)
+2025-10-24 20:49:27,560 - INFO - Successfully downloaded data/authors/updated_date=2025-01-17/part_000.gz
+2025-10-24 20:49:27,771 - INFO - Downloading data/authors/updated_date=2025-01-27/part_000.gz (13.1 MB)
+2025-10-24 20:49:33,731 - INFO - Successfully downloaded data/authors/updated_date=2025-01-22/part_000.gz
+2025-10-24 20:49:33,950 - INFO - Downloading data/authors/updated_date=2025-01-28/part_000.gz (12.6 MB)
+2025-10-24 20:49:36,484 - INFO - Successfully downloaded data/authors/updated_date=2025-01-21/part_000.gz
+2025-10-24 20:49:36,699 - INFO - Downloading data/authors/updated_date=2025-01-29/part_000.gz (6.4 MB)
+2025-10-24 20:49:38,170 - INFO - Successfully downloaded data/authors/updated_date=2025-01-19/part_000.gz
+2025-10-24 20:49:38,236 - INFO - Successfully downloaded data/authors/updated_date=2025-01-20/part_000.gz
+2025-10-24 20:49:38,501 - INFO - Downloading data/authors/updated_date=2025-01-30/part_000.gz (5.8 MB)
+2025-10-24 20:49:38,511 - INFO - Downloading data/authors/updated_date=2025-01-31/part_000.gz (7.9 MB)
+2025-10-24 20:49:39,055 - INFO - Successfully downloaded data/authors/updated_date=2025-01-24/part_000.gz
+2025-10-24 20:49:39,272 - INFO - Downloading data/authors/updated_date=2025-02-01/part_000.gz (6.6 MB)
+2025-10-24 20:49:46,180 - INFO - Successfully downloaded data/authors/updated_date=2025-01-29/part_000.gz
+2025-10-24 20:49:46,388 - INFO - Downloading data/authors/updated_date=2025-02-02/part_000.gz (10.9 MB)
+2025-10-24 20:49:46,608 - INFO - Successfully downloaded data/authors/updated_date=2025-01-27/part_000.gz
+2025-10-24 20:49:46,813 - INFO - Downloading data/authors/updated_date=2025-02-03/part_000.gz (9.1 MB)
+2025-10-24 20:49:48,029 - INFO - Successfully downloaded data/authors/updated_date=2025-01-30/part_000.gz
+2025-10-24 20:49:48,255 - INFO - Downloading data/authors/updated_date=2025-02-04/part_000.gz (3.3 MB)
+2025-10-24 20:49:49,447 - INFO - Successfully downloaded data/authors/updated_date=2025-02-01/part_000.gz
+2025-10-24 20:49:49,455 - INFO - Successfully downloaded data/authors/updated_date=2025-01-26/part_000.gz
+2025-10-24 20:49:49,642 - INFO - Downloading data/authors/updated_date=2025-02-05/part_000.gz (0.3 MB)
+2025-10-24 20:49:49,643 - INFO - Downloading data/authors/updated_date=2025-02-06/part_000.gz (0.1 MB)
+2025-10-24 20:49:50,274 - INFO - Successfully downloaded data/authors/updated_date=2025-02-06/part_000.gz
+2025-10-24 20:49:50,453 - INFO - Downloading data/authors/updated_date=2025-02-07/part_000.gz (0.1 MB)
+2025-10-24 20:49:50,462 - INFO - Successfully downloaded data/authors/updated_date=2025-01-25/part_000.gz
+2025-10-24 20:49:50,621 - INFO - Downloading data/authors/updated_date=2025-02-08/part_000.gz (0.1 MB)
+2025-10-24 20:49:50,681 - INFO - Successfully downloaded data/authors/updated_date=2025-01-31/part_000.gz
+2025-10-24 20:49:50,833 - INFO - Downloading data/authors/updated_date=2025-02-09/part_000.gz (0.2 MB)
+2025-10-24 20:49:50,968 - INFO - Successfully downloaded data/authors/updated_date=2025-02-07/part_000.gz
+2025-10-24 20:49:50,979 - INFO - Successfully downloaded data/authors/updated_date=2025-01-28/part_000.gz
+2025-10-24 20:49:51,098 - INFO - Successfully downloaded data/authors/updated_date=2025-02-08/part_000.gz
+2025-10-24 20:49:51,108 - INFO - Downloading data/authors/updated_date=2025-02-10/part_000.gz (0.1 MB)
+2025-10-24 20:49:51,121 - INFO - Downloading data/authors/updated_date=2025-02-11/part_000.gz (0.1 MB)
+2025-10-24 20:49:51,272 - INFO - Downloading data/authors/updated_date=2025-02-12/part_000.gz (0.2 MB)
+2025-10-24 20:49:51,330 - INFO - Successfully downloaded data/authors/updated_date=2025-02-05/part_000.gz
+2025-10-24 20:49:51,438 - INFO - Successfully downloaded data/authors/updated_date=2025-02-09/part_000.gz
+2025-10-24 20:49:51,498 - INFO - Downloading data/authors/updated_date=2025-02-13/part_000.gz (0.1 MB)
+2025-10-24 20:49:51,590 - INFO - Downloading data/authors/updated_date=2025-02-14/part_000.gz (0.1 MB)
+2025-10-24 20:49:51,647 - INFO - Successfully downloaded data/authors/updated_date=2025-02-11/part_000.gz
+2025-10-24 20:49:51,648 - INFO - Progress: 300/3115 (9.6%)
+2025-10-24 20:49:51,648 - INFO - ============================================================
+2025-10-24 20:49:51,648 - INFO - DOWNLOAD STATISTICS
+2025-10-24 20:49:51,648 - INFO - ============================================================
+2025-10-24 20:49:51,648 - INFO - Total files processed: 300
+2025-10-24 20:49:51,648 - INFO - Files downloaded: 300
+2025-10-24 20:49:51,648 - INFO - Files skipped: 0
+2025-10-24 20:49:51,648 - INFO - Files failed: 0
+2025-10-24 20:49:51,648 - INFO - Total data downloaded: 1.14 GB
+2025-10-24 20:49:51,648 - INFO - Time elapsed: 0h 3m
+2025-10-24 20:49:51,648 - INFO - Average download rate: 5.03 MB/s
+2025-10-24 20:49:51,648 - INFO - ============================================================
+2025-10-24 20:49:51,784 - INFO - Successfully downloaded data/authors/updated_date=2025-02-12/part_000.gz
+2025-10-24 20:49:51,786 - INFO - Successfully downloaded data/authors/updated_date=2025-02-10/part_000.gz
+2025-10-24 20:49:51,805 - INFO - Downloading data/authors/updated_date=2025-02-15/part_000.gz (1.8 MB)
+2025-10-24 20:49:51,937 - INFO - Downloading data/authors/updated_date=2025-02-16/part_000.gz (6.2 MB)
+2025-10-24 20:49:51,946 - INFO - Downloading data/authors/updated_date=2025-02-17/part_000.gz (9.0 MB)
+2025-10-24 20:49:52,110 - INFO - Successfully downloaded data/authors/updated_date=2025-02-04/part_000.gz
+2025-10-24 20:49:52,121 - INFO - Successfully downloaded data/authors/updated_date=2025-02-14/part_000.gz
+2025-10-24 20:49:52,159 - INFO - Successfully downloaded data/authors/updated_date=2025-02-13/part_000.gz
+2025-10-24 20:49:52,256 - INFO - Downloading data/authors/updated_date=2025-02-18/part_000.gz (9.2 MB)
+2025-10-24 20:49:52,276 - INFO - Downloading data/authors/updated_date=2025-02-19/part_000.gz (8.6 MB)
+2025-10-24 20:49:52,306 - INFO - Downloading data/authors/updated_date=2025-02-20/part_000.gz (8.7 MB)
+2025-10-24 20:49:54,851 - INFO - Successfully downloaded data/authors/updated_date=2025-02-15/part_000.gz
+2025-10-24 20:49:55,052 - INFO - Downloading data/authors/updated_date=2025-02-21/part_000.gz (8.9 MB)
+2025-10-24 20:49:55,337 - INFO - Successfully downloaded data/authors/updated_date=2024-05-07/part_000.gz
+2025-10-24 20:49:55,562 - INFO - Downloading data/authors/updated_date=2025-02-22/part_000.gz (9.9 MB)
+2025-10-24 20:49:59,762 - INFO - Successfully downloaded data/authors/updated_date=2025-02-03/part_000.gz
+2025-10-24 20:49:59,976 - INFO - Downloading data/authors/updated_date=2025-02-23/part_000.gz (9.1 MB)
+2025-10-24 20:50:01,309 - INFO - Successfully downloaded data/authors/updated_date=2025-02-16/part_000.gz
+2025-10-24 20:50:01,514 - INFO - Downloading data/authors/updated_date=2025-02-24/part_000.gz (4.3 MB)
+2025-10-24 20:50:02,727 - INFO - Successfully downloaded data/authors/updated_date=2025-02-02/part_000.gz
+2025-10-24 20:50:02,960 - INFO - Downloading data/authors/updated_date=2025-02-25/part_000.gz (7.2 MB)
+2025-10-24 20:50:04,345 - INFO - Successfully downloaded data/authors/updated_date=2024-05-08/part_000.gz
+2025-10-24 20:50:04,490 - INFO - Successfully downloaded data/authors/updated_date=2025-02-17/part_000.gz
+2025-10-24 20:50:04,539 - INFO - Downloading data/authors/updated_date=2025-02-26/part_000.gz (4.6 MB)
+2025-10-24 20:50:04,705 - INFO - Downloading data/authors/updated_date=2025-02-27/part_000.gz (0.2 MB)
+2025-10-24 20:50:04,892 - INFO - Successfully downloaded data/authors/updated_date=2025-02-18/part_000.gz
+2025-10-24 20:50:05,106 - INFO - Downloading data/authors/updated_date=2025-02-28/part_000.gz (0.1 MB)
+2025-10-24 20:50:05,713 - INFO - Successfully downloaded data/authors/updated_date=2025-02-28/part_000.gz
+2025-10-24 20:50:05,735 - INFO - Successfully downloaded data/authors/updated_date=2025-02-19/part_000.gz
+2025-10-24 20:50:05,907 - INFO - Downloading data/authors/updated_date=2025-03-01/part_000.gz (0.4 MB)
+2025-10-24 20:50:05,929 - INFO - Downloading data/authors/updated_date=2025-03-02/part_000.gz (0.4 MB)
+2025-10-24 20:50:06,215 - INFO - Successfully downloaded data/authors/updated_date=2025-02-27/part_000.gz
+2025-10-24 20:50:06,511 - INFO - Downloading data/authors/updated_date=2025-03-03/part_000.gz (0.2 MB)
+2025-10-24 20:50:06,842 - INFO - Successfully downloaded data/authors/updated_date=2025-03-01/part_000.gz
+2025-10-24 20:50:07,031 - INFO - Downloading data/authors/updated_date=2025-03-04/part_000.gz (0.3 MB)
+2025-10-24 20:50:07,068 - INFO - Successfully downloaded data/authors/updated_date=2025-03-03/part_000.gz
+2025-10-24 20:50:07,244 - INFO - Downloading data/authors/updated_date=2025-03-05/part_000.gz (0.3 MB)
+2025-10-24 20:50:07,508 - INFO - Successfully downloaded data/authors/updated_date=2025-03-02/part_000.gz
+2025-10-24 20:50:07,528 - INFO - Successfully downloaded data/authors/updated_date=2025-02-20/part_000.gz
+2025-10-24 20:50:07,586 - INFO - Successfully downloaded data/authors/updated_date=2025-02-21/part_000.gz
+2025-10-24 20:50:07,755 - INFO - Downloading data/authors/updated_date=2025-03-06/part_000.gz (0.4 MB)
+2025-10-24 20:50:07,763 - INFO - Downloading data/authors/updated_date=2025-03-07/part_000.gz (0.5 MB)
+2025-10-24 20:50:07,771 - INFO - Downloading data/authors/updated_date=2025-03-08/part_000.gz (0.3 MB)
+2025-10-24 20:50:07,821 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,822 - INFO - Successfully downloaded data/authors/updated_date=2025-03-05/part_000.gz
+2025-10-24 20:50:07,825 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,828 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,836 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,840 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,853 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,858 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,861 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:07,864 - INFO - Successfully downloaded data/authors/updated_date=2025-03-04/part_000.gz
+2025-10-24 20:50:07,969 - INFO - Downloading data/authors/updated_date=2025-03-09/part_000.gz (0.3 MB)
+2025-10-24 20:50:08,003 - INFO - Downloading data/authors/updated_date=2025-03-10/part_000.gz (0.5 MB)
+2025-10-24 20:50:08,067 - INFO - Successfully downloaded data/authors/updated_date=2025-02-22/part_000.gz
+2025-10-24 20:50:08,074 - INFO - Successfully downloaded data/authors/updated_date=2025-02-24/part_000.gz
+2025-10-24 20:50:08,214 - INFO - Downloading data/authors/updated_date=2025-03-11/part_000.gz (0.5 MB)
+2025-10-24 20:50:08,215 - INFO - Downloading data/authors/updated_date=2025-03-12/part_000.gz (0.3 MB)
+2025-10-24 20:50:08,246 - INFO - Successfully downloaded data/authors/updated_date=2025-03-08/part_000.gz
+2025-10-24 20:50:08,400 - INFO - Downloading data/authors/updated_date=2025-03-13/part_000.gz (0.4 MB)
+2025-10-24 20:50:08,478 - INFO - Successfully downloaded data/authors/updated_date=2025-03-06/part_000.gz
+2025-10-24 20:50:08,512 - INFO - Successfully downloaded data/authors/updated_date=2025-03-09/part_000.gz
+2025-10-24 20:50:08,693 - INFO - Downloading data/authors/updated_date=2025-03-14/part_000.gz (0.3 MB)
+2025-10-24 20:50:08,710 - INFO - Downloading data/authors/updated_date=2025-03-15/part_000.gz (4.6 MB)
+2025-10-24 20:50:08,852 - INFO - Successfully downloaded data/authors/updated_date=2025-03-11/part_000.gz
+2025-10-24 20:50:08,863 - INFO - Successfully downloaded data/authors/updated_date=2025-03-10/part_000.gz
+2025-10-24 20:50:08,931 - INFO - Successfully downloaded data/authors/updated_date=2025-03-12/part_000.gz
+2025-10-24 20:50:08,962 - INFO - Successfully downloaded data/authors/updated_date=2025-03-13/part_000.gz
+2025-10-24 20:50:08,969 - INFO - Downloading data/authors/updated_date=2025-03-16/part_000.gz (9.4 MB)
+2025-10-24 20:50:08,981 - INFO - Downloading data/authors/updated_date=2025-03-17/part_000.gz (8.5 MB)
+2025-10-24 20:50:09,062 - INFO - Downloading data/authors/updated_date=2025-03-18/part_000.gz (9.4 MB)
+2025-10-24 20:50:09,081 - INFO - Downloading data/authors/updated_date=2025-03-19/part_000.gz (6.8 MB)
+2025-10-24 20:50:09,083 - INFO - Successfully downloaded data/authors/updated_date=2025-03-07/part_000.gz
+2025-10-24 20:50:09,186 - INFO - Successfully downloaded data/authors/updated_date=2025-03-14/part_000.gz
+2025-10-24 20:50:09,231 - INFO - Downloading data/authors/updated_date=2025-03-20/part_000.gz (5.1 MB)
+2025-10-24 20:50:09,341 - INFO - Downloading data/authors/updated_date=2025-03-21/part_000.gz (8.5 MB)
+2025-10-24 20:50:09,446 - INFO - Successfully downloaded data/authors/updated_date=2025-02-26/part_000.gz
+2025-10-24 20:50:09,671 - INFO - Downloading data/authors/updated_date=2025-03-22/part_000.gz (9.9 MB)
+2025-10-24 20:50:11,470 - INFO - Successfully downloaded data/authors/updated_date=2025-02-23/part_000.gz
+2025-10-24 20:50:11,696 - INFO - Downloading data/authors/updated_date=2025-03-23/part_000.gz (10.0 MB)
+2025-10-24 20:50:12,502 - INFO - Successfully downloaded data/authors/updated_date=2025-02-25/part_000.gz
+2025-10-24 20:50:12,717 - INFO - Downloading data/authors/updated_date=2025-03-24/part_000.gz (4.6 MB)
+2025-10-24 20:50:15,164 - INFO - Successfully downloaded data/authors/updated_date=2025-03-15/part_000.gz
+2025-10-24 20:50:15,362 - INFO - Downloading data/authors/updated_date=2025-03-25/part_000.gz (5.8 MB)
+2025-10-24 20:50:16,782 - INFO - Successfully downloaded data/authors/updated_date=2025-03-20/part_000.gz
+2025-10-24 20:50:16,976 - INFO - Downloading data/authors/updated_date=2025-03-26/part_000.gz (0.3 MB)
+2025-10-24 20:50:18,428 - INFO - Successfully downloaded data/authors/updated_date=2025-03-26/part_000.gz
+2025-10-24 20:50:18,636 - INFO - Downloading data/authors/updated_date=2025-03-27/part_000.gz (0.2 MB)
+2025-10-24 20:50:18,723 - INFO - Successfully downloaded data/authors/updated_date=2025-03-19/part_000.gz
+2025-10-24 20:50:18,900 - INFO - Downloading data/authors/updated_date=2025-03-28/part_000.gz (0.3 MB)
+2025-10-24 20:50:19,232 - INFO - Successfully downloaded data/authors/updated_date=2025-03-27/part_000.gz
+2025-10-24 20:50:19,454 - INFO - Downloading data/authors/updated_date=2025-03-29/part_000.gz (0.1 MB)
+2025-10-24 20:50:19,606 - INFO - Successfully downloaded data/authors/updated_date=2025-03-28/part_000.gz
+2025-10-24 20:50:19,776 - INFO - Downloading data/authors/updated_date=2025-03-30/part_000.gz (0.6 MB)
+2025-10-24 20:50:20,026 - INFO - Successfully downloaded data/authors/updated_date=2025-03-29/part_000.gz
+2025-10-24 20:50:20,232 - INFO - Downloading data/authors/updated_date=2025-03-31/part_000.gz (0.1 MB)
+2025-10-24 20:50:20,631 - INFO - Successfully downloaded data/authors/updated_date=2025-03-24/part_000.gz
+2025-10-24 20:50:20,765 - INFO - Successfully downloaded data/authors/updated_date=2025-03-17/part_000.gz
+2025-10-24 20:50:20,770 - INFO - Downloading data/authors/updated_date=2025-04-02/part_000.gz (0.6 MB)
+2025-10-24 20:50:20,778 - INFO - Successfully downloaded data/authors/updated_date=2025-03-31/part_000.gz
+2025-10-24 20:50:20,889 - INFO - Successfully downloaded data/authors/updated_date=2025-03-21/part_000.gz
+2025-10-24 20:50:20,889 - INFO - Downloading data/authors/updated_date=2025-04-03/part_000.gz (0.4 MB)
+2025-10-24 20:50:20,904 - INFO - Downloading data/authors/updated_date=2025-04-04/part_000.gz (0.6 MB)
+2025-10-24 20:50:20,926 - INFO - Successfully downloaded data/authors/updated_date=2025-03-30/part_000.gz
+2025-10-24 20:50:21,019 - INFO - Downloading data/authors/updated_date=2025-04-05/part_000.gz (0.2 MB)
+2025-10-24 20:50:21,043 - INFO - Downloading data/authors/updated_date=2025-04-06/part_000.gz (0.5 MB)
+2025-10-24 20:50:21,808 - INFO - Successfully downloaded data/authors/updated_date=2025-04-04/part_000.gz
+2025-10-24 20:50:21,809 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,809 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,812 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,814 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,848 - INFO - Successfully downloaded data/authors/updated_date=2025-04-05/part_000.gz
+2025-10-24 20:50:21,883 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,884 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,887 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,891 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,903 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:50:21,929 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,938 - INFO - Downloading data/authors/updated_date=2025-04-07/part_000.gz (0.1 MB)
+2025-10-24 20:50:21,948 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,964 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,976 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,978 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,982 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,982 - INFO - Downloading data/authors/updated_date=2025-04-08/part_000.gz (0.7 MB)
+2025-10-24 20:50:21,985 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,989 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:21,989 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:22,001 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:50:22,022 - INFO - Successfully downloaded data/authors/updated_date=2025-04-03/part_000.gz
+2025-10-24 20:50:22,082 - INFO - Successfully downloaded data/authors/updated_date=2025-03-18/part_000.gz
+2025-10-24 20:50:22,084 - INFO - Successfully downloaded data/authors/updated_date=2025-04-06/part_000.gz
+2025-10-24 20:50:22,088 - INFO - Successfully downloaded data/authors/updated_date=2025-03-16/part_000.gz
+2025-10-24 20:50:22,203 - INFO - Downloading data/authors/updated_date=2025-04-12/part_000.gz (0.2 MB)
+2025-10-24 20:50:22,206 - INFO - Downloading data/authors/updated_date=2025-04-10/part_000.gz (0.6 MB)
+2025-10-24 20:50:22,210 - INFO - Downloading data/authors/updated_date=2025-04-09/part_000.gz (0.5 MB)
+2025-10-24 20:50:22,210 - INFO - Downloading data/authors/updated_date=2025-04-11/part_000.gz (0.4 MB)
+2025-10-24 20:50:22,267 - INFO - Successfully downloaded data/authors/updated_date=2025-04-07/part_000.gz
+2025-10-24 20:50:22,279 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:22,284 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:22,293 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:22,296 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:22,341 - INFO - Successfully downloaded data/authors/updated_date=2025-03-25/part_000.gz
+2025-10-24 20:50:22,404 - INFO - Downloading data/authors/updated_date=2025-04-13/part_000.gz (0.3 MB)
+2025-10-24 20:50:22,463 - INFO - Successfully downloaded data/authors/updated_date=2025-04-02/part_000.gz
+2025-10-24 20:50:22,465 - INFO - Successfully downloaded data/authors/updated_date=2025-03-22/part_000.gz
+2025-10-24 20:50:22,548 - INFO - Successfully downloaded data/authors/updated_date=2025-04-12/part_000.gz
+2025-10-24 20:50:22,579 - INFO - Downloading data/authors/updated_date=2025-04-15/part_000.gz (6.6 MB)
+2025-10-24 20:50:22,594 - INFO - Downloading data/authors/updated_date=2025-04-16/part_000.gz (13.1 MB)
+2025-10-24 20:50:22,609 - INFO - Successfully downloaded data/authors/updated_date=2025-04-11/part_000.gz
+2025-10-24 20:50:22,649 - INFO - Downloading data/authors/updated_date=2025-04-17/part_000.gz (13.8 MB)
+2025-10-24 20:50:22,679 - INFO - Downloading data/authors/updated_date=2025-04-14/part_000.gz (0.1 MB)
+2025-10-24 20:50:22,713 - INFO - Downloading data/authors/updated_date=2025-04-18/part_000.gz (13.4 MB)
+2025-10-24 20:50:22,796 - INFO - Successfully downloaded data/authors/updated_date=2025-04-08/part_000.gz
+2025-10-24 20:50:22,870 - INFO - Successfully downloaded data/authors/updated_date=2025-04-10/part_000.gz
+2025-10-24 20:50:22,896 - INFO - Downloading data/authors/updated_date=2025-04-19/part_000.gz (13.5 MB)
+2025-10-24 20:50:22,904 - INFO - Successfully downloaded data/authors/updated_date=2025-04-13/part_000.gz
+2025-10-24 20:50:22,920 - INFO - Successfully downloaded data/authors/updated_date=2025-04-09/part_000.gz
+2025-10-24 20:50:22,974 - INFO - Downloading data/authors/updated_date=2025-04-20/part_000.gz (10.5 MB)
+2025-10-24 20:50:23,001 - INFO - Successfully downloaded data/authors/updated_date=2025-04-14/part_000.gz
+2025-10-24 20:50:23,017 - INFO - Downloading data/authors/updated_date=2025-04-21/part_000.gz (2.8 MB)
+2025-10-24 20:50:23,023 - INFO - Downloading data/authors/updated_date=2025-04-22/part_000.gz (9.0 MB)
+2025-10-24 20:50:23,109 - INFO - Downloading data/authors/updated_date=2025-04-23/part_000.gz (13.2 MB)
+2025-10-24 20:50:26,464 - INFO - Successfully downloaded data/authors/updated_date=2025-03-23/part_000.gz
+2025-10-24 20:50:26,684 - INFO - Downloading data/authors/updated_date=2025-04-24/part_000.gz (14.3 MB)
+2025-10-24 20:50:27,278 - INFO - Successfully downloaded data/authors/updated_date=2025-04-21/part_000.gz
+2025-10-24 20:50:27,479 - INFO - Downloading data/authors/updated_date=2025-04-25/part_000.gz (6.4 MB)
+2025-10-24 20:50:33,236 - INFO - Successfully downloaded data/authors/updated_date=2025-04-15/part_000.gz
+2025-10-24 20:50:33,429 - INFO - Downloading data/authors/updated_date=2025-04-26/part_000.gz (0.1 MB)
+2025-10-24 20:50:34,312 - INFO - Successfully downloaded data/authors/updated_date=2025-04-26/part_000.gz
+2025-10-24 20:50:34,509 - INFO - Downloading data/authors/updated_date=2025-04-27/part_000.gz (0.3 MB)
+2025-10-24 20:50:35,583 - INFO - Successfully downloaded data/authors/updated_date=2025-04-22/part_000.gz
+2025-10-24 20:50:35,786 - INFO - Downloading data/authors/updated_date=2025-04-28/part_000.gz (0.6 MB)
+2025-10-24 20:50:36,077 - INFO - Successfully downloaded data/authors/updated_date=2025-04-27/part_000.gz
+2025-10-24 20:50:36,303 - INFO - Downloading data/authors/updated_date=2025-04-29/part_000.gz (0.2 MB)
+2025-10-24 20:50:36,893 - INFO - Successfully downloaded data/authors/updated_date=2025-04-28/part_000.gz
+2025-10-24 20:50:37,067 - INFO - Downloading data/authors/updated_date=2025-04-30/part_000.gz (0.2 MB)
+2025-10-24 20:50:37,070 - INFO - Successfully downloaded data/authors/updated_date=2025-04-29/part_000.gz
+2025-10-24 20:50:37,149 - INFO - Successfully downloaded data/authors/updated_date=2025-04-25/part_000.gz
+2025-10-24 20:50:37,240 - INFO - Downloading data/authors/updated_date=2025-05-01/part_000.gz (0.2 MB)
+2025-10-24 20:50:37,318 - INFO - Downloading data/authors/updated_date=2025-05-02/part_000.gz (0.1 MB)
+2025-10-24 20:50:37,647 - INFO - Successfully downloaded data/authors/updated_date=2025-04-30/part_000.gz
+2025-10-24 20:50:37,858 - INFO - Downloading data/authors/updated_date=2025-05-03/part_000.gz (0.2 MB)
+2025-10-24 20:50:37,863 - INFO - Successfully downloaded data/authors/updated_date=2025-05-01/part_000.gz
+2025-10-24 20:50:37,918 - INFO - Successfully downloaded data/authors/updated_date=2025-05-02/part_000.gz
+2025-10-24 20:50:37,991 - INFO - Downloading data/authors/updated_date=2025-05-04/part_000.gz (0.3 MB)
+2025-10-24 20:50:38,043 - INFO - Downloading data/authors/updated_date=2025-05-05/part_000.gz (0.3 MB)
+2025-10-24 20:50:38,123 - INFO - Successfully downloaded data/authors/updated_date=2025-04-20/part_000.gz
+2025-10-24 20:50:38,303 - INFO - Downloading data/authors/updated_date=2025-05-06/part_000.gz (0.1 MB)
+2025-10-24 20:50:38,332 - INFO - Successfully downloaded data/authors/updated_date=2025-05-03/part_000.gz
+2025-10-24 20:50:38,542 - INFO - Downloading data/authors/updated_date=2025-05-09/part_000.gz (0.1 MB)
+2025-10-24 20:50:38,561 - INFO - Successfully downloaded data/authors/updated_date=2025-05-04/part_000.gz
+2025-10-24 20:50:38,682 - INFO - Successfully downloaded data/authors/updated_date=2025-05-05/part_000.gz
+2025-10-24 20:50:38,744 - INFO - Successfully downloaded data/authors/updated_date=2025-05-06/part_000.gz
+2025-10-24 20:50:38,758 - INFO - Downloading data/authors/updated_date=2025-05-10/part_000.gz (0.3 MB)
+2025-10-24 20:50:38,851 - INFO - Downloading data/authors/updated_date=2025-05-11/part_000.gz (0.3 MB)
+2025-10-24 20:50:38,898 - INFO - Downloading data/authors/updated_date=2025-05-12/part_000.gz (0.1 MB)
+2025-10-24 20:50:38,974 - INFO - Successfully downloaded data/authors/updated_date=2025-05-09/part_000.gz
+2025-10-24 20:50:39,127 - INFO - Downloading data/authors/updated_date=2025-05-13/part_000.gz (0.3 MB)
+2025-10-24 20:50:39,484 - INFO - Successfully downloaded data/authors/updated_date=2025-05-12/part_000.gz
+2025-10-24 20:50:39,700 - INFO - Downloading data/authors/updated_date=2025-05-14/part_000.gz (0.2 MB)
+2025-10-24 20:50:39,750 - INFO - Successfully downloaded data/authors/updated_date=2025-05-10/part_000.gz
+2025-10-24 20:50:39,774 - INFO - Successfully downloaded data/authors/updated_date=2025-05-13/part_000.gz
+2025-10-24 20:50:39,902 - INFO - Downloading data/authors/updated_date=2025-05-15/part_000.gz (8.3 MB)
+2025-10-24 20:50:39,928 - INFO - Downloading data/authors/updated_date=2025-05-16/part_000.gz (19.2 MB)
+2025-10-24 20:50:40,260 - INFO - Successfully downloaded data/authors/updated_date=2025-05-11/part_000.gz
+2025-10-24 20:50:40,472 - INFO - Downloading data/authors/updated_date=2025-05-17/part_000.gz (19.3 MB)
+2025-10-24 20:50:40,582 - INFO - Successfully downloaded data/authors/updated_date=2025-05-14/part_000.gz
+2025-10-24 20:50:40,756 - INFO - Successfully downloaded data/authors/updated_date=2025-04-16/part_000.gz
+2025-10-24 20:50:40,788 - INFO - Downloading data/authors/updated_date=2025-05-18/part_000.gz (18.9 MB)
+2025-10-24 20:50:40,794 - INFO - Successfully downloaded data/authors/updated_date=2025-04-23/part_000.gz
+2025-10-24 20:50:40,836 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,837 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,839 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,839 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,842 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,871 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,920 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,949 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:50:40,994 - INFO - Downloading data/authors/updated_date=2025-05-19/part_000.gz (7.9 MB)
+2025-10-24 20:50:40,996 - INFO - Downloading data/authors/updated_date=2025-05-20/part_000.gz (18.9 MB)
+2025-10-24 20:50:41,022 - INFO - Successfully downloaded data/authors/updated_date=2025-04-19/part_000.gz
+2025-10-24 20:50:41,122 - INFO - Successfully downloaded data/authors/updated_date=2025-04-17/part_000.gz
+2025-10-24 20:50:41,124 - INFO - Successfully downloaded data/authors/updated_date=2025-04-18/part_000.gz
+2025-10-24 20:50:41,282 - INFO - Downloading data/authors/updated_date=2025-05-22/part_000.gz (14.6 MB)
+2025-10-24 20:50:41,284 - INFO - Downloading data/authors/updated_date=2025-05-23/part_000.gz (10.3 MB)
+2025-10-24 20:50:41,646 - INFO - Downloading data/authors/updated_date=2025-05-21/part_000.gz (18.4 MB)
+2025-10-24 20:50:45,558 - INFO - Successfully downloaded data/authors/updated_date=2025-04-24/part_000.gz
+2025-10-24 20:50:45,761 - INFO - Downloading data/authors/updated_date=2025-05-24/part_000.gz (19.4 MB)
+2025-10-24 20:50:50,759 - INFO - Successfully downloaded data/authors/updated_date=2025-05-15/part_000.gz
+2025-10-24 20:50:50,967 - INFO - Downloading data/authors/updated_date=2025-05-25/part_000.gz (6.6 MB)
+2025-10-24 20:50:53,214 - INFO - Successfully downloaded data/authors/updated_date=2025-05-19/part_000.gz
+2025-10-24 20:50:53,417 - INFO - Downloading data/authors/updated_date=2025-05-26/part_000.gz (0.5 MB)
+2025-10-24 20:50:55,190 - INFO - Successfully downloaded data/authors/updated_date=2025-05-26/part_000.gz
+2025-10-24 20:50:55,414 - INFO - Downloading data/authors/updated_date=2025-05-27/part_000.gz (0.4 MB)
+2025-10-24 20:50:57,047 - INFO - Successfully downloaded data/authors/updated_date=2025-05-27/part_000.gz
+2025-10-24 20:50:57,253 - INFO - Downloading data/authors/updated_date=2025-05-28/part_000.gz (0.4 MB)
+2025-10-24 20:50:57,291 - INFO - Successfully downloaded data/authors/updated_date=2025-05-23/part_000.gz
+2025-10-24 20:50:57,291 - INFO - Progress: 400/3115 (12.8%)
+2025-10-24 20:50:57,291 - INFO - ============================================================
+2025-10-24 20:50:57,291 - INFO - DOWNLOAD STATISTICS
+2025-10-24 20:50:57,292 - INFO - ============================================================
+2025-10-24 20:50:57,292 - INFO - Total files processed: 400
+2025-10-24 20:50:57,292 - INFO - Files downloaded: 400
+2025-10-24 20:50:57,292 - INFO - Files skipped: 0
+2025-10-24 20:50:57,292 - INFO - Files failed: 0
+2025-10-24 20:50:57,292 - INFO - Total data downloaded: 1.85 GB
+2025-10-24 20:50:57,292 - INFO - Time elapsed: 0h 4m
+2025-10-24 20:50:57,292 - INFO - Average download rate: 6.33 MB/s
+2025-10-24 20:50:57,292 - INFO - ============================================================
+2025-10-24 20:50:57,514 - INFO - Downloading data/authors/updated_date=2025-05-29/part_000.gz (0.2 MB)
+2025-10-24 20:50:58,500 - INFO - Successfully downloaded data/authors/updated_date=2025-05-28/part_000.gz
+2025-10-24 20:50:58,689 - INFO - Downloading data/authors/updated_date=2025-05-30/part_000.gz (0.0 MB)
+2025-10-24 20:50:59,052 - INFO - Successfully downloaded data/authors/updated_date=2025-05-29/part_000.gz
+2025-10-24 20:50:59,274 - INFO - Downloading data/authors/updated_date=2025-05-31/part_000.gz (0.1 MB)
+2025-10-24 20:50:59,359 - INFO - Successfully downloaded data/authors/updated_date=2025-05-30/part_000.gz
+2025-10-24 20:50:59,594 - INFO - Downloading data/authors/updated_date=2025-06-01/part_000.gz (0.2 MB)
+2025-10-24 20:50:59,892 - INFO - Successfully downloaded data/authors/updated_date=2025-05-31/part_000.gz
+2025-10-24 20:50:59,962 - INFO - Successfully downloaded data/authors/updated_date=2025-05-25/part_000.gz
+2025-10-24 20:51:00,105 - INFO - Downloading data/authors/updated_date=2025-06-02/part_000.gz (0.2 MB)
+2025-10-24 20:51:00,192 - INFO - Downloading data/authors/updated_date=2025-06-03/part_000.gz (0.2 MB)
+2025-10-24 20:51:00,224 - INFO - Successfully downloaded data/authors/updated_date=2025-06-01/part_000.gz
+2025-10-24 20:51:00,392 - INFO - Downloading data/authors/updated_date=2025-06-04/part_000.gz (0.3 MB)
+2025-10-24 20:51:00,720 - INFO - Successfully downloaded data/authors/updated_date=2025-06-02/part_000.gz
+2025-10-24 20:51:00,944 - INFO - Downloading data/authors/updated_date=2025-06-05/part_000.gz (0.1 MB)
+2025-10-24 20:51:01,406 - INFO - Successfully downloaded data/authors/updated_date=2025-06-04/part_000.gz
+2025-10-24 20:51:01,524 - INFO - Successfully downloaded data/authors/updated_date=2025-06-03/part_000.gz
+2025-10-24 20:51:01,598 - INFO - Downloading data/authors/updated_date=2025-06-06/part_000.gz (0.4 MB)
+2025-10-24 20:51:01,718 - INFO - Downloading data/authors/updated_date=2025-06-07/part_000.gz (0.1 MB)
+2025-10-24 20:51:02,514 - INFO - Successfully downloaded data/authors/updated_date=2025-06-07/part_000.gz
+2025-10-24 20:51:02,517 - INFO - Successfully downloaded data/authors/updated_date=2025-06-05/part_000.gz
+2025-10-24 20:51:02,644 - INFO - Successfully downloaded data/authors/updated_date=2025-06-06/part_000.gz
+2025-10-24 20:51:02,691 - INFO - Downloading data/authors/updated_date=2025-06-08/part_000.gz (0.2 MB)
+2025-10-24 20:51:02,723 - INFO - Downloading data/authors/updated_date=2025-06-09/part_000.gz (0.2 MB)
+2025-10-24 20:51:02,820 - INFO - Downloading data/authors/updated_date=2025-06-10/part_000.gz (0.3 MB)
+2025-10-24 20:51:02,823 - INFO - Successfully downloaded data/authors/updated_date=2025-05-22/part_000.gz
+2025-10-24 20:51:02,968 - INFO - Downloading data/authors/updated_date=2025-06-11/part_000.gz (0.5 MB)
+2025-10-24 20:51:03,320 - INFO - Successfully downloaded data/authors/updated_date=2025-06-08/part_000.gz
+2025-10-24 20:51:03,320 - INFO - Successfully downloaded data/authors/updated_date=2025-06-09/part_000.gz
+2025-10-24 20:51:03,549 - INFO - Downloading data/authors/updated_date=2025-06-12/part_000.gz (0.1 MB)
+2025-10-24 20:51:03,549 - INFO - Downloading data/authors/updated_date=2025-06-13/part_000.gz (0.2 MB)
+2025-10-24 20:51:04,014 - INFO - Successfully downloaded data/authors/updated_date=2025-06-11/part_000.gz
+2025-10-24 20:51:04,148 - INFO - Successfully downloaded data/authors/updated_date=2025-06-13/part_000.gz
+2025-10-24 20:51:04,182 - INFO - Downloading data/authors/updated_date=2025-06-14/part_000.gz (0.2 MB)
+2025-10-24 20:51:04,316 - INFO - Downloading data/authors/updated_date=2025-06-15/part_000.gz (12.2 MB)
+2025-10-24 20:51:04,327 - INFO - Successfully downloaded data/authors/updated_date=2025-06-10/part_000.gz
+2025-10-24 20:51:04,346 - INFO - Successfully downloaded data/authors/updated_date=2025-06-12/part_000.gz
+2025-10-24 20:51:04,482 - INFO - Downloading data/authors/updated_date=2025-06-16/part_000.gz (26.0 MB)
+2025-10-24 20:51:04,509 - INFO - Downloading data/authors/updated_date=2025-06-17/part_000.gz (30.0 MB)
+2025-10-24 20:51:04,731 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:04,734 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:04,734 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-10-24 20:51:04,735 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:51:04,735 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:51:04,735 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:51:04,735 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:51:04,736 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:04,737 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:04,738 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:51:04,813 - INFO - Successfully downloaded data/authors/updated_date=2025-06-14/part_000.gz
+2025-10-24 20:51:04,923 - INFO - Successfully downloaded data/authors/updated_date=2025-05-16/part_000.gz
+2025-10-24 20:51:05,005 - INFO - Successfully downloaded data/authors/updated_date=2025-05-17/part_000.gz
+2025-10-24 20:51:05,018 - INFO - Downloading data/authors/updated_date=2025-06-18/part_000.gz (28.3 MB)
+2025-10-24 20:51:05,112 - INFO - Downloading data/authors/updated_date=2025-06-19/part_000.gz (29.4 MB)
+2025-10-24 20:51:05,185 - INFO - Downloading data/authors/updated_date=2025-06-20/part_000.gz (28.7 MB)
+2025-10-24 20:51:06,827 - INFO - Successfully downloaded data/authors/updated_date=2025-05-18/part_000.gz
+2025-10-24 20:51:06,850 - INFO - Successfully downloaded data/authors/updated_date=2025-05-21/part_000.gz
+2025-10-24 20:51:07,065 - INFO - Downloading data/authors/updated_date=2025-06-21/part_000.gz (28.2 MB)
+2025-10-24 20:51:07,067 - INFO - Downloading data/authors/updated_date=2025-06-22/part_000.gz (20.4 MB)
+2025-10-24 20:51:09,516 - INFO - Successfully downloaded data/authors/updated_date=2025-05-20/part_000.gz
+2025-10-24 20:51:09,704 - INFO - Downloading data/authors/updated_date=2025-06-23/part_000.gz (9.0 MB)
+2025-10-24 20:51:10,057 - INFO - Successfully downloaded data/authors/updated_date=2025-05-24/part_000.gz
+2025-10-24 20:51:10,284 - INFO - Downloading data/authors/updated_date=2025-06-24/part_000.gz (24.5 MB)
+2025-10-24 20:51:23,509 - INFO - Successfully downloaded data/authors/updated_date=2025-06-23/part_000.gz
+2025-10-24 20:51:23,538 - INFO - Successfully downloaded data/authors/updated_date=2025-06-15/part_000.gz
+2025-10-24 20:51:23,712 - INFO - Downloading data/authors/updated_date=2025-06-25/part_000.gz (10.6 MB)
+2025-10-24 20:51:23,735 - INFO - Downloading data/authors/updated_date=2025-06-26/part_000.gz (0.5 MB)
+2025-10-24 20:51:24,834 - INFO - Successfully downloaded data/authors/updated_date=2025-06-26/part_000.gz
+2025-10-24 20:51:25,130 - INFO - Downloading data/authors/updated_date=2025-06-27/part_000.gz (0.4 MB)
+2025-10-24 20:51:26,778 - INFO - Successfully downloaded data/authors/updated_date=2025-06-27/part_000.gz
+2025-10-24 20:51:27,089 - INFO - Downloading data/authors/updated_date=2025-06-28/part_000.gz (0.4 MB)
+2025-10-24 20:51:29,084 - INFO - Successfully downloaded data/authors/updated_date=2025-06-28/part_000.gz
+2025-10-24 20:51:29,779 - INFO - Downloading data/authors/updated_date=2025-06-29/part_000.gz (0.6 MB)
+2025-10-24 20:51:31,682 - INFO - Successfully downloaded data/authors/updated_date=2025-06-29/part_000.gz
+2025-10-24 20:51:31,900 - INFO - Downloading data/authors/updated_date=2025-06-30/part_000.gz (0.6 MB)
+2025-10-24 20:51:33,184 - INFO - Successfully downloaded data/authors/updated_date=2025-06-30/part_000.gz
+2025-10-24 20:51:33,378 - INFO - Downloading data/authors/updated_date=2025-07-01/part_000.gz (0.5 MB)
+2025-10-24 20:51:34,597 - INFO - Successfully downloaded data/authors/updated_date=2025-07-01/part_000.gz
+2025-10-24 20:51:34,818 - INFO - Downloading data/authors/updated_date=2025-07-02/part_000.gz (1.1 MB)
+2025-10-24 20:51:36,663 - INFO - Successfully downloaded data/authors/updated_date=2025-06-22/part_000.gz
+2025-10-24 20:51:36,889 - INFO - Downloading data/authors/updated_date=2025-07-03/part_000.gz (0.4 MB)
+2025-10-24 20:51:37,097 - INFO - Successfully downloaded data/authors/updated_date=2025-07-02/part_000.gz
+2025-10-24 20:51:37,321 - INFO - Downloading data/authors/updated_date=2025-07-04/part_000.gz (0.1 MB)
+2025-10-24 20:51:38,563 - INFO - Successfully downloaded data/authors/updated_date=2025-07-03/part_000.gz
+2025-10-24 20:51:38,677 - INFO - Successfully downloaded data/authors/updated_date=2025-07-04/part_000.gz
+2025-10-24 20:51:38,777 - INFO - Downloading data/authors/updated_date=2025-07-05/part_000.gz (2.9 MB)
+2025-10-24 20:51:38,907 - INFO - Downloading data/authors/updated_date=2025-07-06/part_000.gz (1.3 MB)
+2025-10-24 20:51:40,855 - INFO - Successfully downloaded data/authors/updated_date=2025-06-25/part_000.gz
+2025-10-24 20:51:41,075 - INFO - Downloading data/authors/updated_date=2025-07-07/part_000.gz (0.1 MB)
+2025-10-24 20:51:41,458 - INFO - Successfully downloaded data/authors/updated_date=2025-06-16/part_000.gz
+2025-10-24 20:51:41,664 - INFO - Downloading data/authors/updated_date=2025-07-08/part_000.gz (0.7 MB)
+2025-10-24 20:51:41,858 - INFO - Successfully downloaded data/authors/updated_date=2025-07-06/part_000.gz
+2025-10-24 20:51:42,047 - INFO - Downloading data/authors/updated_date=2025-07-09/part_000.gz (0.6 MB)
+2025-10-24 20:51:42,051 - INFO - Successfully downloaded data/authors/updated_date=2025-07-07/part_000.gz
+2025-10-24 20:51:42,265 - INFO - Downloading data/authors/updated_date=2025-07-10/part_000.gz (0.3 MB)
+2025-10-24 20:51:42,403 - INFO - Successfully downloaded data/authors/updated_date=2025-06-20/part_000.gz
+2025-10-24 20:51:42,633 - INFO - Downloading data/authors/updated_date=2025-07-11/part_000.gz (0.3 MB)
+2025-10-24 20:51:43,275 - INFO - Successfully downloaded data/authors/updated_date=2025-07-10/part_000.gz
+2025-10-24 20:51:43,304 - INFO - Successfully downloaded data/authors/updated_date=2025-07-11/part_000.gz
+2025-10-24 20:51:43,315 - INFO - Successfully downloaded data/authors/updated_date=2025-07-09/part_000.gz
+2025-10-24 20:51:43,380 - INFO - Successfully downloaded data/authors/updated_date=2025-07-08/part_000.gz
+2025-10-24 20:51:43,399 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,425 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,426 - INFO - Downloading data/authors/updated_date=2025-07-12/part_000.gz (0.6 MB)
+2025-10-24 20:51:43,441 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,456 - INFO - Downloading data/authors/updated_date=2025-07-13/part_000.gz (0.5 MB)
+2025-10-24 20:51:43,458 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,468 - INFO - Downloading data/authors/updated_date=2025-07-14/part_000.gz (0.4 MB)
+2025-10-24 20:51:43,468 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,501 - INFO - Downloading data/authors/updated_date=2025-07-15/part_000.gz (37.9 MB)
+2025-10-24 20:51:43,504 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:51:43,538 - INFO - Successfully downloaded data/authors/updated_date=2025-07-05/part_000.gz
+2025-10-24 20:51:43,660 - INFO - Downloading data/authors/updated_date=2025-07-16/part_000.gz (103.0 MB)
+2025-10-24 20:51:43,786 - INFO - Successfully downloaded data/authors/updated_date=2025-06-24/part_000.gz
+2025-10-24 20:51:44,051 - INFO - Downloading data/authors/updated_date=2025-07-17/part_000.gz (85.9 MB)
+2025-10-24 20:51:44,312 - INFO - Successfully downloaded data/authors/updated_date=2025-07-14/part_000.gz
+2025-10-24 20:51:44,354 - INFO - Successfully downloaded data/authors/updated_date=2025-07-13/part_000.gz
+2025-10-24 20:51:44,469 - INFO - Successfully downloaded data/authors/updated_date=2025-07-12/part_000.gz
+2025-10-24 20:51:44,500 - INFO - Downloading data/authors/updated_date=2025-07-18/part_000.gz (59.0 MB)
+2025-10-24 20:51:44,533 - INFO - Downloading data/authors/updated_date=2025-07-19/part_000.gz (99.8 MB)
+2025-10-24 20:51:44,652 - INFO - Downloading data/authors/updated_date=2025-07-20/part_000.gz (111.7 MB)
+2025-10-24 20:51:46,388 - INFO - Successfully downloaded data/authors/updated_date=2025-06-17/part_000.gz
+2025-10-24 20:51:46,570 - INFO - Downloading data/authors/updated_date=2025-07-21/part_000.gz (101.8 MB)
+2025-10-24 20:51:47,108 - INFO - Successfully downloaded data/authors/updated_date=2025-06-21/part_000.gz
+2025-10-24 20:51:47,276 - INFO - Successfully downloaded data/authors/updated_date=2025-06-18/part_000.gz
+2025-10-24 20:51:47,354 - INFO - Successfully downloaded data/authors/updated_date=2025-06-19/part_000.gz
+2025-10-24 20:51:47,419 - INFO - Downloading data/authors/updated_date=2025-07-22/part_000.gz (102.5 MB)
+2025-10-24 20:51:47,526 - INFO - Downloading data/authors/updated_date=2025-07-23/part_000.gz (28.7 MB)
+2025-10-24 20:51:47,552 - INFO - Downloading data/authors/updated_date=2025-07-24/part_000.gz (0.9 MB)
+2025-10-24 20:51:50,214 - INFO - Successfully downloaded data/authors/updated_date=2025-07-24/part_000.gz
+2025-10-24 20:51:50,448 - INFO - Downloading data/authors/updated_date=2025-07-25/part_000.gz (1.1 MB)
+2025-10-24 20:51:52,366 - INFO - Successfully downloaded data/authors/updated_date=2025-07-25/part_000.gz
+2025-10-24 20:51:52,585 - INFO - Downloading data/authors/updated_date=2025-07-26/part_000.gz (1.5 MB)
+2025-10-24 20:51:56,622 - INFO - Successfully downloaded data/authors/updated_date=2025-07-26/part_000.gz
+2025-10-24 20:51:56,844 - INFO - Downloading data/authors/updated_date=2025-07-27/part_000.gz (1.4 MB)
+2025-10-24 20:52:00,814 - INFO - Successfully downloaded data/authors/updated_date=2025-07-27/part_000.gz
+2025-10-24 20:52:01,034 - INFO - Downloading data/authors/updated_date=2025-07-28/part_000.gz (0.3 MB)
+2025-10-24 20:52:02,302 - INFO - Successfully downloaded data/authors/updated_date=2025-07-28/part_000.gz
+2025-10-24 20:52:02,539 - INFO - Downloading data/authors/updated_date=2025-07-29/part_000.gz (0.5 MB)
+2025-10-24 20:52:03,782 - INFO - Successfully downloaded data/authors/updated_date=2025-07-29/part_000.gz
+2025-10-24 20:52:04,020 - INFO - Downloading data/authors/updated_date=2025-07-30/part_000.gz (0.5 MB)
+2025-10-24 20:52:06,174 - INFO - Successfully downloaded data/authors/updated_date=2025-07-30/part_000.gz
+2025-10-24 20:52:06,385 - INFO - Downloading data/authors/updated_date=2025-07-31/part_000.gz (0.4 MB)
+2025-10-24 20:52:08,267 - INFO - Successfully downloaded data/authors/updated_date=2025-07-31/part_000.gz
+2025-10-24 20:52:08,500 - INFO - Downloading data/authors/updated_date=2025-08-01/part_000.gz (0.4 MB)
+2025-10-24 20:52:10,231 - INFO - Successfully downloaded data/authors/updated_date=2025-08-01/part_000.gz
+2025-10-24 20:52:10,448 - INFO - Downloading data/authors/updated_date=2025-08-02/part_000.gz (0.3 MB)
+2025-10-24 20:52:12,549 - INFO - Successfully downloaded data/authors/updated_date=2025-08-02/part_000.gz
+2025-10-24 20:52:12,731 - INFO - Downloading data/authors/updated_date=2025-08-03/part_000.gz (0.3 MB)
+2025-10-24 20:52:13,664 - INFO - Successfully downloaded data/authors/updated_date=2025-08-03/part_000.gz
+2025-10-24 20:52:13,841 - INFO - Downloading data/authors/updated_date=2025-08-04/part_000.gz (0.3 MB)
+2025-10-24 20:52:14,592 - INFO - Successfully downloaded data/authors/updated_date=2025-08-04/part_000.gz
+2025-10-24 20:52:14,800 - INFO - Downloading data/authors/updated_date=2025-08-05/part_000.gz (0.3 MB)
+2025-10-24 20:52:16,138 - INFO - Successfully downloaded data/authors/updated_date=2025-08-05/part_000.gz
+2025-10-24 20:52:16,322 - INFO - Downloading data/authors/updated_date=2025-08-06/part_000.gz (0.4 MB)
+2025-10-24 20:52:17,313 - INFO - Successfully downloaded data/authors/updated_date=2025-08-06/part_000.gz
+2025-10-24 20:52:17,504 - INFO - Downloading data/authors/updated_date=2025-08-07/part_000.gz (0.5 MB)
+2025-10-24 20:52:19,610 - INFO - Successfully downloaded data/authors/updated_date=2025-08-07/part_000.gz
+2025-10-24 20:52:19,854 - INFO - Downloading data/authors/updated_date=2025-08-08/part_000.gz (0.8 MB)
+2025-10-24 20:52:22,526 - INFO - Successfully downloaded data/authors/updated_date=2025-08-08/part_000.gz
+2025-10-24 20:52:22,733 - INFO - Downloading data/authors/updated_date=2025-08-09/part_000.gz (0.9 MB)
+2025-10-24 20:52:24,588 - INFO - Successfully downloaded data/authors/updated_date=2025-08-09/part_000.gz
+2025-10-24 20:52:24,818 - INFO - Downloading data/authors/updated_date=2025-08-10/part_000.gz (0.9 MB)
+2025-10-24 20:52:27,351 - INFO - Successfully downloaded data/authors/updated_date=2025-08-10/part_000.gz
+2025-10-24 20:52:27,566 - INFO - Downloading data/authors/updated_date=2025-08-11/part_000.gz (0.9 MB)
+2025-10-24 20:52:30,137 - INFO - Successfully downloaded data/authors/updated_date=2025-08-11/part_000.gz
+2025-10-24 20:52:30,342 - INFO - Downloading data/authors/updated_date=2025-08-12/part_000.gz (0.9 MB)
+2025-10-24 20:52:31,134 - INFO - Successfully downloaded data/authors/updated_date=2025-07-23/part_000.gz
+2025-10-24 20:52:31,344 - INFO - Downloading data/authors/updated_date=2025-08-13/part_000.gz (1.0 MB)
+2025-10-24 20:52:32,509 - INFO - Successfully downloaded data/authors/updated_date=2025-08-12/part_000.gz
+2025-10-24 20:52:32,719 - INFO - Downloading data/authors/updated_date=2025-08-14/part_000.gz (0.8 MB)
+2025-10-24 20:52:33,437 - INFO - Successfully downloaded data/authors/updated_date=2025-08-13/part_000.gz
+2025-10-24 20:52:33,641 - INFO - Downloading data/authors/updated_date=2025-08-15/part_000.gz (99.0 MB)
+2025-10-24 20:52:34,196 - INFO - Successfully downloaded data/authors/updated_date=2025-08-14/part_000.gz
+2025-10-24 20:52:34,422 - INFO - Downloading data/authors/updated_date=2025-08-16/part_000.gz (223.4 MB)
+2025-10-24 20:52:35,241 - INFO - Successfully downloaded data/authors/updated_date=2025-07-15/part_000.gz
+2025-10-24 20:52:35,511 - INFO - Downloading data/authors/updated_date=2025-08-17/part_000.gz (171.2 MB)
+2025-10-24 20:53:07,774 - INFO - Successfully downloaded data/authors/updated_date=2025-07-18/part_000.gz
+2025-10-24 20:53:08,009 - INFO - Downloading data/authors/updated_date=2025-08-18/part_000.gz (166.7 MB)
+2025-10-24 20:53:45,589 - INFO - Successfully downloaded data/authors/updated_date=2025-07-17/part_000.gz
+2025-10-24 20:53:45,817 - INFO - Downloading data/authors/updated_date=2025-08-19/part_000.gz (211.2 MB)
+2025-10-24 20:54:14,886 - INFO - Successfully downloaded data/authors/updated_date=2025-07-19/part_000.gz
+2025-10-24 20:54:15,092 - INFO - Downloading data/authors/updated_date=2025-08-20/part_000.gz (219.1 MB)
+2025-10-24 20:54:15,564 - INFO - Successfully downloaded data/authors/updated_date=2025-07-16/part_000.gz
+2025-10-24 20:54:15,959 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,959 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,959 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,959 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,960 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,960 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,960 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,960 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,960 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,961 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,961 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,962 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,962 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,962 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,962 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,963 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,964 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:15,965 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:54:15,969 - INFO - Downloading data/authors/updated_date=2025-08-21/part_000.gz (135.0 MB)
+2025-10-24 20:54:18,885 - INFO - Successfully downloaded data/authors/updated_date=2025-07-22/part_000.gz
+2025-10-24 20:54:18,987 - INFO - Successfully downloaded data/authors/updated_date=2025-07-21/part_000.gz
+2025-10-24 20:54:19,170 - INFO - Downloading data/authors/updated_date=2025-08-22/part_000.gz (69.2 MB)
+2025-10-24 20:54:19,211 - INFO - Downloading data/authors/updated_date=2025-08-23/part_000.gz (181.1 MB)
+2025-10-24 20:54:25,568 - INFO - Successfully downloaded data/authors/updated_date=2025-07-20/part_000.gz
+2025-10-24 20:54:25,777 - INFO - Downloading data/authors/updated_date=2025-08-24/part_000.gz (86.9 MB)
+2025-10-24 20:54:26,253 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,253 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,254 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,254 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,254 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,255 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,256 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,256 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,256 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,257 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,258 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,259 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,259 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:54:26,261 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-10-24 20:55:02,162 - INFO - Successfully downloaded data/authors/updated_date=2025-08-15/part_000.gz
+2025-10-24 20:55:02,372 - INFO - Downloading data/authors/updated_date=2025-08-25/part_000.gz (2.5 MB)
+2025-10-24 20:55:08,019 - INFO - Successfully downloaded data/authors/updated_date=2025-08-25/part_000.gz
+2025-10-24 20:55:08,339 - INFO - Downloading data/authors/updated_date=2025-08-26/part_000.gz (2.4 MB)
+2025-10-24 20:55:13,077 - INFO - Successfully downloaded data/authors/updated_date=2025-08-26/part_000.gz
+2025-10-24 20:55:13,342 - INFO - Downloading data/authors/updated_date=2025-08-27/part_000.gz (2.6 MB)
+2025-10-24 20:55:18,315 - INFO - Successfully downloaded data/authors/updated_date=2025-08-27/part_000.gz
+2025-10-24 20:55:18,522 - INFO - Downloading data/authors/updated_date=2025-08-28/part_000.gz (2.5 MB)
+2025-10-24 20:55:23,140 - INFO - Successfully downloaded data/authors/updated_date=2025-08-28/part_000.gz
+2025-10-24 20:55:23,371 - INFO - Downloading data/authors/updated_date=2025-08-29/part_000.gz (2.4 MB)
+2025-10-24 20:55:28,130 - INFO - Successfully downloaded data/authors/updated_date=2025-08-29/part_000.gz
+2025-10-24 20:55:28,755 - INFO - Downloading data/authors/updated_date=2025-08-30/part_000.gz (2.8 MB)
+2025-10-24 20:55:33,073 - INFO - Successfully downloaded data/authors/updated_date=2025-08-30/part_000.gz
+2025-10-24 20:55:33,292 - INFO - Downloading data/authors/updated_date=2025-08-31/part_000.gz (2.5 MB)
+2025-10-24 20:55:38,690 - INFO - Successfully downloaded data/authors/updated_date=2025-08-31/part_000.gz
+2025-10-24 20:55:38,922 - INFO - Downloading data/authors/updated_date=2025-09-01/part_000.gz (2.5 MB)
+2025-10-24 20:55:42,921 - INFO - Successfully downloaded data/authors/updated_date=2025-09-01/part_000.gz
+2025-10-24 20:55:43,129 - INFO - Downloading data/authors/updated_date=2025-09-02/part_000.gz (2.4 MB)
+2025-10-24 20:55:47,953 - INFO - Successfully downloaded data/authors/updated_date=2025-09-02/part_000.gz
+2025-10-24 20:55:48,159 - INFO - Downloading data/authors/updated_date=2025-09-03/part_000.gz (2.7 MB)
+2025-10-24 20:55:54,126 - INFO - Successfully downloaded data/authors/updated_date=2025-09-03/part_000.gz
+2025-10-24 20:55:54,323 - INFO - Downloading data/authors/updated_date=2025-09-04/part_000.gz (2.5 MB)
+2025-10-24 20:55:58,587 - INFO - Successfully downloaded data/authors/updated_date=2025-09-04/part_000.gz
+2025-10-24 20:55:58,815 - INFO - Downloading data/authors/updated_date=2025-09-05/part_000.gz (1.6 MB)
+2025-10-24 20:56:02,051 - INFO - Successfully downloaded data/authors/updated_date=2025-09-05/part_000.gz
+2025-10-24 20:56:02,051 - INFO - Progress: 500/3115 (16.1%)
+2025-10-24 20:56:02,052 - INFO - ============================================================
+2025-10-24 20:56:02,052 - INFO - DOWNLOAD STATISTICS
+2025-10-24 20:56:02,052 - INFO - ============================================================
+2025-10-24 20:56:02,052 - INFO - Total files processed: 500
+2025-10-24 20:56:02,052 - INFO - Files downloaded: 500
+2025-10-24 20:56:02,052 - INFO - Files skipped: 0
+2025-10-24 20:56:02,052 - INFO - Files failed: 0
+2025-10-24 20:56:02,052 - INFO - Total data downloaded: 3.09 GB
+2025-10-24 20:56:02,052 - INFO - Time elapsed: 0h 10m
+2025-10-24 20:56:02,052 - INFO - Average download rate: 5.24 MB/s
+2025-10-24 20:56:02,052 - INFO - ============================================================
+2025-10-24 20:56:02,279 - INFO - Downloading data/authors/updated_date=2025-09-06/part_000.gz (1.1 MB)
+2025-10-24 20:56:04,181 - INFO - Successfully downloaded data/authors/updated_date=2025-09-06/part_000.gz
+2025-10-24 20:56:04,367 - INFO - Downloading data/authors/updated_date=2025-09-07/part_000.gz (2.0 MB)
+2025-10-24 20:56:04,848 - INFO - Successfully downloaded data/authors/updated_date=2025-08-22/part_000.gz
+2025-10-24 20:56:05,056 - INFO - Downloading data/authors/updated_date=2025-09-08/part_000.gz (2.0 MB)
+2025-10-24 20:56:07,446 - INFO - Successfully downloaded data/authors/updated_date=2025-09-07/part_000.gz
+2025-10-24 20:56:07,662 - INFO - Downloading data/authors/updated_date=2025-09-09/part_000.gz (2.1 MB)
+2025-10-24 20:56:09,456 - INFO - Successfully downloaded data/authors/updated_date=2025-09-08/part_000.gz
+2025-10-24 20:56:09,672 - INFO - Downloading data/authors/updated_date=2025-09-10/part_000.gz (2.5 MB)
+2025-10-24 20:56:11,772 - INFO - Successfully downloaded data/authors/updated_date=2025-09-09/part_000.gz
+2025-10-24 20:56:12,079 - INFO - Downloading data/authors/updated_date=2025-09-11/part_000.gz (2.4 MB)
+2025-10-24 20:56:14,484 - INFO - Successfully downloaded data/authors/updated_date=2025-09-10/part_000.gz
+2025-10-24 20:56:14,698 - INFO - Downloading data/authors/updated_date=2025-09-12/part_000.gz (2.3 MB)
+2025-10-24 20:56:18,319 - INFO - Successfully downloaded data/authors/updated_date=2025-09-11/part_000.gz
+2025-10-24 20:56:18,540 - INFO - Downloading data/authors/updated_date=2025-09-13/part_000.gz (2.4 MB)
+2025-10-24 20:56:19,415 - INFO - Successfully downloaded data/authors/updated_date=2025-09-12/part_000.gz
+2025-10-24 20:56:19,609 - INFO - Downloading data/authors/updated_date=2025-09-14/part_000.gz (3.1 MB)
+2025-10-24 20:56:23,645 - INFO - Successfully downloaded data/authors/updated_date=2025-09-13/part_000.gz
+2025-10-24 20:56:23,829 - INFO - Downloading data/authors/updated_date=2025-09-15/part_000.gz (395.6 MB)
+2025-10-24 20:56:25,280 - INFO - Successfully downloaded data/authors/updated_date=2025-09-14/part_000.gz
+2025-10-24 20:56:25,498 - INFO - Downloading data/authors/updated_date=2025-09-15/part_001.gz (402.2 MB)
+2025-10-24 20:56:37,162 - INFO - Successfully downloaded data/authors/updated_date=2025-08-24/part_000.gz
+2025-10-24 20:56:37,359 - INFO - Downloading data/authors/updated_date=2025-09-15/part_002.gz (409.1 MB)
+2025-10-24 20:56:55,524 - INFO - Successfully downloaded data/authors/updated_date=2025-08-17/part_000.gz
+2025-10-24 20:56:55,734 - INFO - Downloading data/authors/updated_date=2025-09-15/part_003.gz (395.1 MB)
+2025-10-24 20:57:18,362 - INFO - Successfully downloaded data/authors/updated_date=2025-08-18/part_000.gz
+2025-10-24 20:57:18,566 - INFO - Downloading data/authors/updated_date=2025-09-15/part_004.gz (106.1 MB)
+2025-10-24 20:57:42,313 - INFO - Successfully downloaded data/authors/updated_date=2025-08-21/part_000.gz
+2025-10-24 20:57:42,538 - INFO - Downloading data/authors/updated_date=2025-09-16/part_000.gz (399.5 MB)
+2025-10-24 20:58:08,214 - INFO - Successfully downloaded data/authors/updated_date=2025-08-16/part_000.gz
+2025-10-24 20:58:08,411 - INFO - Downloading data/authors/updated_date=2025-09-16/part_001.gz (396.2 MB)
+2025-10-24 20:58:08,814 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,814 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,814 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,815 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,815 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,815 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,816 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:58:08,817 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,817 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,817 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,818 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:58:08,819 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 20:58:53,342 - INFO - Successfully downloaded data/authors/updated_date=2025-08-23/part_000.gz
+2025-10-24 20:58:53,547 - INFO - Downloading data/authors/updated_date=2025-09-16/part_002.gz (399.5 MB)
+2025-10-24 20:59:08,684 - INFO - Successfully downloaded data/authors/updated_date=2025-08-19/part_000.gz
+2025-10-24 20:59:08,880 - INFO - Downloading data/authors/updated_date=2025-09-16/part_003.gz (404.1 MB)
+2025-10-24 20:59:39,170 - INFO - Successfully downloaded data/authors/updated_date=2025-08-20/part_000.gz
+2025-10-24 20:59:39,373 - INFO - Downloading data/authors/updated_date=2025-09-16/part_004.gz (408.6 MB)
+2025-10-24 20:59:39,753 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,754 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,754 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,755 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,755 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,755 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,757 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,757 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,757 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:39,759 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 20:59:58,614 - INFO - Successfully downloaded data/authors/updated_date=2025-09-15/part_004.gz
+2025-10-24 20:59:58,830 - INFO - Downloading data/authors/updated_date=2025-09-16/part_005.gz (411.5 MB)
+2025-10-24 21:06:23,160 - INFO - Successfully downloaded data/authors/updated_date=2025-09-15/part_000.gz
+2025-10-24 21:06:23,388 - INFO - Downloading data/authors/updated_date=2025-09-16/part_006.gz (411.4 MB)
+2025-10-24 21:06:23,876 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,876 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,876 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,877 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,878 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,878 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-10-24 21:06:23,879 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-10-24 21:06:33,410 - INFO - Successfully downloaded data/authors/updated_date=2025-09-15/part_001.gz
+2025-10-24 21:06:33,605 - INFO - Downloading data/authors/updated_date=2025-09-16/part_007.gz (403.7 MB)
+2025-10-24 21:06:55,346 - INFO - Successfully downloaded data/authors/updated_date=2025-09-15/part_003.gz
+2025-10-24 21:06:55,532 - INFO - Downloading data/authors/updated_date=2025-09-16/part_008.gz (405.4 MB)
+2025-10-24 21:07:00,279 - INFO - Successfully downloaded data/authors/updated_date=2025-09-15/part_002.gz
+2025-10-24 21:07:00,502 - INFO - Downloading data/authors/updated_date=2025-09-16/part_009.gz (362.0 MB)
+2025-10-24 21:07:44,193 - INFO - Successfully downloaded data/authors/updated_date=2025-09-16/part_000.gz
+2025-10-24 21:07:44,403 - INFO - Downloading data/authors/updated_date=2025-09-17/part_000.gz (400.1 MB)

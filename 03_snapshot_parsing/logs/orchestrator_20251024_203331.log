@@ -1,0 +1,41 @@
+[2025-10-24 20:33:31] [INFO ] ================================================================================
+[2025-10-24 20:33:31] [INFO ] OPENALEX DATA INGESTION ORCHESTRATOR
+[2025-10-24 20:33:31] [INFO ] ================================================================================
+[2025-10-24 20:33:31] [INFO ] Mode: RESUME
+[2025-10-24 20:33:31] [INFO ] Entities: topics, concepts, publishers, funders, sources, institutions, authors
+[2025-10-24 20:33:31] [INFO ] Data root: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data
+[2025-10-24 20:33:31] [INFO ] 
+[2025-10-24 20:33:31] [INFO ] Database connected: PostgreSQL 15.14 (Debian 15.14-1.pgdg13+1) on x86_...
+[2025-10-24 20:33:31] [INFO ] ================================================================================
+[2025-10-24 20:33:31] [INFO ] ENTITY: TOPICS
+[2025-10-24 20:33:31] [INFO ] ================================================================================
+[2025-10-24 20:33:32] [INFO ] Total files: 64
+[2025-10-24 20:33:32] [INFO ] ✅ Already completed: 19
+[2025-10-24 20:33:32] [INFO ] To process: 45
+[2025-10-24 20:33:32] [INFO ] [1/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-08-05/part_000.gz
+[2025-10-24 20:33:32] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:32] [INFO ] [2/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-08-12/part_000.gz
+[2025-10-24 20:33:33] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:33] [INFO ] [3/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-08-19/part_000.gz
+[2025-10-24 20:33:34] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:34] [INFO ] [4/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-08-26/part_000.gz
+[2025-10-24 20:33:34] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:34] [INFO ] [5/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-09-02/part_000.gz
+[2025-10-24 20:33:35] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:35] [INFO ] [6/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-09-09/part_000.gz
+[2025-10-24 20:33:36] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:36] [INFO ] [7/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-09-16/part_000.gz
+[2025-10-24 20:33:37] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:37] [INFO ] [8/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-09-23/part_000.gz
+[2025-10-24 20:33:37] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:37] [INFO ] [9/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-09-30/part_000.gz
+[2025-10-24 20:33:38] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:38] [INFO ] [10/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-10-07/part_000.gz
+[2025-10-24 20:33:39] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:33:39] [INFO ] [11/45] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-10-14/part_000.gz
+[2025-10-24 20:33:39] [WARN ] ⚠️  Process interrupted by user - state saved
+[2025-10-24 20:33:39] [INFO ] 
+[2025-10-24 20:33:39] [INFO ] ================================================================================
+[2025-10-24 20:33:39] [WARN ] INTERRUPTED BY USER
+[2025-10-24 20:33:39] [INFO ] ================================================================================
+[2025-10-24 20:33:39] [INFO ] State has been saved. Re-run without --no-resume to continue.

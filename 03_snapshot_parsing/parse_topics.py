@@ -12,10 +12,16 @@ from config import DB_CONFIG, BATCH_SIZE, PROGRESS_INTERVAL
 def parse_topics(input_file):
     """Parse topics from gz file"""
     print(f"Reading {input_file}...")
-    
+
     topics_main = []
     topic_hierarchy = []
     unique_topics = set()
+    stats = {
+        'topics_processed': 0,
+        'hierarchy_relationships': 0,
+        'topics_with_description': 0,
+        'topics_with_keywords': 0
+    }
     
     with gzip.open(input_file, 'rt', encoding='utf-8') as f:
         for i, line in enumerate(f, 1):
@@ -34,46 +40,85 @@ def parse_topics(input_file):
             topic_id = topic.get('id', '').replace('https://openalex.org/', '')
             if not topic_id or topic_id in unique_topics:
                 continue
-            
-            # Main topic
+
+            # Extract domain, field, subfield IDs and names
+            domain = topic.get('domain', {})
+            domain_id = domain.get('id', '').replace('https://openalex.org/', '') if domain else ''
+            domain_display_name = domain.get('display_name', '') if domain else ''
+
+            field = topic.get('field', {})
+            field_id = field.get('id', '').replace('https://openalex.org/', '') if field else ''
+            field_display_name = field.get('display_name', '') if field else ''
+
+            subfield = topic.get('subfield', {})
+            subfield_id = subfield.get('id', '').replace('https://openalex.org/', '') if subfield else ''
+            subfield_display_name = subfield.get('display_name', '') if subfield else ''
+
+            # Extract keywords (convert list to comma-separated string)
+            keywords_list = topic.get('keywords', [])
+            keywords_str = ', '.join(keywords_list) if isinstance(keywords_list, list) else ''
+
+            # Main topic record
             topics_main.append({
                 'topic_id': topic_id,
                 'display_name': topic.get('display_name', ''),
-                'score': topic.get('score', 0),
-                'subfield_id': '',
-                'subfield_display_name': '',
-                'field_id': '',
-                'field_display_name': '',
-                'domain_id': '',
-                'domain_display_name': ''
+                'score': 0,  # Not in source data
+                'subfield_id': subfield_id,
+                'subfield_display_name': subfield_display_name,
+                'field_id': field_id,
+                'field_display_name': field_display_name,
+                'domain_id': domain_id,
+                'domain_display_name': domain_display_name,
+                'description': topic.get('description', ''),
+                'keywords': keywords_str,
+                'works_count': topic.get('works_count', 0),
+                'cited_by_count': topic.get('cited_by_count', 0),
+                'updated_date': topic.get('updated_date', None)
             })
             unique_topics.add(topic_id)
-            
-            # Extract hierarchy
-            subfield = topic.get('subfield', {})
-            if subfield:
-                subfield_id = subfield.get('id', '').replace('https://openalex.org/', '')
-                if subfield_id and subfield_id not in unique_topics:
-                    topics_main.append({
-                        'topic_id': subfield_id,
-                        'display_name': subfield.get('display_name', ''),
-                        'score': 0,
-                        'subfield_id': '',
-                        'subfield_display_name': '',
-                        'field_id': '',
-                        'field_display_name': '',
-                        'domain_id': '',
-                        'domain_display_name': ''
-                    })
-                    unique_topics.add(subfield_id)
-                
-                if topic_id and subfield_id:
-                    topic_hierarchy.append({
-                        'parent_topic_id': subfield_id,
-                        'child_topic_id': topic_id,
-                        'hierarchy_level': 1
-                    })
-    
+
+            # Track statistics
+            stats['topics_processed'] += 1
+            if topic.get('description'):
+                stats['topics_with_description'] += 1
+            if keywords_list:
+                stats['topics_with_keywords'] += 1
+
+            # Build hierarchy relationships
+            # Relationship: subfield → topic
+            if subfield_id and topic_id:
+                topic_hierarchy.append({
+                    'parent_topic_id': subfield_id,
+                    'child_topic_id': topic_id,
+                    'hierarchy_level': 1
+                })
+                stats['hierarchy_relationships'] += 1
+
+            # Relationship: field → subfield
+            if field_id and subfield_id:
+                topic_hierarchy.append({
+                    'parent_topic_id': field_id,
+                    'child_topic_id': subfield_id,
+                    'hierarchy_level': 2
+                })
+                stats['hierarchy_relationships'] += 1
+
+            # Relationship: domain → field
+            if domain_id and field_id:
+                topic_hierarchy.append({
+                    'parent_topic_id': domain_id,
+                    'child_topic_id': field_id,
+                    'hierarchy_level': 3
+                })
+                stats['hierarchy_relationships'] += 1
+
+    # Print summary statistics
+    print(f"\n📊 Parsing Summary:")
+    print(f"  ✅ Topics processed: {stats['topics_processed']:,}")
+    print(f"  ✅ Topics with descriptions: {stats['topics_with_description']:,}")
+    print(f"  ✅ Topics with keywords: {stats['topics_with_keywords']:,}")
+    print(f"  ✅ Hierarchy relationships: {stats['hierarchy_relationships']:,}")
+
     return topics_main, topic_hierarchy
 
 def write_to_db(topics_main, topic_hierarchy):
@@ -116,11 +161,13 @@ def write_to_db(topics_main, topic_hierarchy):
     cursor.close()
     conn.close()
     
-    print("âœ… Complete")
+    print("✅ Complete")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', required=True)
+    parser.add_argument('--mode', choices=['clean', 'update'], default='clean',
+                       help="Processing mode (clean or update)")
     args = parser.parse_args()
     
     try:

@@ -173,11 +173,11 @@ class WorksParser:
                             
                     except json.JSONDecodeError as e:
                         self.error_count += 1
-                        self.logger.warning(f"JSON error at line {line_number}: {e}")
+                        self.logger.warning(f"⚠️  JSON error at line {line_number}: {e}")
                         continue
                     except Exception as e:
                         self.error_count += 1
-                        self.logger.error(f"Error at line {line_number}: {e}")
+                        self.logger.error(f"❌ Error at line {line_number}: {e}")
                         continue
                     
                     # Write batch when full
@@ -186,7 +186,7 @@ class WorksParser:
                         self.conn.commit()
                         batches_completed += 1
                         batch_records = 0
-                        self.logger.info(f"✓ Batch {batches_completed} committed")
+                        self.logger.info(f"✅ Batch {batches_completed} committed")
                     
                     # Progress update
                     if records_processed % PROGRESS_INTERVAL == 0:
@@ -197,7 +197,7 @@ class WorksParser:
                     self.writer.write_batch()
                     self.conn.commit()
                     batches_completed += 1
-                    self.logger.info(f"✓ Final batch committed")
+                    self.logger.info(f"✅ Final batch committed")
                 
                 # Final report
                 self.monitor.final_report()
@@ -209,13 +209,13 @@ class WorksParser:
                 return True
                 
         except KeyboardInterrupt:
-            self.logger.warning("Interrupted by user")
+            self.logger.warning("⚠️  Interrupted by user")
             if self.conn:
                 self.conn.rollback()
             return False
-            
+
         except Exception as e:
-            self.logger.error(f"FATAL ERROR: {e}")
+            self.logger.error(f"❌ FATAL ERROR: {e}")
             if self.conn:
                 self.conn.rollback()
             import traceback

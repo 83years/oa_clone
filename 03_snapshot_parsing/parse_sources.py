@@ -35,15 +35,40 @@ def parse_sources(input_file):
             if not source_id or source_id in unique_ids:
                 continue
             
+            # Extract host_organization (can be string ID or null)
+            host_org = source.get('host_organization')
+            if host_org and isinstance(host_org, str):
+                host_org_id = host_org.replace('https://openalex.org/', '')
+            else:
+                host_org_id = ''
+
+            # Extract host_organization_lineage (array of IDs)
+            lineage = source.get('host_organization_lineage', [])
+            lineage_str = ','.join([l.replace('https://openalex.org/', '') for l in lineage if l]) if lineage else ''
+
+            # Convert issn list/array to string if needed
+            issn_value = source.get('issn')
+            if isinstance(issn_value, list):
+                issn_str = ','.join(issn_value) if issn_value else ''
+            else:
+                issn_str = issn_value if issn_value else ''
+
             # Extract basic source info
             sources.append({
                 'source_id': source_id,
                 'display_name': source.get('display_name', ''),
                 'issn_l': source.get('issn_l', ''),
-                'host': '',
-                'host_organization': '',
-                'host_organization_lineage': '',
-                'type': source.get('type', '')
+                'host': '',  # Not in source data
+                'host_organization': host_org_id,
+                'host_organization_lineage': lineage_str,
+                'type': source.get('type', ''),
+                'issn': issn_str,
+                'host_organization_name': source.get('host_organization_name', ''),
+                'is_oa': str(source.get('is_oa', '')),
+                'is_in_doaj': str(source.get('is_in_doaj', '')),
+                'works_count': source.get('works_count', 0),
+                'cited_by_count': source.get('cited_by_count', 0),
+                'updated_date': source.get('updated_date', None)
             })
             unique_ids.add(source_id)
             
@@ -127,11 +152,13 @@ def write_to_db(sources, source_publishers):
     cursor.close()
     conn.close()
     
-    print("âœ… Complete")
+    print("✅ Complete")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', required=True)
+    parser.add_argument('--mode', choices=['clean', 'update'], default='clean',
+                       help='Processing mode (clean or update)')
     args = parser.parse_args()
     
     try:

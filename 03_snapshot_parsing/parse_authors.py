@@ -297,11 +297,11 @@ class AuthorsParser:
                             
                     except json.JSONDecodeError as e:
                         self.error_count += 1
-                        self.logger.warning(f"JSON error at line {line_number}: {e}")
+                        self.logger.warning(f"⚠️  JSON error at line {line_number}: {e}")
                         continue
                     except Exception as e:
                         self.error_count += 1
-                        self.logger.error(f"Error at line {line_number}: {e}")
+                        self.logger.error(f"❌ Error at line {line_number}: {e}")
                         continue
                     
                     # Write batch if size reached
@@ -337,7 +337,7 @@ class AuthorsParser:
             return False
             
         except Exception as e:
-            self.logger.error(f"FATAL ERROR: {e}")
+            self.logger.error(f"❌ FATAL ERROR: {e}")
             if self.conn:
                 self.conn.rollback()
             import traceback

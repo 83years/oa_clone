@@ -1,0 +1,59 @@
+[2025-10-24 20:18:11] [INFO ] ================================================================================
+[2025-10-24 20:18:11] [INFO ] OPENALEX DATA INGESTION ORCHESTRATOR
+[2025-10-24 20:18:11] [INFO ] ================================================================================
+[2025-10-24 20:18:11] [INFO ] Mode: RESUME
+[2025-10-24 20:18:11] [INFO ] Entities: topics, concepts, publishers, funders, sources, institutions, authors
+[2025-10-24 20:18:11] [INFO ] Data root: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data
+[2025-10-24 20:18:11] [INFO ] 
+[2025-10-24 20:18:11] [INFO ] Database connected: PostgreSQL 15.14 (Debian 15.14-1.pgdg13+1) on x86_...
+[2025-10-24 20:18:11] [INFO ] ================================================================================
+[2025-10-24 20:18:11] [INFO ] ENTITY: TOPICS
+[2025-10-24 20:18:11] [INFO ] ================================================================================
+[2025-10-24 20:18:12] [INFO ] Total files: 64
+[2025-10-24 20:18:12] [INFO ] ✅ Already completed: 0
+[2025-10-24 20:18:12] [INFO ] To process: 64
+[2025-10-24 20:18:12] [INFO ] [1/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-03-04/part_000.gz
+[2025-10-24 20:18:12] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:12] [INFO ] [2/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-03-11/part_000.gz
+[2025-10-24 20:18:13] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:13] [INFO ] [3/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-03-18/part_000.gz
+[2025-10-24 20:18:14] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:14] [INFO ] [4/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-03-25/part_000.gz
+[2025-10-24 20:18:14] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:14] [INFO ] [5/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-04-01/part_000.gz
+[2025-10-24 20:18:15] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:15] [INFO ] [6/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-04-08/part_000.gz
+[2025-10-24 20:18:16] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:16] [INFO ] [7/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-04-15/part_000.gz
+[2025-10-24 20:18:17] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:17] [INFO ] [8/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-04-22/part_000.gz
+[2025-10-24 20:18:18] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:18] [INFO ] [9/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-04-29/part_000.gz
+[2025-10-24 20:18:18] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:18] [INFO ] [10/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-05-06/part_000.gz
+[2025-10-24 20:18:19] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:19] [INFO ] [11/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-05-13/part_000.gz
+[2025-10-24 20:18:20] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:20] [INFO ] [12/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-05-20/part_000.gz
+[2025-10-24 20:18:20] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:20] [INFO ] [13/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-05-27/part_000.gz
+[2025-10-24 20:18:21] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:21] [INFO ] [14/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-06-17/part_000.gz
+[2025-10-24 20:18:22] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:22] [INFO ] [15/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-06-24/part_000.gz
+[2025-10-24 20:18:23] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:23] [INFO ] [16/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-07-01/part_000.gz
+[2025-10-24 20:18:23] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:23] [INFO ] [17/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-07-08/part_000.gz
+[2025-10-24 20:18:24] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:24] [INFO ] [18/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-07-15/part_000.gz
+[2025-10-24 20:18:25] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:25] [INFO ] [19/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-07-29/part_000.gz
+[2025-10-24 20:18:25] [INFO ]   ✅ SUCCESS: part_000.gz
+[2025-10-24 20:18:25] [INFO ] [20/64] START: /Volumes/OA_snapshot/03OCT2025/openalex-snapshot/data/topics/updated_date=2024-08-05/part_000.gz
+[2025-10-24 20:18:26] [WARN ] ⚠️  Process interrupted by user - state saved
+[2025-10-24 20:18:26] [INFO ] 
+[2025-10-24 20:18:26] [INFO ] ================================================================================
+[2025-10-24 20:18:26] [WARN ] INTERRUPTED BY USER
+[2025-10-24 20:18:26] [INFO ] ================================================================================
+[2025-10-24 20:18:26] [INFO ] State has been saved. Re-run without --no-resume to continue.

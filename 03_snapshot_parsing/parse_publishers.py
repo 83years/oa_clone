@@ -34,11 +34,15 @@ def parse_publishers(input_file):
             if not pub_id or pub_id in unique_ids:
                 continue
             
+            # Extract country_codes (it's an array in source data)
+            country_codes = pub.get('country_codes', [])
+            country_code = country_codes[0] if country_codes else ''
+
             publishers.append({
                 'publisher_id': pub_id,
                 'display_name': pub.get('display_name', ''),
-                'country_code': pub.get('country_code', ''),
-                'hierarchy_level': pub.get('hierarchy_level', 0)
+                'country_code': country_code,
+                'hierarchy_level': pub.get('hierarchy_level', None)
             })
             unique_ids.add(pub_id)
     
@@ -70,11 +74,13 @@ def write_to_db(publishers):
     cursor.close()
     conn.close()
     
-    print("âœ… Complete")
+    print("✅ Complete")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', required=True)
+    parser.add_argument('--mode', choices=['clean', 'update'], default='clean',
+                       help='Processing mode (clean or update)')
     args = parser.parse_args()
     
     try:

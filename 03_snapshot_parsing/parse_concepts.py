@@ -39,7 +39,11 @@ def parse_concepts(input_file):
                 'display_name': concept.get('display_name', ''),
                 'level': concept.get('level', 0),
                 'score': concept.get('score', 0.0),
-                'wikidata': concept.get('wikidata', '').replace('https://www.wikidata.org/entity/', '')
+                'wikidata': concept.get('wikidata', '').replace('https://www.wikidata.org/entity/', ''),
+                'description': concept.get('description', ''),
+                'works_count': concept.get('works_count', 0),
+                'cited_by_count': concept.get('cited_by_count', 0),
+                'updated_date': concept.get('updated_date', None)
             })
             unique_ids.add(concept_id)
     
@@ -71,11 +75,13 @@ def write_to_db(concepts):
     cursor.close()
     conn.close()
     
-    print("âœ… Complete")
+    print("✅ Complete")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', required=True)
+    parser.add_argument('--mode', choices=['clean', 'update'], default='clean',
+                       help='Processing mode (clean or update)')
     args = parser.parse_args()
     
     try:

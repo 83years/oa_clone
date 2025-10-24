@@ -157,7 +157,7 @@ class Orchestrator:
             self.log(f"Database connected: {version[:50]}...")
             return True
         except Exception as e:
-            self.log(f"Database connection failed: {e}", 'ERROR')
+            self.log(f"❌ Database connection failed: {e}", 'ERROR')
             return False
     
     def process_file(self, entity: str, file_path: str, file_num: int, 
@@ -190,7 +190,7 @@ class Orchestrator:
             )
             
             if result.returncode == 0:
-                self.log(f"  âœ… SUCCESS: {Path(file_path).name}")
+                self.log(f"  ✅ SUCCESS: {Path(file_path).name}")
                 self.state.mark_completed(file_path)
                 self.stats['completed'] += 1
                 return True
@@ -203,13 +203,13 @@ class Orchestrator:
         
         except subprocess.TimeoutExpired:
             error = "Timeout after 2 hours"
-            self.log(f"  TIMEOUT: {file_path}", 'ERROR')
+            self.log(f"  ❌ TIMEOUT: {file_path}", 'ERROR')
             self.state.mark_failed(file_path, error)
             self.stats['failed'] += 1
             return False
             
         except KeyboardInterrupt:
-            self.log("Process interrupted by user - state saved", 'WARN')
+            self.log("⚠️  Process interrupted by user - state saved", 'WARN')
             raise
             
         except Exception as e:
@@ -228,7 +228,7 @@ class Orchestrator:
         # Check parser exists
         parser = PARSERS.get(entity)
         if not parser or not Path(parser).exists():
-            self.log(f"Parser not found: {parser}", 'ERROR')
+            self.log(f"❌ Parser not found: {parser}", 'ERROR')
             return False
         
         # Discover files
@@ -247,11 +247,11 @@ class Orchestrator:
         self.log(f"Total files: {len(files)}")
         if self.resume:
             already_done = len(files) - len(files_to_process)
-            self.log(f"âœ… Already completed: {already_done}")
+            self.log(f"✅ Already completed: {already_done}")
             self.log(f"To process: {len(files_to_process)}")
         
         if not files_to_process:
-            self.log("âœ… All files already processed")
+            self.log("✅ All files already processed")
             return True
         
         # Process files
@@ -270,7 +270,7 @@ class Orchestrator:
         self.log("")
         self.log(f"{entity.upper()} SUMMARY:")
         self.log(f"  Processed: {entity_success + entity_failed}")
-        self.log(f"  âœ… Success: {entity_success}")
+        self.log(f"  ✅ Success: {entity_success}")
         self.log(f"  âŒ Failed: {entity_failed}")
         
         return entity_failed == 0
@@ -289,16 +289,16 @@ class Orchestrator:
         self.log("")
         self.log(f"Entities processed: {len(self.entities)}")
         self.log(f"Total files: {self.stats['total_files']}")
-        self.log(f"  Completed: {self.stats['completed']}")
-        self.log(f"  Skipped: {self.stats['skipped']}")
-        self.log(f"  Failed: {self.stats['failed']}")
+        self.log(f"  ✅ Completed: {self.stats['completed']}")
+        self.log(f"  ⏭️  Skipped: {self.stats['skipped']}")
+        self.log(f"  ❌ Failed: {self.stats['failed']}")
         if self.retry_failed:
-            self.log(f"  Retried: {self.stats['retried']}")
+            self.log(f"  🔄 Retried: {self.stats['retried']}")
         
         # List failed files if any
         if self.state.failed_files:
             self.log("")
-            self.log("FAILED FILES:")
+            self.log("❌ FAILED FILES:")
             for file_path, error in self.state.failed_files.items():
                 self.log(f"  {file_path}")
                 self.log(f"    Error: {error[:100]}")
@@ -327,7 +327,7 @@ class Orchestrator:
         
         if self.stats['failed'] > 0:
             self.log("")
-            self.log(f"ATTENTION: {self.stats['failed']} files failed", 'WARN')
+            self.log(f"⚠️  ATTENTION: {self.stats['failed']} files failed", 'WARN')
             self.log("Re-run with --retry-failed to attempt failed files again")
     
     def run(self):

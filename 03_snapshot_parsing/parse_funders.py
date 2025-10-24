@@ -71,11 +71,13 @@ def write_to_db(funders):
     cursor.close()
     conn.close()
     
-    print("âœ… Complete")
+    print("✅ Complete")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-file', required=True)
+    parser.add_argument('--mode', choices=['clean', 'update'], default='clean',
+                       help='Processing mode (clean or update)')
     args = parser.parse_args()
     
     try:
