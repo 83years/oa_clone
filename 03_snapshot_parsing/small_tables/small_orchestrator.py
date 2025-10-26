@@ -196,7 +196,7 @@ class Orchestrator:
                 return True
             else:
                 error = result.stderr[-500:] if result.stderr else "Unknown error"
-                self.log(f"  âŒ FAILED: {error}", 'ERROR')
+                self.log(f"  ❌ FAILED: {error}", 'ERROR')
                 self.state.mark_failed(file_path, error)
                 self.stats['failed'] += 1
                 return False
@@ -214,7 +214,7 @@ class Orchestrator:
             
         except Exception as e:
             error = str(e)
-            self.log(f"  âŒ ERROR: {error}", 'ERROR')
+            self.log(f"  ❌ ERROR: {error}", 'ERROR')
             self.state.mark_failed(file_path, error)
             self.stats['failed'] += 1
             return False

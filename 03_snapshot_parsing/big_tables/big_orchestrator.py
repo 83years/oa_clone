@@ -233,10 +233,10 @@ class Orchestrator:
     def generate_final_report(self, start_time: datetime):
         """Generate final report"""
         duration = datetime.now() - start_time
-        
+
         self.log("")
         self.log("=" * 80)
-        self.log("FINAL REPORT")
+        self.log("FINAL REPORT - PHASE 1 (WORKS TABLE)")
         self.log("=" * 80)
         self.log(f"Started: {start_time.strftime('%Y-%m-%d %H:%M:%S')}")
         self.log(f"Ended: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
@@ -265,11 +265,39 @@ class Orchestrator:
             conn.close()
         except:
             pass
-        
+
         self.log("=" * 80)
 
         if self.stats['failed'] > 0:
             self.log(f"⚠️  WARNING: {self.stats['failed']} files failed")
+
+        # Phase 2 notification
+        if self.stats['failed'] == 0:
+            self.log("")
+            self.log("=" * 80)
+            self.log("✅ PHASE 1 COMPLETE - WORKS TABLE LOADED")
+            self.log("=" * 80)
+            self.log("")
+            self.log("NEXT STEP: PHASE 2 - BUILD JOINING TABLES")
+            self.log("")
+            self.log("Phase 2 extracts relationships (authorships, topics, concepts, etc.)")
+            self.log("from works data and loads them into joining tables.")
+            self.log("")
+            self.log("Before starting Phase 2:")
+            self.log("  1. Run verification: python3 verify_works_complete.py")
+            self.log("  2. Run verification: python3 verify_entities_complete.py")
+            self.log("")
+            self.log("To start Phase 2:")
+            self.log("  python3 orchestrator_relationships.py")
+            self.log("")
+            self.log("Phase 2 will:")
+            self.log("  - Extract relationships to CSV files (~12-24 hours)")
+            self.log("  - Load CSV files into 11 joining tables (~6-12 hours)")
+            self.log("  - Add FK constraints and indexes")
+            self.log("  - Generate data quality reports")
+            self.log("")
+            self.log("Total estimated time: 20-38 hours")
+            self.log("=" * 80)
     
     def run(self):
         """Main execution"""
