@@ -1,0 +1,122 @@
+﻿Analysis of gender roles within a clinical flow cytometry co-author network
+In order to test our hypothesis that there are significant and sustained differences in the network positions of male and female authors we are planning a multi-phased analysis pipeline. 
+
+Phase 1 – data collection
+1. Clone the OpenAlex database locally (OADB) for faster queries not limited by API call rates. Set deadline of January 2026 snapshot. 
+2. Validate OADB clone – 1000 API calls for Author and Works. Compare to OADB values – accept >95% accurate. The OpenAlex database updates daily so will not be 100% accurate from a snapshot. 
+
+Phase 2 – querying the OADB 
+1. Define search term – “flow cytometry” vs “clinical flow cytometry” 
+2. Define search fields – Abstract and Title, Keywords, MeSH, Topics, Concepts 
+3. Define search time – 2004-2024 was selected because PubMed didn’t record author forenames until 2002. OpenAlex assigns authorships based on multiple factors so not limited to 2002. We can potentially see more historical trends. 
+4. Refine/ add clinical flow cytometry field: clinical studies, guidelines, recommendations, clinical method development and validation, patient samples, case reports, case series, flow as the sole focus of the paper vs flow as a technique among others. 
+5. We could also just focus on journals considering publicly accessible metrics (Impact Factor, CiteScore, h-index, quartile ranking), whether journal is specifically dedicated to this or publishes clinical flow among broader hematology/ immunology/ clinical [FL1]diagnostics topics, our own perception
+o Cytometry Part B: Clinical Cytometry
+o Cytometry Part A
+o Haematologica
+o Hemasphere
+o Blood
+o Blood Advances
+o Leukemia
+o American Journal of Hematology
+o British Journal of hematology
+o International Journal of Laboratory Hematology
+o Journal of Clinical Immunology
+o Journal of Hematopathology
+o Journal of Clinical and Experimental Hematopathology
+o Current Protocols in Cytometry
+o Journal of clinical Oncology
+o Nature Communications
+o Clinical Cancer Research
+o Clinical Chemistry
+o Journal of Pathology
+o American Journal of Clinical Pathology
+
+6. Apply this to the first section of the search to see how this changes and/ or refines the OADB
+
+
+Phase 3 – Author profile enrichment [LB2]
+1. Build a model of author career stages
+a. Year of first publication
+b. Year of first 1st authorship 
+c. Frequency of corresponding authorships 
+d. Frequency in top journals 
+e. Articles to reviews ratio 
+f. Works citations patterns 
+g. International moves 
+h. Time at top institutions 
+2. Infer gender from forename and country code 
+3. How can we validate gender inference without manual checking? If manually checking how many are needed? 1000? 
+4. Clustering of author profiles 
+5. Author topic enrichment – use OpenAlex topics and concepts 
+This phase to me is definitely “authors”, and I take from Brody’s input the major task is to meaningfully limit and refine our authors. As the focus is on gender, I can see the following:
+- In refined clinical flow cytometry data, start with the gender annotation: M, F, unable to assign
+o We could then break these down by country/ continent
+o Further breakdown: 
+• How many of these authors have n=1 publication: M, F, UTA, we could further break down by only 1 pub as 1st author, only 1 pub as last author, only 2 pub as middle author
+• For n=> 2 pubs: as 1st author, as last author, as middle author
+• Looking at middle authors: how many middle author pubs over which time period, their gender, country, type of institution (academic, hospital, industry,…), always the same or from different institutions, maybe their degree. After that we exclude them from further analysis and focus on the first and last auhors
+• First and last authors: describe their author profile. What is a meaningful capture of career stage and influence?
+• Frequency of pubs
+• Transition from first to last author/ corresponding author
+• Institution
+• Type of journal
+• 
+
+
+Phase 4 – build and test network 
+1. Build co-author network 
+2. Nodes = author profile. Edges = number of co-authored papers 
+3. Measure network features:
+a. Degree centrality 
+b. Pagerank
+c. Eigenvector centrality 
+d. Closeness centrality 
+e. Betweenness centrality 
+f. Leiden cluster 
+
+Phase 5 – test network 
+1. Use Exponential Random Graph Models based on real network parameters 
+a. Remove any parameters that are not significantly different to ERGM 
+b. Node attributes that need to be included:  gender (primary variable), career stage, institution, topics, productivity metrics. 
+2. Edge weights can be binary to start with. Progressing to weight for final analysis 
+3. Monte-Carlo analysis? Are 1000 models enough? How computationally expensive it is?
+
+Phase 6 – Subnetwork analysis
+1. Build level-1 and level-2 ego networks for every author in the query 
+2. Measure ego network features
+3. ERGM analysis on all ego networks – is this possible and is this practical?
+4. Build temporally split networks – minimum 3-year window 
+
+Phase 7 – gender hypothesis testing 
+1. Test the hypothesis below using the networks created. 
+
+Formal Hypothesis Statement
+Primary Hypothesis: Gender disparities exist within the cytometry research collaboration network, with women systematically occupying less central network positions, having smaller collaborative networks, and being underrepresented at highly connected institutions. If disparities exist, we hypothesise they show associations with time and career stage. 
+Specific Sub-Hypotheses and Analysis Plan
+H1: Gender Disparities in Network Centrality
+H1a: Women have significantly lower network centrality scores (degree, closeness, eigenvector) than men across all career stages. 
+H1b: The magnitude of gender disparities varies by centrality measure, with larger gaps in measures reflecting collaboration opportunities (degree centrality) versus structural importance (eigenvector centrality).
+H2: Institutional Gender Stratification
+H2a: Women are underrepresented at high-centrality institutions (top quartile by network degree). 
+H2b: The gender gap is largest at the most central institutions.
+H3: Author Typology and Gender Disparities
+H3a: Distinct Academic Role Types Exist Authors can be meaningfully classified into distinct academic role types.
+H3b: Gender Stratification Across Academic Role Types Women are significantly underrepresented in high-influence academic role types (particularly those characterized by high centrality and extensive networks) and overrepresented in peripheral role types.
+H3c: Gender Disparities Within Role Types Within each academic role type, women occupy less central network positions than men, as measured by degree, closeness, and eigenvector centrality, with effect sizes varying by role type.
+H3d: Career Stage Interaction Effects Gender disparities in academic role type membership and within-type network positioning vary significantly across career stages
+
+H4: Temporal Trends in Gender Equity
+H4a: Gender disparities in network centrality have decreased over time (2004-2024). 
+H4b: The rate of improvement has accelerated in recent years (post-2010).
+H5: Career Trajectory Gender Differences
+H5a: Women show slower network centrality growth over their research careers compared to men. H5b: The gender gap in centrality widens with career progression.
+H6: Collaborative Pattern Gender Differences
+H6a: Women have different collaboration patterns than men, with more clustered (locally dense) but smaller networks. H6b: Women collaborate more frequently with other women (gender homophily).
+
+
+
+Pro - it is a smaller number of authors and thus faster
+Con - it may miss out on really some different author phenotypes that are less present in the flow cytometry field 
+[FL3]I would move this to phase 2
+[FL4]to ensure picking journals isn't subjective: use the CytoB editorial Board, pubmed the members to obtain journals they have published in, exclude the odd journal (n=1)

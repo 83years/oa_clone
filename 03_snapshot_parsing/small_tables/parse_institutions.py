@@ -7,6 +7,13 @@ from psycopg2.extras import execute_values
 import pandas as pd
 import argparse
 import sys
+from pathlib import Path
+
+# Add parent directory to path for config imports
+SCRIPT_DIR = Path(__file__).parent
+PARENT_DIR = SCRIPT_DIR.parent
+sys.path.insert(0, str(PARENT_DIR))
+
 from config import DB_CONFIG, BATCH_SIZE, PROGRESS_INTERVAL
 
 def parse_institutions(input_file):

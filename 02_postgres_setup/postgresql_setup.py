@@ -37,6 +37,50 @@ def create_database_and_users():
             print(f"[{datetime.now()}] Granting superuser privileges to {ADMIN_USER}...")
             cursor.execute(f"ALTER USER {ADMIN_USER} WITH SUPERUSER;")
         
+        # Check if database exists and clean up user objects before dropping
+        cursor.execute(f"""
+            SELECT EXISTS(SELECT 1 FROM pg_database WHERE datname = '{DB_NAME}');
+        """)
+        db_exists = cursor.fetchone()[0]
+
+        if db_exists:
+            print(f"[{datetime.now()}] Database exists, cleaning up user objects...")
+            # Temporarily connect to OADB to clean up user1's objects
+            cursor.close()
+            conn.close()
+
+            cleanup_conn = psycopg2.connect(
+                host=DB_HOST,
+                port=DB_PORT,
+                database=DB_NAME,
+                user=ADMIN_USER,
+                password=ADMIN_PASSWORD
+            )
+            cleanup_conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+            cleanup_cursor = cleanup_conn.cursor()
+
+            try:
+                # Clean up user1's objects in OADB
+                cleanup_cursor.execute(f"REASSIGN OWNED BY {READONLY_USER} TO {ADMIN_USER};")
+                cleanup_cursor.execute(f"DROP OWNED BY {READONLY_USER} CASCADE;")
+                print(f"[{datetime.now()}] ✅ User objects cleaned up in {DB_NAME}")
+            except Exception as e:
+                print(f"[{datetime.now()}] Note: {e}")
+            finally:
+                cleanup_cursor.close()
+                cleanup_conn.close()
+
+            # Reconnect to postgres database
+            conn = psycopg2.connect(
+                host=DB_HOST,
+                port=DB_PORT,
+                database='postgres',
+                user=ADMIN_USER,
+                password=ADMIN_PASSWORD
+            )
+            conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+            cursor = conn.cursor()
+
         # Terminate existing connections to the database if it exists
         print(f"[{datetime.now()}] Terminating existing connections...")
         cursor.execute(f"""
@@ -45,13 +89,13 @@ def create_database_and_users():
             WHERE pg_stat_activity.datname = '{DB_NAME}'
               AND pid <> pg_backend_pid();
         """)
-        
+
         # Drop database if exists
         print(f"[{datetime.now()}] Dropping existing database if present...")
         cursor.execute(f"DROP DATABASE IF EXISTS {DB_NAME};")
-        
-        # Create read-only user (admin user already exists)
-        print(f"[{datetime.now()}] Creating read-only user '{READONLY_USER}'...")
+
+        # Drop read-only user
+        print(f"[{datetime.now()}] Dropping and recreating read-only user '{READONLY_USER}'...")
         cursor.execute(f"DROP USER IF EXISTS {READONLY_USER};")
         cursor.execute(f"""
             CREATE USER {READONLY_USER} WITH 
@@ -71,11 +115,11 @@ def create_database_and_users():
         # Create database
         print(f"[{datetime.now()}] Creating database '{DB_NAME}'...")
         cursor.execute(f"CREATE DATABASE {DB_NAME} OWNER {ADMIN_USER};")
-        
-        print(f"[{datetime.now()}] Database and users created successfully!")
-        
+
+        print(f"[{datetime.now()}] ✅ Database and users created successfully!")
+
     except Exception as e:
-        print(f"Error creating database: {e}")
+        print(f"❌ Error creating database: {e}")
         raise
     finally:
         cursor.close()
@@ -421,7 +465,7 @@ def create_tables_and_indexes():
             CREATE TABLE IF NOT EXISTS author_concepts (
                 author_id VARCHAR(255) REFERENCES authors(author_id) ON DELETE CASCADE,
                 concept_id VARCHAR(255) REFERENCES concepts(concept_id) ON DELETE CASCADE,
-                score DECIMAL(12,7),
+                score DECIMAL(20,7),
                 work_count INTEGER,
                 PRIMARY KEY (author_id, concept_id)
             );
@@ -564,11 +608,11 @@ def create_tables_and_indexes():
         """)
         
         conn.commit()
-        print(f"[{datetime.now()}] All tables and indexes created successfully!")
-        
+        print(f"[{datetime.now()}] ✅ All tables and indexes created successfully!")
+
     except Exception as e:
         conn.rollback()
-        print(f"Error creating tables: {e}")
+        print(f"❌ Error creating tables: {e}")
         raise
     finally:
         cursor.close()
@@ -634,16 +678,16 @@ def create_audit_logging():
                     FOR EACH STATEMENT
                     EXECUTE FUNCTION log_data_modifications();
             """)
-            print(f"  âœ“ Created modification trigger for {table}")
+            print(f"  ✅ Created modification trigger for {table}")
         
         conn.commit()
-        print(f"\n[{datetime.now()}] Audit logging configured successfully!")
-        print(f"\n  ðŸ“ Note: Data modifications (INSERT/UPDATE/DELETE) are logged in 'data_modification_log' table")
-        print(f"  ðŸ“ Note: SELECT operations require PostgreSQL logging to be enabled")
+        print(f"\n[{datetime.now()}] ✅ Audit logging configured successfully!")
+        print(f"\n  📝 Note: Data modifications (INSERT/UPDATE/DELETE) are logged in 'data_modification_log' table")
+        print(f"  📝 Note: SELECT operations require PostgreSQL logging to be enabled")
         
     except Exception as e:
         conn.rollback()
-        print(f"Error setting up audit logging: {e}")
+        print(f"❌ Error setting up audit logging: {e}")
         raise
     finally:
         cursor.close()
@@ -685,7 +729,7 @@ def enable_postgresql_logging():
     print("\n# Or use pgBadger for log analysis:")
     print("pgbadger /var/lib/postgresql/data/pg_log/postgresql-*.log")
     
-    print("\nâš ï¸  After editing postgresql.conf, restart PostgreSQL:")
+    print("\n⚠️  After editing postgresql.conf, restart PostgreSQL:")
     print("sudo systemctl restart postgresql")
     print("="*70 + "\n")
 
@@ -737,13 +781,13 @@ def setup_user_permissions():
         """)
         
         conn.commit()
-        print(f"[{datetime.now()}] User permissions configured!")
-        print(f"  âœ“ User '{READONLY_USER}' can SELECT from 'works' table only")
-        print(f"  âœ“ User '{READONLY_USER}' can view their own modification logs")
+        print(f"[{datetime.now()}] ✅ User permissions configured!")
+        print(f"  ✅ User '{READONLY_USER}' can SELECT from 'works' table only")
+        print(f"  ✅ User '{READONLY_USER}' can view their own modification logs")
         
     except Exception as e:
         conn.rollback()
-        print(f"Error configuring permissions: {e}")
+        print(f"❌ Error configuring permissions: {e}")
         raise
     finally:
         cursor.close()
@@ -769,23 +813,23 @@ def verify_setup():
             WHERE table_schema = 'public' AND table_type = 'BASE TABLE';
         """)
         table_count = cursor.fetchone()[0]
-        print(f"  âœ“ Total tables created: {table_count}")
-        
+        print(f"  ✅ Total tables created: {table_count}")
+
         # Count indexes
         cursor.execute("""
-            SELECT COUNT(*) FROM pg_indexes 
+            SELECT COUNT(*) FROM pg_indexes
             WHERE schemaname = 'public';
         """)
         index_count = cursor.fetchone()[0]
-        print(f"  âœ“ Total indexes created: {index_count}")
-        
+        print(f"  ✅ Total indexes created: {index_count}")
+
         # Count triggers
         cursor.execute("""
-            SELECT COUNT(*) FROM pg_trigger 
+            SELECT COUNT(*) FROM pg_trigger
             WHERE tgname NOT LIKE 'pg_%';
         """)
         trigger_count = cursor.fetchone()[0]
-        print(f"  âœ“ Total triggers created: {trigger_count}")
+        print(f"  ✅ Total triggers created: {trigger_count}")
         
         # Verify user permissions
         cursor.execute(f"""
@@ -795,26 +839,26 @@ def verify_setup():
             ORDER BY table_name;
         """)
         permissions = cursor.fetchall()
-        print(f"  âœ“ Read-only user permissions:")
+        print(f"  ✅ Read-only user permissions:")
         for table, privilege in permissions:
             print(f"    - {privilege} on {table}")
-        
+
         # Check if logging tables exist
         cursor.execute("""
             SELECT EXISTS (
-                SELECT FROM information_schema.tables 
-                WHERE table_schema = 'public' 
+                SELECT FROM information_schema.tables
+                WHERE table_schema = 'public'
                 AND table_name = 'data_modification_log'
             );
         """)
         log_table_exists = cursor.fetchone()[0]
         if log_table_exists:
-            print(f"  âœ“ Audit logging table 'data_modification_log' created")
-        
-        print(f"\n[{datetime.now()}] Setup verification complete!")
+            print(f"  ✅ Audit logging table 'data_modification_log' created")
+
+        print(f"\n[{datetime.now()}] ✅ Setup verification complete!")
         
     except Exception as e:
-        print(f"Error during verification: {e}")
+        print(f"❌ Error during verification: {e}")
     finally:
         cursor.close()
         conn.close()
@@ -822,7 +866,7 @@ def verify_setup():
 def print_connection_info():
     """Print connection information and security notes"""
     print("\n" + "="*70)
-    print("DATABASE SETUP COMPLETE!")
+    print("✅ DATABASE SETUP COMPLETE!")
     print("="*70)
     print(f"\nDatabase: {DB_NAME}")
     print(f"Host: {DB_HOST}")
@@ -833,7 +877,7 @@ def print_connection_info():
     print(f"Read-Only Password: {READONLY_PASSWORD}")
     
     print("\n" + "="*70)
-    print("SECURITY CONFIGURATION REQUIRED")
+    print("🔒 SECURITY CONFIGURATION REQUIRED")
     print("="*70)
     print("\n1. Edit postgresql.conf:")
     print("   listen_addresses = '*'")
@@ -888,10 +932,10 @@ DB_CONFIG_READONLY = {{
 """)
     
     print("\n" + "="*70)
-    print("AUDIT LOGGING")
+    print("📊 AUDIT LOGGING")
     print("="*70)
-    print("\nðŸ“Š Data Modification Logging:")
-    print("  âœ“ INSERT/UPDATE/DELETE operations are logged in 'data_modification_log'")
+    print("\n📊 Data Modification Logging:")
+    print("  ✅ INSERT/UPDATE/DELETE operations are logged in 'data_modification_log'")
     print("\nTo view modification logs:")
     print("  SELECT * FROM data_modification_log ORDER BY modified_at DESC LIMIT 20;")
     print("\nTo view logs for a specific user:")
@@ -899,9 +943,9 @@ DB_CONFIG_READONLY = {{
     print("\nTo view logs for a specific table:")
     print("  SELECT * FROM data_modification_log WHERE table_name = 'works';")
     
-    print("\nðŸ“Š SELECT Query Logging:")
-    print("  âš ï¸  Requires PostgreSQL logging to be enabled (see instructions above)")
-    print("  âœ“ Run enable_postgresql_logging() for detailed instructions")
+    print("\n📊 SELECT Query Logging:")
+    print("  ⚠️  Requires PostgreSQL logging to be enabled (see instructions above)")
+    print("  ✅ Run enable_postgresql_logging() for detailed instructions")
     
     print("\n" + "="*70)
     print("QUERY LOGGING QUICK START")
@@ -919,20 +963,20 @@ DB_CONFIG_READONLY = {{
     print("  sudo systemctl restart postgresql")
     
     print("\n" + "="*70)
-    print("âš ï¸  IMPORTANT SECURITY REMINDERS")
+    print("⚠️  IMPORTANT SECURITY REMINDERS")
     print("="*70)
-    print("1. âœ“ Change default passwords immediately")
-    print("2. âœ“ Use environment variables for passwords, never hardcode")
-    print("3. âœ“ Enable SSL/TLS for all connections")
-    print("4. âœ“ Restrict admin user to local network only")
-    print("5. âœ“ Use strong, unique passwords (20+ characters)")
-    print("6. âœ“ Whitelist specific IP addresses when possible")
-    print("7. âœ“ Regularly review audit logs")
-    print("8. âœ“ Keep PostgreSQL updated")
-    print("9. âœ“ Consider using a VPN instead of direct internet access")
-    print("10. âœ“ Implement database backups")
-    print("11. âœ“ Enable PostgreSQL logging for SELECT queries")
-    print("12. âœ“ Monitor log files regularly for suspicious activity")
+    print("1. ✅ Change default passwords immediately")
+    print("2. ✅ Use environment variables for passwords, never hardcode")
+    print("3. ✅ Enable SSL/TLS for all connections")
+    print("4. ✅ Restrict admin user to local network only")
+    print("5. ✅ Use strong, unique passwords (20+ characters)")
+    print("6. ✅ Whitelist specific IP addresses when possible")
+    print("7. ✅ Regularly review audit logs")
+    print("8. ✅ Keep PostgreSQL updated")
+    print("9. ✅ Consider using a VPN instead of direct internet access")
+    print("10. ✅ Implement database backups")
+    print("11. ✅ Enable PostgreSQL logging for SELECT queries")
+    print("12. ✅ Monitor log files regularly for suspicious activity")
     print("="*70 + "\n")
 
 def create_log_analysis_views():
@@ -1000,14 +1044,14 @@ def create_log_analysis_views():
         cursor.execute(f"GRANT SELECT ON recent_modifications TO {READONLY_USER};")
         
         conn.commit()
-        print(f"[{datetime.now()}] Log analysis views created!")
-        print(f"  âœ“ daily_modification_summary")
-        print(f"  âœ“ user_activity_summary")
-        print(f"  âœ“ recent_modifications")
+        print(f"[{datetime.now()}] ✅ Log analysis views created!")
+        print(f"  ✅ daily_modification_summary")
+        print(f"  ✅ user_activity_summary")
+        print(f"  ✅ recent_modifications")
         
     except Exception as e:
         conn.rollback()
-        print(f"Error creating log analysis views: {e}")
+        print(f"❌ Error creating log analysis views: {e}")
         raise
     finally:
         cursor.close()
@@ -1045,7 +1089,7 @@ def main():
         print_connection_info()
         
     except Exception as e:
-        print(f"\nâŒ Setup failed: {e}")
+        print(f"\n❌ Setup failed: {e}")
         print("Please check the error messages above and try again.")
         return False
     
@@ -1054,12 +1098,12 @@ def main():
 if __name__ == "__main__":
     success = main()
     if success:
-        print("âœ… Database setup completed successfully!")
-        print("\nðŸ“ Next Steps:")
+        print("✅ Database setup completed successfully!")
+        print("\n📝 Next Steps:")
         print("  1. Configure PostgreSQL logging (see instructions above)")
         print("  2. Update pg_hba.conf for network access")
         print("  3. Enable SSL certificates")
         print("  4. Restart PostgreSQL")
         print("  5. Test connections from both local and remote machines")
     else:
-        print("âŒ Database setup failed. Please review errors above.")
+        print("❌ Database setup failed. Please review errors above.")

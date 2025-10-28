@@ -10,6 +10,9 @@ import argparse
 import sys
 from pathlib import Path
 
+# Add parent directory to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
 from config import DB_CONFIG
 from utils import BatchWriter, setup_logging, get_file_info, PerformanceMonitor
 

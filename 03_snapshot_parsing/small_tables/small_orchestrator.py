@@ -12,20 +12,28 @@ from pathlib import Path
 from datetime import datetime
 import psycopg2
 from typing import Dict, List, Set
+
+# Get script directory for absolute paths
+SCRIPT_DIR = Path(__file__).parent
+PARENT_DIR = SCRIPT_DIR.parent
+
+# Add parent directory to path for config imports
+sys.path.insert(0, str(PARENT_DIR))
 from config import DB_CONFIG, DATA_ROOT, PROCESSING_ORDER
 
-# Parser file mapping
+# Parser file mapping (authors moved to big_tables pipeline)
+# Use absolute paths so parsers can be found regardless of working directory
 PARSERS = {
-    'topics': 'parse_topics.py',
-    'concepts': 'parse_concepts.py',
-    'publishers': 'parse_publishers.py',
-    'funders': 'parse_funders.py',
-    'sources': 'parse_sources.py',
-    'institutions': 'parse_institutions.py',
-    'authors': 'parse_authors.py'
+    'topics': str(SCRIPT_DIR / 'parse_topics.py'),
+    'concepts': str(SCRIPT_DIR / 'parse_concepts.py'),
+    'publishers': str(SCRIPT_DIR / 'parse_publishers.py'),
+    'funders': str(SCRIPT_DIR / 'parse_funders.py'),
+    'sources': str(SCRIPT_DIR / 'parse_sources.py'),
+    'institutions': str(SCRIPT_DIR / 'parse_institutions.py')
 }
 
-STATE_FILE = 'orchestrator_state.json'
+# State file in same directory as orchestrator
+STATE_FILE = str(SCRIPT_DIR / 'orchestrator_state.json')
 
 class ProcessingState:
     """Track which files have been processed"""
@@ -110,8 +118,8 @@ class Orchestrator:
             self.state.started_at = datetime.now().isoformat()
             self.state.save_state()
         
-        # Setup logging
-        self.log_dir = Path('logs')
+        # Setup logging in same directory as orchestrator
+        self.log_dir = SCRIPT_DIR / 'logs'
         self.log_dir.mkdir(exist_ok=True)
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
         self.log_file = open(self.log_dir / f'orchestrator_{timestamp}.log', 'w')

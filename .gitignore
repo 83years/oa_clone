@@ -1,0 +1,4 @@
+# Log directories
+03_snapshot_parsing/small_tables/logs/
+03_snapshot_parsing/big_tables/works/logs/
+03_snapshot_parsing/big_tables/authors/logs/

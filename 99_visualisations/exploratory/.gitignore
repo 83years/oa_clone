@@ -1,0 +1,6 @@
+# Ignore all files in exploratory folder
+# This folder is for scratch/exploratory plots only
+# Do not version control exploratory visualizations
+
+*
+!.gitignore
