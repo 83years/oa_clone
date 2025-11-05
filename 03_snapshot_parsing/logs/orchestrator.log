@@ -1,0 +1,426 @@
+[2025-11-05 20:23:50] Resetting orchestrator state...
+[2025-11-05 20:23:50] ✅ State reset complete
+[2025-11-05 20:24:15] 
+######################################################################
+[2025-11-05 20:24:15] STARTING OPENALEX PARSING PIPELINE
+[2025-11-05 20:24:15] TEST MODE: Processing 1,000 lines per file
+[2025-11-05 20:24:15] ######################################################################
+
+[2025-11-05 20:24:15] PHASE 1: Reference tables (topics, concepts, publishers, funders)
+[2025-11-05 20:24:15] 
+======================================================================
+[2025-11-05 20:24:15] PARSING: TOPICS
+[2025-11-05 20:24:15] ======================================================================
+[2025-11-05 20:24:15] Found 1 file(s) to process:
+[2025-11-05 20:24:15]   - part_000.gz
+[2025-11-05 20:24:15] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:15] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_topics_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/topics/updated_date=2025-09-29/part_000.gz --limit 1000
+[2025-11-05 20:24:16] [2025-11-05 20:24:15.934081] Reading /Volumes/OA_snapshot/24OCT2025/data/topics/updated_date=2025-09-29/part_000.gz...
+  [2025-11-05 20:24:16.008366] Reached line limit of 1,000
+
+======================================================================
+✅ TOPICS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 4,000
+  Errors:          0
+  Time elapsed:    0.2 seconds
+  Parse rate:      5085 lines/sec
+  Write rate:      20320 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:16] ✅ File 1/1 completed successfully in 0.3s
+[2025-11-05 20:24:16] 
+✅ topics - All 1 file(s) completed successfully in 0.3s
+[2025-11-05 20:24:16] 
+======================================================================
+[2025-11-05 20:24:16] PARSING: CONCEPTS
+[2025-11-05 20:24:16] ======================================================================
+[2025-11-05 20:24:16] Found 1 file(s) to process:
+[2025-11-05 20:24:16]   - part_000.gz
+[2025-11-05 20:24:16] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:16] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_concepts_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/concepts/updated_date=2025-10-01/part_000.gz --limit 1000
+[2025-11-05 20:24:16] [2025-11-05 20:24:16.237698] Reading /Volumes/OA_snapshot/24OCT2025/data/concepts/updated_date=2025-10-01/part_000.gz...
+
+======================================================================
+✅ CONCEPTS PARSING COMPLETE
+======================================================================
+  Lines read:      8
+  Records parsed:  8
+  Records written: 8
+  Errors:          0
+  Time elapsed:    0.0 seconds
+  Parse rate:      178 lines/sec
+  Write rate:      178 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:16] ✅ File 1/1 completed successfully in 0.1s
+[2025-11-05 20:24:16] 
+✅ concepts - All 1 file(s) completed successfully in 0.2s
+[2025-11-05 20:24:16] 
+======================================================================
+[2025-11-05 20:24:16] PARSING: PUBLISHERS
+[2025-11-05 20:24:16] ======================================================================
+[2025-11-05 20:24:16] Found 1 file(s) to process:
+[2025-11-05 20:24:16]   - part_000.gz
+[2025-11-05 20:24:16] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:16] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_publishers_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/publishers/updated_date=2025-10-01/part_000.gz --limit 1000
+[2025-11-05 20:24:16] [2025-11-05 20:24:16.509217] Reading /Volumes/OA_snapshot/24OCT2025/data/publishers/updated_date=2025-10-01/part_000.gz...
+  [2025-11-05 20:24:16.569654] Reached line limit of 1,000
+
+======================================================================
+✅ PUBLISHERS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 1,000
+  Errors:          0
+  Time elapsed:    0.2 seconds
+  Parse rate:      5906 lines/sec
+  Write rate:      5900 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:16] ✅ File 1/1 completed successfully in 0.3s
+[2025-11-05 20:24:16] 
+✅ publishers - All 1 file(s) completed successfully in 0.3s
+[2025-11-05 20:24:16] 
+======================================================================
+[2025-11-05 20:24:16] PARSING: FUNDERS
+[2025-11-05 20:24:16] ======================================================================
+[2025-11-05 20:24:16] Found 1 file(s) to process:
+[2025-11-05 20:24:16]   - part_000.gz
+[2025-11-05 20:24:16] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:16] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_funders_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/funders/updated_date=2025-10-01/part_000.gz --limit 1000
+[2025-11-05 20:24:16] [2025-11-05 20:24:16.723604] Reading /Volumes/OA_snapshot/24OCT2025/data/funders/updated_date=2025-10-01/part_000.gz...
+  [2025-11-05 20:24:16.787663] Reached line limit of 1,000
+
+======================================================================
+✅ FUNDERS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 1,000
+  Errors:          0
+  Time elapsed:    0.1 seconds
+  Parse rate:      9320 lines/sec
+  Write rate:      9311 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:16] ✅ File 1/1 completed successfully in 0.2s
+[2025-11-05 20:24:16] 
+✅ funders - All 1 file(s) completed successfully in 0.2s
+[2025-11-05 20:24:16] 
+PHASE 2: Sources and Institutions
+[2025-11-05 20:24:16] 
+======================================================================
+[2025-11-05 20:24:16] PARSING: SOURCES
+[2025-11-05 20:24:16] ======================================================================
+[2025-11-05 20:24:16] Found 1 file(s) to process:
+[2025-11-05 20:24:16]   - part_000.gz
+[2025-11-05 20:24:16] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:16] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_sources_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/sources/updated_date=2025-10-01/part_000.gz --limit 1000
+[2025-11-05 20:24:17] [2025-11-05 20:24:16.930049] Reading /Volumes/OA_snapshot/24OCT2025/data/sources/updated_date=2025-10-01/part_000.gz...
+  [2025-11-05 20:24:17.161514] Reached line limit of 1,000
+
+======================================================================
+✅ SOURCES PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 1,810
+  Errors:          0
+  Time elapsed:    0.3 seconds
+  Parse rate:      3515 lines/sec
+  Write rate:      6355 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:17] ✅ File 1/1 completed successfully in 0.4s
+[2025-11-05 20:24:17] 
+✅ sources - All 1 file(s) completed successfully in 0.4s
+[2025-11-05 20:24:17] 
+======================================================================
+[2025-11-05 20:24:17] PARSING: INSTITUTIONS
+[2025-11-05 20:24:17] ======================================================================
+[2025-11-05 20:24:17] Found 1 file(s) to process:
+[2025-11-05 20:24:17]   - part_000.gz
+[2025-11-05 20:24:17] 
+--- Processing file 1/1: part_000.gz ---
+[2025-11-05 20:24:17] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_institutions_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/institutions/updated_date=2025-10-01/part_000.gz --limit 1000
+[2025-11-05 20:24:17] [2025-11-05 20:24:17.547891] Reading /Volumes/OA_snapshot/24OCT2025/data/institutions/updated_date=2025-10-01/part_000.gz...
+  [2025-11-05 20:24:17.830646] Reached line limit of 1,000
+
+======================================================================
+✅ INSTITUTIONS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 2,614
+  Errors:          0
+  Time elapsed:    0.4 seconds
+  Parse rate:      2351 lines/sec
+  Write rate:      6140 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:17] ✅ File 1/1 completed successfully in 0.5s
+[2025-11-05 20:24:17] 
+✅ institutions - All 1 file(s) completed successfully in 0.7s
+[2025-11-05 20:24:17] 
+PHASE 3: Authors
+[2025-11-05 20:24:17] 
+======================================================================
+[2025-11-05 20:24:17] PARSING: AUTHORS
+[2025-11-05 20:24:17] ======================================================================
+[2025-11-05 20:24:18] Found 3 file(s) to process:
+[2025-11-05 20:24:18]   - part_000.gz
+[2025-11-05 20:24:18]   - part_001.gz
+[2025-11-05 20:24:18]   - part_002.gz
+[2025-11-05 20:24:18] 
+--- Processing file 1/3: part_000.gz ---
+[2025-11-05 20:24:18] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_authors_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_000.gz --limit 1000
+[2025-11-05 20:24:18] [2025-11-05 20:24:18.166751] Reading /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_000.gz...
+  [2025-11-05 20:24:18.491388] Reached line limit of 1,000
+
+======================================================================
+✅ AUTHORS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 70,134
+  Errors:          0
+  Time elapsed:    0.7 seconds
+  Parse rate:      1496 lines/sec
+  Write rate:      104805 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:18] ✅ File 1/3 completed successfully in 0.8s
+[2025-11-05 20:24:18] 
+--- Processing file 2/3: part_001.gz ---
+[2025-11-05 20:24:18] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_authors_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_001.gz --limit 1000
+[2025-11-05 20:24:19] [2025-11-05 20:24:18.945531] Reading /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_001.gz...
+  [2025-11-05 20:24:19.245861] Reached line limit of 1,000
+
+======================================================================
+✅ AUTHORS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 61,294
+  Errors:          0
+  Time elapsed:    0.6 seconds
+  Parse rate:      1568 lines/sec
+  Write rate:      96031 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:19] ✅ File 2/3 completed successfully in 0.7s
+[2025-11-05 20:24:19] 
+--- Processing file 3/3: part_002.gz ---
+[2025-11-05 20:24:19] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_authors_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_002.gz --limit 1000
+[2025-11-05 20:24:20] [2025-11-05 20:24:19.682849] Reading /Volumes/OA_snapshot/24OCT2025/data/authors/updated_date=2025-09-30/part_002.gz...
+  [2025-11-05 20:24:19.841846] Reached line limit of 1,000
+
+======================================================================
+✅ AUTHORS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 37,996
+  Errors:          0
+  Time elapsed:    0.4 seconds
+  Parse rate:      2856 lines/sec
+  Write rate:      108410 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:20] ✅ File 3/3 completed successfully in 0.4s
+[2025-11-05 20:24:20] 
+✅ authors - All 3 file(s) completed successfully in 2.0s
+[2025-11-05 20:24:20] 
+PHASE 4: Works (includes authorship)
+[2025-11-05 20:24:20] 
+======================================================================
+[2025-11-05 20:24:20] PARSING: WORKS
+[2025-11-05 20:24:20] ======================================================================
+[2025-11-05 20:24:20] Found 7 file(s) to process:
+[2025-11-05 20:24:20]   - part_000.gz
+[2025-11-05 20:24:20]   - part_001.gz
+[2025-11-05 20:24:20]   - part_002.gz
+[2025-11-05 20:24:20]   - part_003.gz
+[2025-11-05 20:24:20]   - part_004.gz
+[2025-11-05 20:24:20]   - part_005.gz
+[2025-11-05 20:24:20]   - part_006.gz
+[2025-11-05 20:24:20] 
+--- Processing file 1/7: part_000.gz ---
+[2025-11-05 20:24:20] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_000.gz --limit 1000
+[2025-11-05 20:24:20] [2025-11-05 20:24:20.251840] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_000.gz...
+  [2025-11-05 20:24:20.701503] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 105,920
+  Errors:          0
+  Time elapsed:    0.8 seconds
+  Parse rate:      1326 lines/sec
+  Write rate:      140304 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:20] ✅ File 1/7 completed successfully in 0.9s
+[2025-11-05 20:24:20] 
+--- Processing file 2/7: part_001.gz ---
+[2025-11-05 20:24:20] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_001.gz --limit 1000
+[2025-11-05 20:24:21] [2025-11-05 20:24:21.108639] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_001.gz...
+  [2025-11-05 20:24:21.394201] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 90,424
+  Errors:          0
+  Time elapsed:    0.7 seconds
+  Parse rate:      1382 lines/sec
+  Write rate:      124886 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:21] ✅ File 2/7 completed successfully in 0.8s
+[2025-11-05 20:24:21] 
+--- Processing file 3/7: part_002.gz ---
+[2025-11-05 20:24:21] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_002.gz --limit 1000
+[2025-11-05 20:24:22] [2025-11-05 20:24:21.944007] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_002.gz...
+  [2025-11-05 20:24:22.252130] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 89,108
+  Errors:          0
+  Time elapsed:    0.7 seconds
+  Parse rate:      1355 lines/sec
+  Write rate:      120583 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:22] ✅ File 3/7 completed successfully in 0.8s
+[2025-11-05 20:24:22] 
+--- Processing file 4/7: part_003.gz ---
+[2025-11-05 20:24:22] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_003.gz --limit 1000
+[2025-11-05 20:24:23] [2025-11-05 20:24:22.791158] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_003.gz...
+  [2025-11-05 20:24:23.415922] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 107,643
+  Errors:          0
+  Time elapsed:    1.1 seconds
+  Parse rate:      946 lines/sec
+  Write rate:      101720 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:23] ✅ File 4/7 completed successfully in 1.2s
+[2025-11-05 20:24:23] 
+--- Processing file 5/7: part_004.gz ---
+[2025-11-05 20:24:23] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_004.gz --limit 1000
+[2025-11-05 20:24:24] [2025-11-05 20:24:23.979929] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_004.gz...
+  [2025-11-05 20:24:24.276298] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 73,419
+  Errors:          0
+  Time elapsed:    0.7 seconds
+  Parse rate:      1349 lines/sec
+  Write rate:      98971 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:24] ✅ File 5/7 completed successfully in 0.9s
+[2025-11-05 20:24:24] 
+--- Processing file 6/7: part_005.gz ---
+[2025-11-05 20:24:24] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_005.gz --limit 1000
+[2025-11-05 20:24:25] [2025-11-05 20:24:24.840917] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_005.gz...
+  [2025-11-05 20:24:25.157601] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 44,312
+  Errors:          0
+  Time elapsed:    0.7 seconds
+  Parse rate:      1433 lines/sec
+  Write rate:      63448 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:25] ✅ File 6/7 completed successfully in 0.8s
+[2025-11-05 20:24:25] 
+--- Processing file 7/7: part_006.gz ---
+[2025-11-05 20:24:25] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/parse_works_v2.py --input-file /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_006.gz --limit 1000
+[2025-11-05 20:24:26] [2025-11-05 20:24:25.664410] Reading /Volumes/OA_snapshot/24OCT2025/data/works/updated_date=2025-09-30/part_006.gz...
+  [2025-11-05 20:24:25.865231] Reached line limit of 1,000
+
+======================================================================
+✅ WORKS PARSING COMPLETE
+======================================================================
+  Lines read:      1,001
+  Records parsed:  1,000
+  Records written: 32,200
+  Errors:          0
+  Time elapsed:    0.5 seconds
+  Parse rate:      2059 lines/sec
+  Write rate:      66236 records/sec
+======================================================================
+
+
+[2025-11-05 20:24:26] ✅ File 7/7 completed successfully in 0.6s
+[2025-11-05 20:24:26] 
+✅ works - All 7 file(s) completed successfully in 6.0s
+[2025-11-05 20:24:26] 
+######################################################################
+[2025-11-05 20:24:26] PIPELINE COMPLETE - Total time: 10.4s
+[2025-11-05 20:24:26] ######################################################################
+
+[2025-11-05 20:24:26] 
+======================================================================
+[2025-11-05 20:24:26] ORCHESTRATOR STATUS
+[2025-11-05 20:24:26] ======================================================================
+[2025-11-05 20:24:26]   ✅ topics          complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ concepts        complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ publishers      complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ funders         complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ sources         complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ institutions    complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ authors         complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ✅ works           complete   | Records: 0 | Errors: 0
+[2025-11-05 20:24:26]   ⏸️  authorship      pending    | Records: 0 | Errors: 0
+[2025-11-05 20:24:26] ======================================================================
+

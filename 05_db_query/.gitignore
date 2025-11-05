@@ -1,0 +1,26 @@
+# Data files (keep out of version control)
+*.csv
+*.pkl
+*.pickle
+*.parquet
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
