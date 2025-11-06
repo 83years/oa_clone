@@ -17,16 +17,16 @@ DB_CONFIG = {
 PARSING_DIR = '/Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing'
 SNAPSHOT_DIR = '/Volumes/OA_snapshot/24OCT2025/data'
 
-# Updated snapshot directories (latest dates as of Nov 2025)
+# Entity directories - will process ALL updated_date=* subdirectories
 GZ_DIRECTORIES = {
-    'topics': f'{SNAPSHOT_DIR}/topics/updated_date=2025-09-29',
-    'concepts': f'{SNAPSHOT_DIR}/concepts/updated_date=2025-10-01',
-    'publishers': f'{SNAPSHOT_DIR}/publishers/updated_date=2025-10-01',
-    'funders': f'{SNAPSHOT_DIR}/funders/updated_date=2025-10-01',
-    'sources': f'{SNAPSHOT_DIR}/sources/updated_date=2025-10-01',
-    'institutions': f'{SNAPSHOT_DIR}/institutions/updated_date=2025-10-01',
-    'authors': f'{SNAPSHOT_DIR}/authors/updated_date=2025-09-30',
-    'works': f'{SNAPSHOT_DIR}/works/updated_date=2025-09-30',
+    'topics': f'{SNAPSHOT_DIR}/topics',
+    'concepts': f'{SNAPSHOT_DIR}/concepts',
+    'publishers': f'{SNAPSHOT_DIR}/publishers',
+    'funders': f'{SNAPSHOT_DIR}/funders',
+    'sources': f'{SNAPSHOT_DIR}/sources',
+    'institutions': f'{SNAPSHOT_DIR}/institutions',
+    'authors': f'{SNAPSHOT_DIR}/authors',
+    'works': f'{SNAPSHOT_DIR}/works',
 }
 
 # Legacy single file paths (for backwards compatibility)

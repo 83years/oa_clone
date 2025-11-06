@@ -487,15 +487,7 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 26. CITATIONS TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS citations (
-                citing_work_id VARCHAR(255),
-                cited_work_id VARCHAR(255)
-            );
-        """)
-
-        # 27. APC TABLE
+        # 26. APC TABLE
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS apc (
                 work_id VARCHAR(255),

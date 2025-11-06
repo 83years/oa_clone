@@ -145,11 +145,22 @@ class AuthorsParser(BaseParser):
                         start_year = min(years) if years else None
                         end_year = max(years) if years else None
 
+                        # Format dates with 4-digit years
+                        start_date = None
+                        end_date = None
+                        if start_year:
+                            # Ensure 4-digit year (handle both 2-digit and 4-digit years)
+                            year_val = start_year if start_year >= 1000 else start_year + 2000
+                            start_date = f"{year_val:04d}-01-01"
+                        if end_year:
+                            year_val = end_year if end_year >= 1000 else end_year + 2000
+                            end_date = f"{year_val:04d}-12-31"
+
                         author_institutions_batch.append({
                             'author_id': author_id,
                             'institution_id': inst_id,
-                            'start_date': f"{start_year}-01-01" if start_year else None,
-                            'end_date': f"{end_year}-12-31" if end_year else None,
+                            'start_date': start_date,
+                            'end_date': end_date,
                             'affiliation_string': institution.get('display_name')
                         })
 

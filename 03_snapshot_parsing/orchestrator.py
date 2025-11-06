@@ -72,37 +72,55 @@ class Orchestrator:
         with open(self.log_path, 'a') as f:
             f.write(log_msg + '\n')
 
-    def get_gz_files(self, directory):
+    def get_gz_files(self, entity_directory):
         """
-        Get all part_*.gz files from a directory in order
+        Get all part_*.gz files from all updated_date=* subdirectories
 
         Args:
-            directory: Path to directory containing .gz files
+            entity_directory: Path to entity directory (e.g., /path/to/topics)
 
         Returns:
-            list: Sorted list of .gz file paths
+            list: Sorted list of .gz file paths from all dated subdirectories
         """
-        if not Path(directory).exists():
-            self.log(f"⚠️  Directory not found: {directory}")
+        if not Path(entity_directory).exists():
+            self.log(f"⚠️  Directory not found: {entity_directory}")
             return []
 
-        # Find all part_*.gz files
-        pattern = str(Path(directory) / 'part_*.gz')
-        files = sorted(glob.glob(pattern))
+        all_files = []
 
-        if not files:
-            self.log(f"⚠️  No .gz files found in {directory}")
+        # Find all updated_date=* subdirectories
+        entity_path = Path(entity_directory)
+        dated_dirs = sorted(entity_path.glob('updated_date=*'))
 
-        return files
+        if not dated_dirs:
+            self.log(f"⚠️  No updated_date=* subdirectories found in {entity_directory}")
+            return []
 
-    def run_parser(self, entity_name, parser_script, gz_directory):
+        self.log(f"Found {len(dated_dirs)} dated folder(s):")
+        for dated_dir in dated_dirs:
+            self.log(f"  - {dated_dir.name}")
+
+        # Collect all part_*.gz files from all dated directories
+        for dated_dir in dated_dirs:
+            pattern = str(dated_dir / 'part_*.gz')
+            files = sorted(glob.glob(pattern))
+            all_files.extend(files)
+
+        if not all_files:
+            self.log(f"⚠️  No .gz files found in any dated subdirectory")
+        else:
+            self.log(f"Total .gz files to process: {len(all_files)}")
+
+        return sorted(all_files)
+
+    def run_parser(self, entity_name, parser_script, entity_directory):
         """
-        Run a parser script on all .gz files in a directory
+        Run a parser script on all .gz files from all dated subdirectories
 
         Args:
             entity_name: Name of entity (e.g., 'topics')
             parser_script: Path to parser script
-            gz_directory: Path to directory containing .gz files
+            entity_directory: Path to entity directory (will process all updated_date=* subdirs)
 
         Returns:
             bool: True if successful, False otherwise
@@ -111,10 +129,10 @@ class Orchestrator:
         self.log(f"PARSING: {entity_name.upper()}")
         self.log(f"{'='*70}")
 
-        # Get all .gz files in directory
-        gz_files = self.get_gz_files(gz_directory)
+        # Get all .gz files from all dated subdirectories
+        gz_files = self.get_gz_files(entity_directory)
         if not gz_files:
-            self.log(f"❌ No files found in {gz_directory}")
+            self.log(f"❌ No files found in {entity_directory}")
             self.state[entity_name]['status'] = 'failed'
             self.save_state()
             return False
