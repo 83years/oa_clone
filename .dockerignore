@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+*.swp
+
+# Logs (will be mounted as volume)
+03_snapshot_parsing/logs/*.log
+
+# Git
+.git/
+.gitignore
+
+# Large data files (will be mounted as volume)
+01_oa_snapshot/

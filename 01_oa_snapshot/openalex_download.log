@@ -25555,3 +25555,788 @@
 2025-11-06 06:32:37,048 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
 2025-11-06 06:32:37,048 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
 2025-11-06 06:32:37,049 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:35:00,385 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,387 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,387 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,387 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,420 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,421 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,421 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,421 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,421 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,421 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,422 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,422 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,423 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,423 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,423 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,424 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,425 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,425 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,425 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,426 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,426 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,426 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,426 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,426 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,430 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,430 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,430 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,430 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,431 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,432 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,679 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,679 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,679 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,680 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,714 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,714 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,717 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:00,717 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,456 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,456 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,492 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,492 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,493 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,493 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,493 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,493 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,493 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,494 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,494 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,495 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,495 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,496 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,497 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,497 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,498 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,498 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,498 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,498 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,499 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,507 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:35:18,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:35:18,509 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:35:18,509 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:37:03,930 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_020.gz
+2025-11-06 06:37:04,125 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_004.gz (679.5 MB)
+2025-11-06 06:37:34,863 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_022.gz
+2025-11-06 06:37:35,055 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_005.gz (681.5 MB)
+2025-11-06 06:38:23,928 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_021.gz
+2025-11-06 06:38:24,134 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_006.gz (682.9 MB)
+2025-11-06 06:38:24,627 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,629 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,629 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,630 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,630 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,630 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,630 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,631 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,631 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,631 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,632 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,633 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,633 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,634 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,634 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,634 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,634 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,635 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,636 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:38:24,636 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:38:24,636 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:38:24,639 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-11-06 06:38:33,026 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_025.gz
+2025-11-06 06:38:33,361 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_007.gz (684.6 MB)
+2025-11-06 06:38:36,788 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_024.gz
+2025-11-06 06:38:36,901 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-24/part_023.gz
+2025-11-06 06:38:37,074 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_008.gz (686.4 MB)
+2025-11-06 06:38:37,093 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_009.gz (690.0 MB)
+2025-11-06 06:41:39,750 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,752 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,753 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,753 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,753 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,754 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,755 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:41:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,756 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,757 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,758 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:41:39,758 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:41:39,760 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:43:09,879 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_000.gz
+2025-11-06 06:43:10,102 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_010.gz (691.6 MB)
+2025-11-06 06:43:45,944 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_001.gz
+2025-11-06 06:43:46,139 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_011.gz (695.8 MB)
+2025-11-06 06:44:30,598 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_002.gz
+2025-11-06 06:44:30,810 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_012.gz (697.7 MB)
+2025-11-06 06:49:52,764 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_003.gz
+2025-11-06 06:49:52,948 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_013.gz (701.5 MB)
+2025-11-06 06:54:18,388 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_004.gz
+2025-11-06 06:54:18,618 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_014.gz (700.9 MB)
+2025-11-06 06:54:49,955 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_005.gz
+2025-11-06 06:54:50,732 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_015.gz (712.2 MB)
+2025-11-06 06:55:23,298 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_006.gz
+2025-11-06 06:55:23,523 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_016.gz (714.7 MB)
+2025-11-06 06:55:48,183 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_008.gz
+2025-11-06 06:55:48,394 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_017.gz (716.3 MB)
+2025-11-06 06:55:49,860 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_007.gz
+2025-11-06 06:55:50,083 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_018.gz (718.5 MB)
+2025-11-06 06:55:54,496 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_009.gz
+2025-11-06 06:55:54,729 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_019.gz (720.0 MB)
+2025-11-06 06:55:55,222 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,223 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,224 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,224 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,224 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,224 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 06:55:55,225 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:55:55,225 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 06:55:55,225 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:00:34,453 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_010.gz
+2025-11-06 07:00:34,663 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_020.gz (728.9 MB)
+2025-11-06 07:01:10,249 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_011.gz
+2025-11-06 07:01:10,474 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_021.gz (721.5 MB)
+2025-11-06 07:02:00,301 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_012.gz
+2025-11-06 07:02:00,496 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_022.gz (735.6 MB)
+2025-11-06 07:05:29,500 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,501 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,501 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,501 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,504 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:05:29,504 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,504 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,505 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,505 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,506 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:05:29,506 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,506 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,506 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,507 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,508 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,509 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:05:29,509 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:05:29,510 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:05:29,510 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:07:21,211 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_013.gz
+2025-11-06 07:07:21,449 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_023.gz (713.7 MB)
+2025-11-06 07:11:12,035 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,036 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,037 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,037 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,037 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,037 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,037 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,039 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-11-06 07:11:12,039 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:11:12,039 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,039 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,039 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,041 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,041 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,041 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,041 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,042 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,043 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,043 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,043 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,043 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,044 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,044 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,044 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,045 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,045 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:11:12,047 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:11:46,731 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_014.gz
+2025-11-06 07:11:46,943 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_024.gz (734.9 MB)
+2025-11-06 07:12:43,790 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_015.gz
+2025-11-06 07:12:44,158 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_025.gz (728.9 MB)
+2025-11-06 07:13:20,091 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_016.gz
+2025-11-06 07:13:20,292 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_026.gz (695.1 MB)
+2025-11-06 07:13:20,802 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,803 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,803 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,804 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,804 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,804 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,805 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,805 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,805 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,806 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,806 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,806 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,807 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,808 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,808 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,808 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,808 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:20,809 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:13:20,809 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:13:43,157 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_018.gz
+2025-11-06 07:13:43,361 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_027.gz (675.2 MB)
+2025-11-06 07:13:44,586 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_017.gz
+2025-11-06 07:13:44,778 - INFO - Downloading legacy-data/works/updated_date=2025-10-25/part_028.gz (435.9 MB)
+2025-11-06 07:14:03,157 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_019.gz
+2025-11-06 07:14:03,375 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_000.gz (729.7 MB)
+2025-11-06 07:18:48,130 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_020.gz
+2025-11-06 07:18:48,355 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_001.gz (730.2 MB)
+2025-11-06 07:19:17,402 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_021.gz
+2025-11-06 07:19:17,639 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_002.gz (729.3 MB)
+2025-11-06 07:19:18,571 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,571 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,571 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:19:18,572 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,121 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,121 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,121 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,122 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,124 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,124 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,125 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,125 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,125 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,126 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:20:14,126 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:20:14,126 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:20:14,127 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:20:14,127 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,127 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,127 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,127 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,128 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:20:14,129 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:20:25,675 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_022.gz
+2025-11-06 07:20:25,877 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_003.gz (729.4 MB)
+2025-11-06 07:24:31,645 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_028.gz
+2025-11-06 07:24:31,869 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_004.gz (729.7 MB)
+2025-11-06 07:25:03,500 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_023.gz
+2025-11-06 07:25:03,701 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_005.gz (731.8 MB)
+2025-11-06 07:30:14,461 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_024.gz
+2025-11-06 07:30:14,696 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_006.gz (733.1 MB)
+2025-11-06 07:30:46,796 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_027.gz
+2025-11-06 07:30:47,013 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_007.gz (735.5 MB)
+2025-11-06 07:30:47,545 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,547 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,548 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,549 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,549 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,549 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,549 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:30:47,550 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:30:48,965 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_025.gz
+2025-11-06 07:30:49,154 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_008.gz (738.7 MB)
+2025-11-06 07:30:56,886 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-25/part_026.gz
+2025-11-06 07:30:57,073 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_009.gz (743.8 MB)
+2025-11-06 07:32:14,842 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_000.gz
+2025-11-06 07:32:15,064 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_010.gz (742.3 MB)
+2025-11-06 07:32:15,365 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,366 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,366 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,369 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,370 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:32:15,371 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:32:15,371 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:02,821 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_001.gz
+2025-11-06 07:37:03,042 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_011.gz (749.5 MB)
+2025-11-06 07:37:03,530 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,530 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,530 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,530 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,531 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,531 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,531 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,532 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,533 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,534 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,534 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,534 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:37:03,535 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:03,535 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:03,535 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:03,535 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:03,536 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:37:22,774 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_002.gz
+2025-11-06 07:37:22,968 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_012.gz (748.8 MB)
+2025-11-06 07:38:46,649 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_003.gz
+2025-11-06 07:38:46,883 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_013.gz (747.8 MB)
+2025-11-06 07:41:13,116 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,116 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,116 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,117 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,117 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,117 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,117 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,118 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,118 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,118 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,118 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,118 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,119 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,119 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,120 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,121 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:41:13,121 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,122 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,122 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,122 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:41:13,123 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:42:33,933 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_004.gz
+2025-11-06 07:42:34,135 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_014.gz (748.6 MB)
+2025-11-06 07:43:27,476 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_005.gz
+2025-11-06 07:43:27,746 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_015.gz (744.7 MB)
+2025-11-06 07:44:49,373 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,374 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,374 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,376 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,377 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,378 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,378 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,378 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,379 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:44:49,381 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:44:49,382 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-11-06 07:48:31,893 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_006.gz
+2025-11-06 07:48:32,131 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_016.gz (686.1 MB)
+2025-11-06 07:49:04,855 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_008.gz
+2025-11-06 07:49:05,046 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_017.gz (677.8 MB)
+2025-11-06 07:49:05,585 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,586 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,586 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,587 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,587 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,587 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,587 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,587 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,588 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,588 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,589 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,589 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,589 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,589 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,590 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,590 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:05,591 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:49:10,700 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_007.gz
+2025-11-06 07:49:10,908 - INFO - Downloading legacy-data/works/updated_date=2025-10-26/part_018.gz (130.6 MB)
+2025-11-06 07:49:42,297 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_009.gz
+2025-11-06 07:49:42,509 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_000.gz (690.6 MB)
+2025-11-06 07:50:41,028 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_010.gz
+2025-11-06 07:50:41,233 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_001.gz (688.7 MB)
+2025-11-06 07:52:31,478 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_018.gz
+2025-11-06 07:52:31,479 - INFO - Progress: 6300/6364 (99.0%)
+2025-11-06 07:52:31,479 - INFO - ============================================================
+2025-11-06 07:52:31,479 - INFO - DOWNLOAD STATISTICS
+2025-11-06 07:52:31,479 - INFO - ============================================================
+2025-11-06 07:52:31,479 - INFO - Total files processed: 6300
+2025-11-06 07:52:31,479 - INFO - Files downloaded: 5741
+2025-11-06 07:52:31,479 - INFO - Files skipped: 550
+2025-11-06 07:52:31,479 - INFO - Files failed: 9
+2025-11-06 07:52:31,479 - INFO - Total data downloaded: 785.91 GB
+2025-11-06 07:52:31,480 - INFO - Time elapsed: 34h 9m
+2025-11-06 07:52:31,480 - INFO - Average download rate: 6.54 MB/s
+2025-11-06 07:52:31,480 - INFO - ============================================================
+2025-11-06 07:52:31,695 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_002.gz (705.1 MB)
+2025-11-06 07:54:43,761 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,762 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,764 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,764 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,764 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,764 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,765 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,766 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,766 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,766 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,767 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:54:43,767 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:54:43,767 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:54:43,768 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:54:43,768 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:11,865 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_011.gz
+2025-11-06 07:56:12,056 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_003.gz (692.5 MB)
+2025-11-06 07:56:12,586 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_012.gz
+2025-11-06 07:56:12,802 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_004.gz (678.6 MB)
+2025-11-06 07:56:13,686 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,686 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,686 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,686 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,687 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,688 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,688 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,688 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,688 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,688 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:56:13,689 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 07:57:22,835 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_013.gz
+2025-11-06 07:57:23,040 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_005.gz (684.2 MB)
+2025-11-06 08:01:02,800 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_014.gz
+2025-11-06 08:01:03,023 - INFO - Downloading legacy-data/works/updated_date=2025-10-27/part_006.gz (49.3 MB)
+2025-11-06 08:01:03,562 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:01:03,562 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:01:03,562 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:01:03,564 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:01:03,564 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:01:03,564 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 48
+2025-11-06 08:01:44,329 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_015.gz
+2025-11-06 08:01:44,555 - INFO - Downloading legacy-data/works/updated_date=2025-10-28/part_000.gz (723.0 MB)
+2025-11-06 08:02:21,770 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_006.gz
+2025-11-06 08:02:21,949 - INFO - Downloading legacy-data/works/updated_date=2025-10-28/part_001.gz (726.6 MB)
+2025-11-06 08:05:35,157 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_016.gz
+2025-11-06 08:05:35,380 - INFO - Downloading legacy-data/works/updated_date=2025-10-28/part_002.gz (695.8 MB)
+2025-11-06 08:05:35,855 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:05:35,856 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:05:35,856 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:05:35,856 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:05:35,857 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:05:48,249 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-26/part_017.gz
+2025-11-06 08:05:48,445 - INFO - Downloading legacy-data/works/updated_date=2025-10-28/part_003.gz (668.0 MB)
+2025-11-06 08:07:00,502 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_000.gz
+2025-11-06 08:07:00,718 - INFO - Downloading legacy-data/works/updated_date=2025-10-28/part_004.gz (143.2 MB)
+2025-11-06 08:08:14,928 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_001.gz
+2025-11-06 08:08:15,151 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_000.gz (719.5 MB)
+2025-11-06 08:10:04,949 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_002.gz
+2025-11-06 08:10:05,220 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_001.gz (709.2 MB)
+2025-11-06 08:10:35,173 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-28/part_004.gz
+2025-11-06 08:10:35,394 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_002.gz (718.4 MB)
+2025-11-06 08:13:02,597 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_004.gz
+2025-11-06 08:13:02,838 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_003.gz (708.7 MB)
+2025-11-06 08:13:03,364 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,365 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,365 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,365 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,366 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,366 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,367 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,368 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:03,368 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:13:48,386 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_003.gz
+2025-11-06 08:13:48,615 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_004.gz (672.7 MB)
+2025-11-06 08:14:26,625 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-27/part_005.gz
+2025-11-06 08:14:26,906 - INFO - Downloading legacy-data/works/updated_date=2025-10-29/part_005.gz (633.6 MB)
+2025-11-06 08:19:47,230 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-28/part_000.gz
+2025-11-06 08:19:47,451 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_000.gz (720.2 MB)
+2025-11-06 08:20:28,187 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-28/part_001.gz
+2025-11-06 08:20:28,420 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_001.gz (698.1 MB)
+2025-11-06 08:22:25,668 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-28/part_003.gz
+2025-11-06 08:22:25,854 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_002.gz (696.2 MB)
+2025-11-06 08:23:02,873 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-28/part_002.gz
+2025-11-06 08:23:03,085 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_003.gz (711.6 MB)
+2025-11-06 08:26:06,220 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_000.gz
+2025-11-06 08:26:06,437 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_004.gz (686.2 MB)
+2025-11-06 08:27:59,559 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_001.gz
+2025-11-06 08:27:59,762 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_005.gz (669.0 MB)
+2025-11-06 08:28:34,583 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_002.gz
+2025-11-06 08:28:34,801 - INFO - Downloading legacy-data/works/updated_date=2025-10-30/part_006.gz (594.0 MB)
+2025-11-06 08:30:02,841 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_005.gz
+2025-11-06 08:30:03,056 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_000.gz (683.4 MB)
+2025-11-06 08:30:29,375 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_004.gz
+2025-11-06 08:30:29,590 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_001.gz (674.9 MB)
+2025-11-06 08:30:30,077 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,078 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,078 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,078 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,078 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,079 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,080 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,080 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,080 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:30:30,081 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:30:30,081 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:30:56,968 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-29/part_003.gz
+2025-11-06 08:30:57,173 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_002.gz (680.6 MB)
+2025-11-06 08:37:47,922 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_000.gz
+2025-11-06 08:37:48,149 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_003.gz (698.8 MB)
+2025-11-06 08:37:57,328 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_001.gz
+2025-11-06 08:37:57,545 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_004.gz (670.0 MB)
+2025-11-06 08:39:59,018 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_002.gz
+2025-11-06 08:39:59,677 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_005.gz (670.9 MB)
+2025-11-06 08:41:00,540 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,541 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,541 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,541 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,541 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,541 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,542 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,542 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,543 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,543 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,543 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,543 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,543 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,544 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,545 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,545 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,545 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,545 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,546 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:41:00,548 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 49
+2025-11-06 08:41:02,620 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_003.gz
+2025-11-06 08:41:02,844 - INFO - Downloading legacy-data/works/updated_date=2025-10-31/part_006.gz (83.1 MB)
+2025-11-06 08:43:08,637 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_004.gz
+2025-11-06 08:43:08,859 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_000.gz (685.7 MB)
+2025-11-06 08:43:13,192 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_006.gz
+2025-11-06 08:43:13,392 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_001.gz (685.4 MB)
+2025-11-06 08:43:13,498 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_006.gz
+2025-11-06 08:43:13,724 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_002.gz (694.4 MB)
+2025-11-06 08:44:47,356 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-30/part_005.gz
+2025-11-06 08:44:47,555 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_003.gz (705.3 MB)
+2025-11-06 08:46:59,124 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_000.gz
+2025-11-06 08:46:59,329 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_004.gz (717.7 MB)
+2025-11-06 08:46:59,890 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,890 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,890 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,891 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,891 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,892 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,892 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,893 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,893 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,894 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,894 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,897 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,894 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,895 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:46:59,899 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 08:47:10,651 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_001.gz
+2025-11-06 08:47:10,871 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_005.gz (689.3 MB)
+2025-11-06 08:48:04,403 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_002.gz
+2025-11-06 08:48:04,610 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_006.gz (696.1 MB)
+2025-11-06 08:54:36,301 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_004.gz
+2025-11-06 08:54:36,542 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_007.gz (662.2 MB)
+2025-11-06 08:55:19,155 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_003.gz
+2025-11-06 08:55:19,395 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_008.gz (687.1 MB)
+2025-11-06 08:56:55,501 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-10-31/part_005.gz
+2025-11-06 08:56:55,730 - INFO - Downloading legacy-data/works/updated_date=2025-11-01/part_009.gz (35.2 MB)
+2025-11-06 08:57:48,357 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-11-01/part_009.gz
+2025-11-06 08:57:48,583 - INFO - Downloading legacy-data/works/updated_date=2025-11-02/part_000.gz (624.9 MB)
+2025-11-06 09:00:23,034 - INFO - Successfully downloaded legacy-data/works/updated_date=2025-11-01/part_001.gz
+2025-11-06 09:00:23,479 - INFO - Downloading legacy-data/works/updated_date=2025-11-02/part_001.gz (607.5 MB)
+2025-11-06 09:01:17,334 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,340 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,344 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,348 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,351 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,354 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,356 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,362 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,363 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,371 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,376 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,380 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,383 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,387 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,391 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,413 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,420 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,424 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,429 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,430 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,432 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,435 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,439 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,443 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,446 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,452 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,453 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,454 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,456 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,462 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,466 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,477 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,485 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,486 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,502 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,503 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,527 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,531 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,560 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,568 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,582 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,588 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,590 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,609 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,613 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,613 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,662 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,674 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:17,737 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:01:18,057 - WARNING - Connection pool is full, discarding connection: openalex.s3.amazonaws.com. Connection pool size: 50
+2025-11-06 09:02:15,024 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_002.gz: [Errno 57] Socket is not connected: '/Volumes/OA_snapshot/24OCT2025/legacy-data/works/updated_date=2025-11-01/part_002.gz'
+2025-11-06 09:02:15,067 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_000.gz: [Errno 2] No such file or directory: '/Volumes/OA_snapshot/24OCT2025/legacy-data/works/updated_date=2025-11-01/part_000.gz'
+2025-11-06 09:02:15,078 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_003.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,081 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_002.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,082 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_005.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,082 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_006.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,222 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_004.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,317 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_000.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,340 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_001.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,413 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_002.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,414 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_003.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,415 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_004.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,419 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_005.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,419 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-03/part_006.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:15,602 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-04/part_000.gz: [Errno 13] Permission denied: '/Volumes/OA_snapshot/24OCT2025'
+2025-11-06 09:02:16,061 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_003.gz: [Errno 6] Device not configured
+2025-11-06 09:02:16,919 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_005.gz: [Errno 6] Device not configured
+2025-11-06 09:02:17,081 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_006.gz: [Errno 6] Device not configured
+2025-11-06 09:02:17,317 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_004.gz: [Errno 6] Device not configured
+2025-11-06 09:02:18,448 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_007.gz: [Errno 6] Device not configured
+2025-11-06 09:02:18,976 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-01/part_008.gz: [Errno 6] Device not configured
+2025-11-06 09:02:20,321 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_001.gz: [Errno 5] Input/output error
+2025-11-06 09:02:20,549 - ERROR - Failed to download legacy-data/works/updated_date=2025-11-02/part_000.gz: [Errno 6] Device not configured
+2025-11-06 09:02:20,550 - INFO - Download completed!
+2025-11-06 09:02:20,550 - INFO - ============================================================
+2025-11-06 09:02:20,550 - INFO - DOWNLOAD STATISTICS
+2025-11-06 09:02:20,550 - INFO - ============================================================
+2025-11-06 09:02:20,550 - INFO - Total files processed: 6364
+2025-11-06 09:02:20,550 - INFO - Files downloaded: 5782
+2025-11-06 09:02:20,550 - INFO - Files skipped: 550
+2025-11-06 09:02:20,550 - INFO - Files failed: 32
+2025-11-06 09:02:20,550 - INFO - Total data downloaded: 811.37 GB
+2025-11-06 09:02:20,550 - INFO - Time elapsed: 35h 19m
+2025-11-06 09:02:20,550 - INFO - Average download rate: 6.53 MB/s
+2025-11-06 09:02:20,550 - INFO - ============================================================

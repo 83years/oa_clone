@@ -1,0 +1,4 @@
+# Ignore all files in the test folder
+*
+# But keep this .gitignore file
+!.gitignore

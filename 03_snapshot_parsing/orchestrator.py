@@ -45,18 +45,23 @@ class Orchestrator:
         """Load orchestrator state from JSON file"""
         if STATE_FILE.exists():
             with open(STATE_FILE, 'r') as f:
-                return json.load(f)
+                state = json.load(f)
+                # Ensure all entities have completed_files list
+                for entity in state:
+                    if 'completed_files' not in state[entity]:
+                        state[entity]['completed_files'] = []
+                return state
         else:
             return {
-                'topics': {'status': 'pending', 'records': 0, 'errors': 0},
-                'concepts': {'status': 'pending', 'records': 0, 'errors': 0},
-                'publishers': {'status': 'pending', 'records': 0, 'errors': 0},
-                'funders': {'status': 'pending', 'records': 0, 'errors': 0},
-                'sources': {'status': 'pending', 'records': 0, 'errors': 0},
-                'institutions': {'status': 'pending', 'records': 0, 'errors': 0},
-                'authors': {'status': 'pending', 'records': 0, 'errors': 0},
-                'works': {'status': 'pending', 'records': 0, 'errors': 0},
-                'authorship': {'status': 'pending', 'records': 0, 'errors': 0}
+                'topics': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'concepts': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'publishers': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'funders': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'sources': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'institutions': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'authors': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'works': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
+                'authorship': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []}
             }
 
     def save_state(self):
@@ -137,20 +142,43 @@ class Orchestrator:
             self.save_state()
             return False
 
-        self.log(f"Found {len(gz_files)} file(s) to process:")
-        for gz_file in gz_files:
+        # Get list of completed files for this entity
+        completed_files = set(self.state[entity_name].get('completed_files', []))
+
+        # Filter out already completed files
+        files_to_process = [f for f in gz_files if f not in completed_files]
+
+        if completed_files:
+            self.log(f"Found {len(completed_files)} already completed file(s)")
+            self.log(f"Remaining files to process: {len(files_to_process)}")
+
+        if not files_to_process:
+            self.log(f"✅ All files already processed for {entity_name}")
+            self.state[entity_name]['status'] = 'complete'
+            if 'completed' not in self.state[entity_name]:
+                self.state[entity_name]['completed'] = datetime.now().isoformat()
+            self.save_state()
+            return True
+
+        self.log(f"Found {len(gz_files)} total file(s), {len(files_to_process)} to process:")
+        for gz_file in files_to_process[:10]:  # Show first 10
             self.log(f"  - {Path(gz_file).name}")
+        if len(files_to_process) > 10:
+            self.log(f"  ... and {len(files_to_process) - 10} more")
 
         # Update state
         self.state[entity_name]['status'] = 'running'
-        self.state[entity_name]['started'] = datetime.now().isoformat()
+        if 'started' not in self.state[entity_name]:
+            self.state[entity_name]['started'] = datetime.now().isoformat()
         self.save_state()
 
         overall_start = time.time()
 
         # Process each file
-        for i, gz_file in enumerate(gz_files, 1):
-            self.log(f"\n--- Processing file {i}/{len(gz_files)}: {Path(gz_file).name} ---")
+        for i, gz_file in enumerate(files_to_process, 1):
+            # Calculate actual position in full list
+            actual_position = gz_files.index(gz_file) + 1
+            self.log(f"\n--- Processing file {actual_position}/{len(gz_files)}: {Path(gz_file).name} ---")
 
             # Build command
             cmd = [sys.executable, str(parser_script), '--input-file', gz_file]
@@ -173,16 +201,20 @@ class Orchestrator:
                 elapsed = time.time() - start_time
 
                 if result.returncode == 0:
-                    self.log(f"✅ File {i}/{len(gz_files)} completed successfully in {elapsed:.1f}s")
+                    self.log(f"✅ File {actual_position}/{len(gz_files)} completed successfully in {elapsed:.1f}s")
+
+                    # Mark file as completed and save state
+                    self.state[entity_name]['completed_files'].append(gz_file)
+                    self.save_state()
                 else:
-                    self.log(f"❌ File {i}/{len(gz_files)} failed with return code {result.returncode}")
+                    self.log(f"❌ File {actual_position}/{len(gz_files)} failed with return code {result.returncode}")
                     self.state[entity_name]['status'] = 'failed'
                     self.state[entity_name]['completed'] = datetime.now().isoformat()
                     self.save_state()
                     return False
 
             except Exception as e:
-                self.log(f"❌ Exception processing file {i}/{len(gz_files)}: {e}")
+                self.log(f"❌ Exception processing file {actual_position}/{len(gz_files)}: {e}")
                 self.state[entity_name]['status'] = 'failed'
                 self.save_state()
                 return False
@@ -205,6 +237,7 @@ class Orchestrator:
             status = state.get('status', 'unknown')
             records = state.get('records', 0)
             errors = state.get('errors', 0)
+            completed_files = len(state.get('completed_files', []))
 
             if status == 'complete':
                 icon = '✅'
@@ -215,7 +248,7 @@ class Orchestrator:
             else:
                 icon = '⏸️ '
 
-            self.log(f"  {icon} {entity:15s} {status:10s} | Records: {records:,} | Errors: {errors}")
+            self.log(f"  {icon} {entity:15s} {status:10s} | Files: {completed_files:,} | Records: {records:,} | Errors: {errors}")
 
         self.log(f"{'='*70}\n")
 
@@ -327,13 +360,22 @@ class Orchestrator:
         self.state = self.load_state()
         self.log("✅ State reset complete")
 
+    def clear_entity_files(self, entity_name):
+        """Clear completed files for a specific entity"""
+        if entity_name in self.state:
+            self.state[entity_name]['completed_files'] = []
+            self.state[entity_name]['status'] = 'pending'
+            self.save_state()
+            self.log(f"✅ Cleared completed files for {entity_name}")
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='OpenAlex Parsing Orchestrator')
-    parser.add_argument('--start', action='store_true', help='Start parsing from beginning')
-    parser.add_argument('--resume', action='store_true', help='Resume from saved state')
+    parser.add_argument('--start', action='store_true', help='Start parsing from beginning (clears incomplete file tracking)')
+    parser.add_argument('--resume', action='store_true', help='Resume from saved state (preserves file tracking)')
     parser.add_argument('--status', action='store_true', help='Show current status')
-    parser.add_argument('--reset', action='store_true', help='Reset state')
+    parser.add_argument('--reset', action='store_true', help='Reset all state')
+    parser.add_argument('--clear-entity', type=str, help='Clear completed files for specific entity')
     parser.add_argument('--test', action='store_true', help='Test mode (100k lines per file)')
     parser.add_argument('--limit', type=int, help='Custom line limit per file')
 
@@ -348,7 +390,17 @@ if __name__ == '__main__':
         orchestrator.print_status()
     elif args.reset:
         orchestrator.reset()
-    elif args.start or args.resume:
+    elif args.clear_entity:
+        orchestrator.clear_entity_files(args.clear_entity)
+    elif args.start:
+        # Clear file tracking for incomplete entities
+        orchestrator.log("Starting from beginning - clearing file tracking for incomplete entities")
+        for entity in orchestrator.state:
+            if orchestrator.state[entity]['status'] != 'complete':
+                orchestrator.state[entity]['completed_files'] = []
+        orchestrator.save_state()
+        orchestrator.run_all()
+    elif args.resume:
         orchestrator.run_all()
     else:
         parser.print_help()

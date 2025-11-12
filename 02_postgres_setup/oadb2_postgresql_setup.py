@@ -7,7 +7,7 @@ from datetime import datetime
 # Configuration
 DB_HOST = '192.168.1.100'
 DB_PORT = 55432
-DB_NAME = 'oadb2'  # Different database name (lowercase to match PostgreSQL behavior)
+DB_NAME = 'OADB'  # Different database name (lowercase to match PostgreSQL behavior)
 ADMIN_USER = 'admin'
 ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 READONLY_USER = 'user1'
@@ -286,8 +286,8 @@ def create_tables_no_constraints():
                 is_retracted BOOLEAN,
                 language VARCHAR(100),
                 language_id VARCHAR(255),
-                first_page VARCHAR(100),
-                last_page VARCHAR(100),
+                first_page VARCHAR(500),
+                last_page VARCHAR(500),
                 volume VARCHAR(100),
                 issue VARCHAR(100),
                 keywords TEXT,
@@ -402,7 +402,7 @@ def create_tables_no_constraints():
             CREATE TABLE IF NOT EXISTS work_funders (
                 work_id VARCHAR(255),
                 funder_id VARCHAR(255),
-                award_id VARCHAR(255)
+                award_id VARCHAR(1000)
             );
         """)
 

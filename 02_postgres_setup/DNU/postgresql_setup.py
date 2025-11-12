@@ -166,8 +166,8 @@ def create_tables_and_indexes():
                 is_retracted BOOLEAN,
                 language VARCHAR(100),
                 language_id VARCHAR(255),
-                first_page VARCHAR(100),
-                last_page VARCHAR(100),
+                first_page VARCHAR(255),
+                last_page VARCHAR(255),
                 volume VARCHAR(100),
                 issue VARCHAR(100),
                 keywords TEXT,
@@ -488,7 +488,7 @@ def create_tables_and_indexes():
             CREATE TABLE IF NOT EXISTS work_funders (
                 work_id VARCHAR(255) REFERENCES works(work_id) ON DELETE CASCADE,
                 funder_id VARCHAR(255) REFERENCES funders(funder_id) ON DELETE CASCADE,
-                award_id VARCHAR(255),
+                award_id VARCHAR(1000),
                 PRIMARY KEY (work_id, funder_id)
             );
         """)

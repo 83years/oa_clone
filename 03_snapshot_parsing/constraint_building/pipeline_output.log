@@ -1,0 +1,14 @@
+[2025-11-09 06:28:36] 
+######################################################################
+[2025-11-09 06:28:36] STARTING CONSTRAINT BUILDING PIPELINE
+[2025-11-09 06:28:36] Database: OADB_test
+[2025-11-09 06:28:36] TEST MODE: Using database clone
+[2025-11-09 06:28:36] ######################################################################
+
+[2025-11-09 06:28:36] 
+======================================================================
+[2025-11-09 06:28:36] PHASE: MERGED IDS
+[2025-11-09 06:28:36] ======================================================================
+[2025-11-09 06:28:36] Command: /Library/Frameworks/Python.framework/Versions/3.13/bin/python3 /Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/constraint_building/apply_merged_ids.py --test
+[2025-11-09 06:44:21] ❌ merged_ids failed with return code -15
+[2025-11-09 06:44:21] ❌ Pipeline halted due to merged_ids failure

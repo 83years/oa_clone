@@ -5,11 +5,12 @@ Global configuration for OpenAlex database parsing
 import os
 
 # Database configuration
+# Can be overridden with environment variables when running on NAS
 DB_CONFIG = {
-    'host': '192.168.1.100',
-    'port': 55432,
-    'database': 'oadb2',
-    'user': 'admin',
+    'host': os.getenv('DB_HOST', '192.168.1.100'),  # Use localhost or container name on NAS
+    'port': int(os.getenv('DB_PORT', '55432')),
+    'database': os.getenv('DB_NAME', 'OADB'),
+    'user': os.getenv('DB_USER', 'admin'),
     'password': os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 }
 
