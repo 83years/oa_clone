@@ -267,7 +267,7 @@ def create_tables_no_constraints():
                 display_name TEXT,
                 title TEXT,
                 abstract TEXT,
-                doi VARCHAR(255),
+                doi VARCHAR(1000),
                 publication_date DATE,
                 publication_year INTEGER,
                 type VARCHAR(100),

@@ -1,0 +1,5 @@
+[2025-11-14 16:08:35.324977] COPY error for works: value too long for type character varying(255)
+CONTEXT:  COPY works, line 8452, column doi: "https://doi.org/10.31080/asnh.2020.04.utilization-of-a-pyrrolidin-one-based-nonselective-adrenocepto..."
+
+[2025-11-14 16:08:36.876513] execute_values error for works: value too long for type character varying(255)
+
