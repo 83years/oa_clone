@@ -288,7 +288,7 @@ def create_tables_no_constraints():
                 language_id VARCHAR(255),
                 first_page VARCHAR(500),
                 last_page VARCHAR(500),
-                volume VARCHAR(100),
+                volume VARCHAR(1000),
                 issue VARCHAR(100),
                 keywords TEXT,
                 sustainable_development_goals TEXT,

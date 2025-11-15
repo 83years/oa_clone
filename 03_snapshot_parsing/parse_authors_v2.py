@@ -45,6 +45,10 @@ class AuthorsParser(BaseParser):
             'author_id', 'year', 'works_count', 'oa_works_count', 'cited_by_count'
         ]
 
+        self.author_name_variants_columns = [
+            'author_id', 'name_variant'
+        ]
+
     def parse(self):
         """Main parsing logic"""
         self.stats['start_time'] = time.time()
@@ -56,6 +60,7 @@ class AuthorsParser(BaseParser):
         author_concepts_batch = []
         author_institutions_batch = []
         authors_works_by_year_batch = []
+        author_name_variants_batch = []
         unique_ids = set()
 
         try:
@@ -177,6 +182,15 @@ class AuthorsParser(BaseParser):
                             'cited_by_count': count.get('cited_by_count')
                         })
 
+                # Author name variants
+                display_name_alternatives = author.get('display_name_alternatives', [])
+                for variant in display_name_alternatives:
+                    if variant:
+                        author_name_variants_batch.append({
+                            'author_id': author_id,
+                            'name_variant': variant
+                        })
+
                 self.stats['records_parsed'] += 1
 
                 # Batch writes
@@ -200,6 +214,10 @@ class AuthorsParser(BaseParser):
                     self.write_with_copy('authors_works_by_year', authors_works_by_year_batch, self.authors_works_by_year_columns)
                     authors_works_by_year_batch = []
 
+                if len(author_name_variants_batch) >= 50000:
+                    self.write_with_copy('author_name_variants', author_name_variants_batch, self.author_name_variants_columns)
+                    author_name_variants_batch = []
+
             # Write remaining records
             if authors_batch:
                 self.write_with_copy('authors', authors_batch, self.authors_columns)
@@ -211,6 +229,8 @@ class AuthorsParser(BaseParser):
                 self.write_with_copy('author_institutions', author_institutions_batch, self.author_institutions_columns)
             if authors_works_by_year_batch:
                 self.write_with_copy('authors_works_by_year', authors_works_by_year_batch, self.authors_works_by_year_columns)
+            if author_name_variants_batch:
+                self.write_with_copy('author_name_variants', author_name_variants_batch, self.author_name_variants_columns)
 
         finally:
             self.stats['end_time'] = time.time()

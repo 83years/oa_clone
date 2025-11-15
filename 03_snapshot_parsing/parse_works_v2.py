@@ -56,6 +56,7 @@ class WorksParser(BaseParser):
         self.citations_by_year_columns = ['work_id', 'year', 'citation_count']
         self.referenced_works_columns = ['work_id', 'referenced_work_id']
         self.related_works_columns = ['work_id', 'related_work_id']
+        self.apc_columns = ['work_id', 'value', 'currency', 'value_usd', 'provenance']
 
     def parse(self):
         """Main parsing logic"""
@@ -73,6 +74,7 @@ class WorksParser(BaseParser):
         citations_by_year_batch = []
         referenced_works_batch = []
         related_works_batch = []
+        apc_batch = []
 
         unique_ids = set()
 
@@ -324,6 +326,28 @@ class WorksParser(BaseParser):
                             'related_work_id': rel_work_id
                         })
 
+                # APC (Article Processing Charges)
+                apc_list = work.get('apc_list', {}) or {}
+                apc_paid = work.get('apc_paid', {}) or {}
+
+                # Use apc_paid if available, otherwise use apc_list
+                if apc_paid:
+                    apc_batch.append({
+                        'work_id': work_id,
+                        'value': apc_paid.get('value'),
+                        'currency': apc_paid.get('currency'),
+                        'value_usd': apc_paid.get('value_usd'),
+                        'provenance': apc_paid.get('provenance')
+                    })
+                elif apc_list:
+                    apc_batch.append({
+                        'work_id': work_id,
+                        'value': apc_list.get('value'),
+                        'currency': apc_list.get('currency'),
+                        'value_usd': apc_list.get('value_usd'),
+                        'provenance': apc_list.get('provenance')
+                    })
+
                 self.stats['records_parsed'] += 1
 
                 # Batch writes when threshold reached
@@ -367,6 +391,10 @@ class WorksParser(BaseParser):
                     self.write_with_copy('related_works', related_works_batch, self.related_works_columns)
                     related_works_batch = []
 
+                if len(apc_batch) >= 50000:
+                    self.write_with_copy('apc', apc_batch, self.apc_columns)
+                    apc_batch = []
+
             # Write remaining records
             if works_batch:
                 self.write_with_copy('works', works_batch, self.works_columns)
@@ -388,6 +416,8 @@ class WorksParser(BaseParser):
                 self.write_with_copy('referenced_works', referenced_works_batch, self.referenced_works_columns)
             if related_works_batch:
                 self.write_with_copy('related_works', related_works_batch, self.related_works_columns)
+            if apc_batch:
+                self.write_with_copy('apc', apc_batch, self.apc_columns)
 
         finally:
             self.stats['end_time'] = time.time()
