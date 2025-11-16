@@ -57,6 +57,7 @@ class WorksParser(BaseParser):
         self.referenced_works_columns = ['work_id', 'referenced_work_id']
         self.related_works_columns = ['work_id', 'related_work_id']
         self.apc_columns = ['work_id', 'value', 'currency', 'value_usd', 'provenance']
+        self.alternate_ids_columns = ['work_id', 'id_type', 'id_value']
 
     def parse(self):
         """Main parsing logic"""
@@ -75,6 +76,7 @@ class WorksParser(BaseParser):
         referenced_works_batch = []
         related_works_batch = []
         apc_batch = []
+        alternate_ids_batch = []
 
         unique_ids = set()
 
@@ -348,6 +350,34 @@ class WorksParser(BaseParser):
                         'provenance': apc_list.get('provenance')
                     })
 
+                # Alternate IDs
+                ids_dict = work.get('ids', {}) or {}
+                for id_type, id_value in ids_dict.items():
+                    # Skip openalex ID as it's already the primary key
+                    if id_type.lower() == 'openalex':
+                        continue
+
+                    if id_value:
+                        # Clean up the ID value (remove URLs, keep just the identifier)
+                        clean_value = str(id_value)
+
+                        # Remove common URL prefixes
+                        if 'doi.org/' in clean_value:
+                            clean_value = clean_value.split('doi.org/')[-1]
+                        elif 'pubmed.ncbi.nlm.nih.gov/' in clean_value:
+                            clean_value = clean_value.split('pubmed.ncbi.nlm.nih.gov/')[-1]
+                        elif 'ncbi.nlm.nih.gov/pmc/articles/' in clean_value:
+                            clean_value = clean_value.split('ncbi.nlm.nih.gov/pmc/articles/')[-1]
+                        elif '://' in clean_value:
+                            # Generic URL cleanup - take everything after last /
+                            clean_value = clean_value.split('/')[-1]
+
+                        alternate_ids_batch.append({
+                            'work_id': work_id,
+                            'id_type': id_type,
+                            'id_value': clean_value[:255]  # Limit to column size
+                        })
+
                 self.stats['records_parsed'] += 1
 
                 # Batch writes when threshold reached
@@ -395,6 +425,10 @@ class WorksParser(BaseParser):
                     self.write_with_copy('apc', apc_batch, self.apc_columns)
                     apc_batch = []
 
+                if len(alternate_ids_batch) >= 50000:
+                    self.write_with_copy('alternate_ids', alternate_ids_batch, self.alternate_ids_columns)
+                    alternate_ids_batch = []
+
             # Write remaining records
             if works_batch:
                 self.write_with_copy('works', works_batch, self.works_columns)
@@ -418,6 +452,8 @@ class WorksParser(BaseParser):
                 self.write_with_copy('related_works', related_works_batch, self.related_works_columns)
             if apc_batch:
                 self.write_with_copy('apc', apc_batch, self.apc_columns)
+            if alternate_ids_batch:
+                self.write_with_copy('alternate_ids', alternate_ids_batch, self.alternate_ids_columns)
 
         finally:
             self.stats['end_time'] = time.time()
