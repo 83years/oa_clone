@@ -208,20 +208,86 @@ class DuplicateRemover:
         self.conn.close()
 
 
+    def get_table_definitions(self):
+        """Return dictionary of all table definitions with their PKs"""
+        return {
+            # Entity tables (single-column PKs)
+            'works': 'work_id',
+            'authors': 'author_id',
+            'institutions': 'institution_id',
+            'sources': 'source_id',
+            'publishers': 'publisher_id',
+            'funders': 'funder_id',
+            'concepts': 'concept_id',
+            'topics': 'topic_id',
+            'institution_geo': 'institution_id',
+            'search_metadata': 'search_id',
+            # Relationship tables (composite PKs)
+            'authorship': ['work_id', 'author_id', 'author_position'],
+            'work_topics': ['work_id', 'topic_id'],
+            'work_concepts': ['work_id', 'concept_id'],
+            'work_sources': ['work_id', 'source_id'],
+            'work_keywords': ['work_id', 'keyword'],
+            'work_funders': ['work_id', 'funder_id'],
+            'citations_by_year': ['work_id', 'year'],
+            'referenced_works': ['work_id', 'referenced_work_id'],
+            'related_works': ['work_id', 'related_work_id'],
+            'author_topics': ['author_id', 'topic_id'],
+            'author_concepts': ['author_id', 'concept_id'],
+            'author_institutions': ['author_id', 'institution_id'],
+            'authors_works_by_year': ['author_id', 'year'],
+            'source_publishers': ['source_id', 'publisher_id'],
+            'institution_hierarchy': ['parent_institution_id', 'child_institution_id'],
+            'topic_hierarchy': ['parent_topic_id', 'child_topic_id'],
+        }
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Remove duplicate records from database')
     parser.add_argument('--test', action='store_true', help='Use test database')
     parser.add_argument('--dry-run', action='store_true', help='Show what would be deleted without actually deleting')
-    parser.add_argument('--table', type=str, help='Only process specific table')
+    parser.add_argument('--entities', type=str, nargs='+', help='Specific tables to process (space-separated list)')
     args = parser.parse_args()
 
     remover = DuplicateRemover(test_mode=args.test, dry_run=args.dry_run)
 
     try:
-        if args.table:
-            # Process specific table (user needs to specify PK columns)
-            remover.log(f"⚠️  Use remove_all_duplicates() for now - single table mode not yet implemented")
-            sys.exit(1)
+        if args.entities:
+            # Get table definitions
+            table_defs = remover.get_table_definitions()
+
+            # Validate requested tables
+            invalid_tables = [t for t in args.entities if t not in table_defs]
+            if invalid_tables:
+                remover.log(f"❌ Invalid table names: {', '.join(invalid_tables)}")
+                remover.log(f"Available tables: {', '.join(sorted(table_defs.keys()))}")
+                sys.exit(1)
+
+            # Process only specified tables
+            remover.log(f"Processing {len(args.entities)} specified table(s)")
+            total_deleted = 0
+
+            for table_name in args.entities:
+                try:
+                    pk_columns = table_defs[table_name]
+                    deleted = remover.remove_duplicates(table_name, pk_columns)
+                    total_deleted += deleted
+                    remover.stats['tables_processed'] += 1
+                except Exception as e:
+                    remover.log(f"  ❌ Error processing {table_name}: {e}")
+                    remover.conn.rollback()
+
+            # Summary
+            remover.log("\n" + "="*70)
+            remover.log("DUPLICATE REMOVAL COMPLETE")
+            remover.log("="*70)
+            remover.log(f"Tables processed: {remover.stats['tables_processed']}")
+
+            if remover.dry_run:
+                remover.log(f"Would delete: {total_deleted:,} duplicate rows")
+                remover.log("\n💡 Run without --dry-run to actually remove duplicates")
+            else:
+                remover.log(f"Deleted: {total_deleted:,} duplicate rows")
         else:
             # Process all tables
             remover.remove_all_duplicates()

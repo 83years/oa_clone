@@ -5,7 +5,7 @@ A comprehensive data pipeline for building and analyzing a local copy of the Ope
 ## Project Status (November 2025)
 
 ### Completed Phases
-- ✅ **Phase 01:** OpenAlex snapshot download (277M works, 115M authors)
+- ✅ **Phase 01:** OpenAlex snapshot download (277M works, 102M authors)
 - ✅ **Phase 02:** PostgreSQL database setup on NAS (OADB: 1012 GB)
 - ✅ **Phase 03:** Data parsing and loading into PostgreSQL
 
@@ -17,7 +17,7 @@ A comprehensive data pipeline for building and analyzing a local copy of the Ope
   - See: `03_snapshot_parsing/constraint_building/README.md`
 
 ### Planned Phases
-- ⏸️ **Phase 04:** Author profile building (115M authors)
+- ⏸️ **Phase 04:** Author profile building (102M authors)
   - Career trajectory clustering (DTW + ML hybrid approach)
   - Scripts ready, awaiting constraint completion
   - See: `04_author_profile_building/test/README.md`
@@ -29,7 +29,7 @@ A comprehensive data pipeline for building and analyzing a local copy of the Ope
 
 **Production Database:** `OADB` (1012 GB)
 - 277M works
-- 115M authors
+- 102M authors
 - 1.1B authorship records
 - 2.3B work-concept relationships
 

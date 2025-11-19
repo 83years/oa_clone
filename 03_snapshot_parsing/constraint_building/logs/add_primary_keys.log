@@ -1,0 +1,101 @@
+[2025-11-17 05:50:50] Connected to database: OADB
+[2025-11-17 05:50:50] Log file: logs/add_primary_keys.log
+[2025-11-17 05:50:50] 
+======================================================================
+[2025-11-17 05:50:50] ADDING PRIMARY KEYS TO ALL TABLES
+[2025-11-17 05:50:50] ======================================================================
+
+[2025-11-17 05:50:50] PHASE 1: Single-column Primary Keys (Entity Tables)
+[2025-11-17 05:50:50]   Adding PK to works (work_id)...
+[2025-11-17 10:03:49]     ✅ Primary key created: works_pkey
+[2025-11-17 10:03:49]   Adding PK to authors (author_id)...
+[2025-11-17 10:09:00]     ✅ Primary key created: authors_pkey
+[2025-11-17 10:09:00]   Adding PK to institutions (institution_id)...
+[2025-11-17 10:09:01]     ✅ Primary key created: institutions_pkey
+[2025-11-17 10:09:01]   Adding PK to sources (source_id)...
+[2025-11-17 10:09:01]     ✅ Primary key created: sources_pkey
+[2025-11-17 10:09:01]   Adding PK to publishers (publisher_id)...
+[2025-11-17 10:09:02]     ✅ Primary key created: publishers_pkey
+[2025-11-17 10:09:02]   Adding PK to funders (funder_id)...
+[2025-11-17 10:09:02]     ✅ Primary key created: funders_pkey
+[2025-11-17 10:09:02]   Adding PK to concepts (concept_id)...
+[2025-11-17 10:09:02]     ✅ Primary key created: concepts_pkey
+[2025-11-17 10:09:02]   Adding PK to topics (topic_id)...
+[2025-11-17 10:09:02]     ✅ Primary key created: topics_pkey
+[2025-11-17 10:09:02]   Adding PK to institution_geo (institution_id)...
+[2025-11-17 10:09:02]     ✅ Primary key created: institution_geo_pkey
+[2025-11-17 10:09:02]   Adding PK to search_metadata (search_id)...
+[2025-11-17 10:09:03]     ✅ Primary key created: search_metadata_pkey
+[2025-11-17 10:09:03] 
+PHASE 2: Composite Primary Keys (Relationship Tables)
+[2025-11-17 10:09:03]   Adding PK to authorship (work_id, author_id, author_position)...
+[2025-11-17 11:03:41]     ⚠️  Found 72,780,241 duplicate groups - CANNOT CREATE PK
+[2025-11-17 11:03:41]   Adding PK to work_topics (work_id, topic_id)...
+[2025-11-17 11:24:11]     ✅ Primary key created: work_topics_pkey
+[2025-11-17 11:24:11]   Adding PK to work_concepts (work_id, concept_id)...
+[2025-11-17 18:10:15]     ✅ Primary key created: work_concepts_pkey
+[2025-11-17 18:10:15]   Adding PK to work_sources (work_id, source_id)...
+[2025-11-17 18:15:54]     ⚠️  Found 4,612,173 duplicate groups - CANNOT CREATE PK
+[2025-11-17 18:15:54]   Adding PK to work_keywords (work_id, keyword)...
+[2025-11-17 18:21:01]     ⚠️  Found 49,874 duplicate groups - CANNOT CREATE PK
+[2025-11-17 18:21:01]   Adding PK to work_funders (work_id, funder_id)...
+[2025-11-17 18:21:36]     ⚠️  Found 2,879,359 duplicate groups - CANNOT CREATE PK
+[2025-11-17 18:21:36]   Adding PK to citations_by_year (work_id, year)...
+[2025-11-17 18:38:45]     ✅ Primary key created: citations_by_year_pkey
+[2025-11-17 18:38:45]   Adding PK to referenced_works (work_id, referenced_work_id)...
+[2025-11-18 02:32:50]     ✅ Primary key created: referenced_works_pkey
+[2025-11-18 02:32:50]   Adding PK to related_works (work_id, related_work_id)...
+[2025-11-18 09:45:59]     ✅ Primary key created: related_works_pkey
+[2025-11-18 09:45:59]   Adding PK to author_topics (author_id, topic_id)...
+[2025-11-18 10:05:25]     ✅ Primary key created: author_topics_pkey
+[2025-11-18 10:05:25]   Adding PK to author_concepts (author_id, concept_id)...
+[2025-11-18 12:06:49]     ✅ Primary key created: author_concepts_pkey
+[2025-11-18 12:06:49]   Adding PK to author_institutions (author_id, institution_id)...
+[2025-11-18 12:11:35]     ✅ Primary key created: author_institutions_pkey
+[2025-11-18 12:11:35]   Adding PK to authors_works_by_year (author_id, year)...
+[2025-11-18 12:26:18]     ✅ Primary key created: authors_works_by_year_pkey
+[2025-11-18 12:26:18]   Adding PK to source_publishers (source_id, publisher_id)...
+[2025-11-18 12:26:18]     ✅ Primary key created: source_publishers_pkey
+[2025-11-18 12:26:18]   Adding PK to institution_hierarchy (parent_institution_id, child_institution_id)...
+[2025-11-18 12:26:19]     ⚠️  Found 1,641 duplicate groups - CANNOT CREATE PK
+[2025-11-18 12:26:19]   Adding PK to topic_hierarchy (parent_topic_id, child_topic_id)...
+[2025-11-18 12:26:19]     ⚠️  Found 248 duplicate groups - CANNOT CREATE PK
+[2025-11-18 12:26:19] 
+======================================================================
+[2025-11-18 12:26:19] PRIMARY KEY CREATION COMPLETE
+[2025-11-18 12:26:19] Created: 20
+[2025-11-18 12:26:19] Skipped (already exists): 0
+[2025-11-18 12:26:19] Failed: 6
+[2025-11-18 12:26:19] ======================================================================
+
+[2025-11-18 12:26:19] ⚠️  Some primary keys failed to create - check for duplicates
+[2025-11-19 05:56:33] Connected to database: OADB
+[2025-11-19 05:56:33] Log file: logs/add_primary_keys.log
+[2025-11-19 05:56:33] 
+======================================================================
+[2025-11-19 05:56:33] ADDING PRIMARY KEYS TO ALL TABLES
+[2025-11-19 05:56:33] ======================================================================
+
+[2025-11-19 05:56:33] PHASE 1: Single-column Primary Keys (Entity Tables)
+[2025-11-19 05:56:33]   Adding PK to works (work_id)...
+[2025-11-19 06:24:08] Connected to database: OADB
+[2025-11-19 06:24:08] Log file: logs/add_primary_keys.log
+[2025-11-19 06:24:08] 
+======================================================================
+[2025-11-19 06:24:08] ADDING PRIMARY KEYS TO SELECTED TABLES: authorship
+[2025-11-19 06:24:08] ======================================================================
+
+[2025-11-19 06:24:08] PHASE 1: Single-column Primary Keys (Entity Tables)
+[2025-11-19 06:24:08] 
+PHASE 2: Composite Primary Keys (Relationship Tables)
+[2025-11-19 06:24:08]   Adding PK to authorship (work_id, author_id, institution_id)...
+[2025-11-19 06:52:41]     ⚠️  Found 1,204,667 duplicate groups - CANNOT CREATE PK
+[2025-11-19 06:52:41] 
+======================================================================
+[2025-11-19 06:52:41] PRIMARY KEY CREATION COMPLETE
+[2025-11-19 06:52:41] Created: 0
+[2025-11-19 06:52:41] Skipped (already exists): 0
+[2025-11-19 06:52:41] Failed: 1
+[2025-11-19 06:52:41] ======================================================================
+
+[2025-11-19 06:52:41] ⚠️  Some primary keys failed to create - check for duplicates

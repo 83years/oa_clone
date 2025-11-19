@@ -1,0 +1,10 @@
+[2025-11-17 04:47:57] Connected to database: OADB
+[2025-11-17 04:47:57] Log file: logs/investigate_duplicates.log
+[2025-11-17 04:48:21] Connected to database: OADB
+[2025-11-17 04:48:21] Log file: logs/investigate_duplicates.log
+[2025-11-17 04:48:21] 
+======================================================================
+[2025-11-17 04:48:21] QUICK DUPLICATE CHECK - ALL TABLES
+[2025-11-17 04:48:21] ======================================================================
+[2025-11-17 04:48:21] 
+Quick checking works...

@@ -140,10 +140,18 @@ class PrimaryKeyBuilder:
             self.pk_stats['failed'] += 1
             return False
 
-    def add_all_primary_keys(self):
-        """Add all primary keys to database tables"""
+    def add_all_primary_keys(self, entity_filter=None):
+        """
+        Add all primary keys to database tables
+
+        Args:
+            entity_filter: Optional list of table names to filter. If None, process all tables.
+        """
         self.log("\n" + "="*70)
-        self.log("ADDING PRIMARY KEYS TO ALL TABLES")
+        if entity_filter:
+            self.log(f"ADDING PRIMARY KEYS TO SELECTED TABLES: {', '.join(entity_filter)}")
+        else:
+            self.log("ADDING PRIMARY KEYS TO ALL TABLES")
         self.log("="*70 + "\n")
 
         # Phase 1: Single-column primary keys (entity tables)
@@ -162,12 +170,13 @@ class PrimaryKeyBuilder:
         ]
 
         for table_name, column in single_column_pks:
-            self.add_primary_key(table_name, column)
+            if entity_filter is None or table_name in entity_filter:
+                self.add_primary_key(table_name, column)
 
         # Phase 2: Composite primary keys (relationship tables)
         self.log("\nPHASE 2: Composite Primary Keys (Relationship Tables)")
         composite_pks = [
-            ('authorship', ['work_id', 'author_id', 'author_position']),
+            ('authorship', ['work_id', 'author_id', 'institution_id']),
             ('work_topics', ['work_id', 'topic_id']),
             ('work_concepts', ['work_id', 'concept_id']),
             ('work_sources', ['work_id', 'source_id']),
@@ -186,7 +195,8 @@ class PrimaryKeyBuilder:
         ]
 
         for table_name, columns in composite_pks:
-            self.add_primary_key(table_name, columns)
+            if entity_filter is None or table_name in entity_filter:
+                self.add_primary_key(table_name, columns)
 
         # Summary
         self.log("\n" + "="*70)
@@ -211,12 +221,13 @@ class PrimaryKeyBuilder:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Add Primary Keys to Database')
     parser.add_argument('--test', action='store_true', help='Use test database (oadb2_test)')
+    parser.add_argument('--entities', nargs='+', help='Specific table names to add primary keys to (e.g., --entities works authors authorship)')
     args = parser.parse_args()
 
     builder = PrimaryKeyBuilder(test_mode=args.test)
 
     try:
-        success = builder.add_all_primary_keys()
+        success = builder.add_all_primary_keys(entity_filter=args.entities)
         sys.exit(0 if success else 1)
     except Exception as e:
         builder.log(f"❌ Error: {e}")
