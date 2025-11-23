@@ -65,24 +65,29 @@ Systematically investigate gender disparities in clinical flow cytometry researc
 
 #### Phase 01: OpenAlex Snapshot Download ✅
 
--   **Status**: FUNCTIONAL
--   **Evidence**: Active logs, multi-threaded downloader operational
--   **Data Location**: `/Volumes/OA_snapshot/03OCT2025/`
--   **Completeness**: Snapshot downloaded with entity-type partitioning
-
-#### Phase 02: PostgreSQL Database Setup ✅
-
 -   **Status**: COMPLETE
+-   **Evidence**: Active logs, multi-threaded downloader operational
+-   **Data Location**: `/Volumes/OA_snapshot/24OCT2025/data/`
+-   **Snapshot Date**: October 24, 2025
+-   **Completeness**: Snapshot downloaded with entity-type partitioning
+-   **Structure**: All entities stored in dated subdirectories (updated_date=YYYY-MM-DD format)
+
+#### Phase 02: PostgreSQL Database Setup ✅ (Rebuilt November 2025)
+
+-   **Status**: COMPLETE (Rebuilt after hardware failure)
 -   **Configuration**:
     -   Host: `192.168.1.100:55432`
-    -   Database: `OADB`
+    -   Database: `oadbv5` (renamed from OADB after rebuild)
     -   Users: `admin` (full), `user1` (read-only)
--   **Schema**: 31 tables created including:
+    -   Platform: Docker-based PostgreSQL 16 on UGREEN NAS
+    -   Data location: `/volume1/postgresql_data`
+    -   SMB access: `/Volumes/postgresql_data`
+-   **Schema**: 32 tables created including:
     -   Core entities: works, authors, institutions, sources, publishers, funders, concepts, topics
     -   Relationship tables: authorship, citations, work_concepts, author_topics, etc.
     -   Supporting tables: institution_geo, author_name_variants, apc
     -   Audit infrastructure: data_modification_log with triggers
--   **Features**: Foreign keys, indexes, trigram extension, row-level security
+-   **Features**: Constraint-free for bulk loading (constraints to be added after data loading)
 
 #### Phase 03: Snapshot Parsing
 
@@ -141,7 +146,7 @@ Systematically investigate gender disparities in clinical flow cytometry researc
 
 ### 3.1 Data Architecture
 
-#### OADB Database Schema (PostgreSQL on NAS)
+#### OADBv5 Database Schema (PostgreSQL 16 on NAS)
 
 ```         
 Core Entities
@@ -187,12 +192,12 @@ Future Extensions
 
 #### Data Flow
 
-```         
+```
 OpenAlex Snapshot (S3)
     ↓ (Phase 01: Download)
-Local Storage (/Volumes/OA_snapshot/)
+Local Storage (/Volumes/OA_snapshot/24OCT2025/data/)
     ↓ (Phase 03: Parse & Load)
-PostgreSQL Database (192.168.1.100:55432)
+PostgreSQL Database (192.168.1.100:55432 - oadbv5)
     ↓ (Phase 04: Enrich)
 Author Profiles (R pipeline → Python integration)
     ↓ (Phase 05: Query)
@@ -1122,7 +1127,12 @@ def parse_work_json(json_obj):
 
 ### A. Key Contacts & Resources
 
-**Database**: 192.168.1.100:55432 (OADB) **Data Storage**: /Volumes/OA_snapshot/03OCT2025/ **OpenAlex API Email**: s.lucasblack\@gmail.com **GitHub Repository**: \[To be created\]
+**Database**: 192.168.1.100:55432 (oadbv5)
+**Docker Container**: PostgreSQL 16 on UGREEN NAS
+**Snapshot Data**: /Volumes/OA_snapshot/24OCT2025/data/ (October 24, 2025 snapshot)
+**Database Data**: /volume1/postgresql_data (SMB: /Volumes/postgresql_data)
+**OpenAlex API Email**: s.lucasblack\@gmail.com
+**GitHub Repository**: \[To be created\]
 
 ### B. Glossary of Network Terms
 

@@ -7,7 +7,7 @@ from datetime import datetime
 # Configuration
 DB_HOST = '192.168.1.100'
 DB_PORT = 55432
-DB_NAME = 'OADB'  # Different database name (lowercase to match PostgreSQL behavior)
+DB_NAME = 'oadbv5'  # Different database name (lowercase to match PostgreSQL behavior)
 ADMIN_USER = 'admin'
 ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 READONLY_USER = 'user1'
@@ -340,7 +340,15 @@ def create_tables_no_constraints():
                 author_id VARCHAR(255),
                 author_position TEXT,
                 is_corresponding BOOLEAN,
-                raw_affiliation_string TEXT,
+                raw_affiliation_string TEXT
+            );
+        """)
+
+        # 10b. AUTHORSHIP_INSTITUTIONS TABLE
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS authorship_institutions (
+                work_id VARCHAR(255),
+                author_id VARCHAR(255),
                 institution_id VARCHAR(255)
             );
         """)

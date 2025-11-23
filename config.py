@@ -9,7 +9,7 @@ import os
 DB_CONFIG = {
     'host': os.getenv('DB_HOST', '192.168.1.100'),  # Use localhost or container name on NAS
     'port': int(os.getenv('DB_PORT', '55432')),
-    'database': os.getenv('DB_NAME', 'OADB'),
+    'database': os.getenv('DB_NAME', 'oadbv5'),
     'user': os.getenv('DB_USER', 'admin'),
     'password': os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 }

@@ -6,15 +6,16 @@ A comprehensive data pipeline for building and analyzing a local copy of the Ope
 
 ### Completed Phases
 - ✅ **Phase 01:** OpenAlex snapshot download (277M works, 102M authors)
-- ✅ **Phase 02:** PostgreSQL database setup on NAS (OADB: 1012 GB)
-- ✅ **Phase 03:** Data parsing and loading into PostgreSQL
+- ✅ **Phase 02:** PostgreSQL database setup on NAS (Rebuilt after RAID failure)
+- 🔄 **Phase 03:** Data parsing and loading into PostgreSQL
 
 ### Current Work
-- 🔄 **Phase 03 (Constraint Building):**
-  - Testing database: OADB_test (1013 GB copy)
-  - Currently running: Primary key creation (~7 hours)
-  - Next: Indexes → Foreign keys → Validation
-  - See: `03_snapshot_parsing/constraint_building/README.md`
+- 🔄 **Phase 02-03 Rebuild:**
+  - New database: OADBv5 (rebuilt November 2025 after hardware failure)
+  - Docker-based PostgreSQL 16 on UGREEN NAS
+  - Database schema created (32 tables, constraint-free for bulk loading)
+  - Ready for data parsing from OpenAlex snapshot
+  - See: `02_postgres_setup/oadb2_postgresql_setup.py`
 
 ### Planned Phases
 - ⏸️ **Phase 04:** Author profile building (102M authors)
@@ -27,15 +28,27 @@ A comprehensive data pipeline for building and analyzing a local copy of the Ope
 
 ## Database Overview
 
-**Production Database:** `OADB` (1012 GB)
+**Current Database:** `OADBv5`
+- Host: 192.168.1.100:55432
+- PostgreSQL 16 (Docker container on UGREEN NAS)
+- Admin user: admin
+- Database: oadbv5
+- Status: Empty schema created, ready for data loading
+- 32 tables created (constraint-free for bulk loading)
+- Data persistence: /volume1/postgresql_data
+- SMB access: /Volumes/postgresql_data
+
+**OpenAlex Snapshot Source:**
+- Location: /Volumes/OA_snapshot/24OCT2025/data/
+- Snapshot Date: October 24, 2025
+- Format: Gzipped JSON files in dated subdirectories
+- Ready for parsing via orchestrator
+
+**Target Data Scale:**
 - 277M works
 - 102M authors
 - 1.1B authorship records
 - 2.3B work-concept relationships
-
-**Test Database:** `OADB_test` (1013 GB)
-- Full copy for safe testing
-- Currently undergoing constraint building
 
 ## Key Directories
 

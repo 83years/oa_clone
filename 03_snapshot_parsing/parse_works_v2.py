@@ -45,7 +45,11 @@ class WorksParser(BaseParser):
 
         self.authorship_columns = [
             'work_id', 'author_id', 'author_position', 'is_corresponding',
-            'raw_affiliation_string', 'institution_id'
+            'raw_affiliation_string'
+        ]
+
+        self.authorship_institutions_columns = [
+            'work_id', 'author_id', 'institution_id'
         ]
 
         self.work_topics_columns = ['work_id', 'topic_id', 'score', 'is_primary_topic']
@@ -67,6 +71,7 @@ class WorksParser(BaseParser):
         # Batches for each table
         works_batch = []
         authorship_batch = []
+        authorship_institutions_batch = []
         work_topics_batch = []
         work_concepts_batch = []
         work_sources_batch = []
@@ -199,7 +204,7 @@ class WorksParser(BaseParser):
                     'primary_location_pdf_url': primary_location.get('pdf_url')
                 })
 
-                # Authorships - CRITICAL: One row per author per institution
+                # Authorships - One row per author (institutions in separate table)
                 authorships = work.get('authorships', [])
                 for authorship in authorships:
                     author = authorship.get('author', {}) or {}
@@ -215,32 +220,25 @@ class WorksParser(BaseParser):
                     raw_affs = authorship.get('raw_affiliation_strings', [])
                     raw_aff_str = '; '.join(raw_affs) if raw_affs else None
 
-                    # Get institutions - create separate row for each institution
-                    institutions = authorship.get('institutions', [])
+                    # Single authorship row per author
+                    authorship_batch.append({
+                        'work_id': work_id,
+                        'author_id': author_id,
+                        'author_position': author_position,
+                        'is_corresponding': is_corresponding,
+                        'raw_affiliation_string': raw_aff_str
+                    })
 
-                    if institutions:
-                        # Author has institutions - create one row per institution
-                        for inst in institutions:
-                            inst_id = self.clean_openalex_id(inst.get('id'))
-                            if inst_id:
-                                authorship_batch.append({
-                                    'work_id': work_id,
-                                    'author_id': author_id,
-                                    'author_position': author_position,
-                                    'is_corresponding': is_corresponding,
-                                    'raw_affiliation_string': raw_aff_str,
-                                    'institution_id': inst_id
-                                })
-                    else:
-                        # No institutions - create single row with NULL institution
-                        authorship_batch.append({
-                            'work_id': work_id,
-                            'author_id': author_id,
-                            'author_position': author_position,
-                            'is_corresponding': is_corresponding,
-                            'raw_affiliation_string': raw_aff_str,
-                            'institution_id': None
-                        })
+                    # Separate rows for each institution in authorship_institutions table
+                    institutions = authorship.get('institutions', [])
+                    for inst in institutions:
+                        inst_id = self.clean_openalex_id(inst.get('id'))
+                        if inst_id:
+                            authorship_institutions_batch.append({
+                                'work_id': work_id,
+                                'author_id': author_id,
+                                'institution_id': inst_id
+                            })
 
                 # Work topics
                 topics = work.get('topics', [])
@@ -389,6 +387,10 @@ class WorksParser(BaseParser):
                     self.write_with_copy('authorship', authorship_batch, self.authorship_columns)
                     authorship_batch = []
 
+                if len(authorship_institutions_batch) >= 50000:
+                    self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
+                    authorship_institutions_batch = []
+
                 if len(work_topics_batch) >= 50000:
                     self.write_with_copy('work_topics', work_topics_batch, self.work_topics_columns)
                     work_topics_batch = []
@@ -434,6 +436,8 @@ class WorksParser(BaseParser):
                 self.write_with_copy('works', works_batch, self.works_columns)
             if authorship_batch:
                 self.write_with_copy('authorship', authorship_batch, self.authorship_columns)
+            if authorship_institutions_batch:
+                self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
             if work_topics_batch:
                 self.write_with_copy('work_topics', work_topics_batch, self.work_topics_columns)
             if work_concepts_batch:
