@@ -5,18 +5,19 @@ Global configuration for OpenAlex database parsing
 import os
 
 # Database configuration
-# Can be overridden with environment variables when running on NAS
+# Can be overridden with environment variables when running in Docker on NAS
 DB_CONFIG = {
-    'host': os.getenv('DB_HOST', '192.168.1.100'),  # Use localhost or container name on NAS
-    'port': int(os.getenv('DB_PORT', '55432')),
+    'host': os.getenv('DB_HOST', '192.168.1.162'),  # New NAS IP (or 'postgres' when in container)
+    'port': int(os.getenv('DB_PORT', '55432')),     # External port (5432 when in container)
     'database': os.getenv('DB_NAME', 'oadbv5'),
     'user': os.getenv('DB_USER', 'admin'),
     'password': os.getenv('ADMIN_PASSWORD', 'secure_password_123')
 }
 
 # File paths
-PARSING_DIR = '/Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing'
-SNAPSHOT_DIR = '/Volumes/OA_snapshot/24OCT2025/data'
+# Support both local Mac development and Docker container paths
+PARSING_DIR = os.getenv('PARSING_DIR', '/Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing')
+SNAPSHOT_DIR = os.getenv('SNAPSHOT_DIR', '/Volumes/Series/25NOV2025/data')  # Updated snapshot location
 
 # Entity directories - will process ALL updated_date=* subdirectories
 GZ_DIRECTORIES = {
@@ -48,7 +49,8 @@ PROGRESS_INTERVAL = 10000  # Print progress every N lines
 LINE_LIMIT = None  # Set to integer for testing (e.g., 100000)
 
 # Logging configuration
-LOG_DIR = '/Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/logs'
+# Support both local Mac development and Docker container paths
+LOG_DIR = os.getenv('LOG_DIR', '/Users/lucas/Documents/openalex_database/python/OA_clone/03_snapshot_parsing/logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 
 # Performance settings

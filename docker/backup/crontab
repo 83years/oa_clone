@@ -1,0 +1,8 @@
+# OpenAlex Database Backup Schedule
+# Runs daily at 2:00 AM UTC
+
+# Format: minute hour day month weekday command
+0 2 * * * /backup.sh >> /var/log/cron.log 2>&1
+
+# Keep cron log from growing too large (rotate weekly)
+0 0 * * 0 echo "=== Weekly cron log rotation ===" > /var/log/cron.log

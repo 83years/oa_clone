@@ -1,16 +1,21 @@
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import os
+import sys
 import time
 from datetime import datetime
 
-# Configuration
-DB_HOST = '192.168.1.100'
-DB_PORT = 55432
-DB_NAME = 'oadbv5'  # Different database name (lowercase to match PostgreSQL behavior)
-ADMIN_USER = 'admin'
-ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', 'secure_password_123')
-READONLY_USER = 'user1'
+# Import centralized configuration
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import config
+
+# Database configuration from centralized config
+DB_HOST = config.DB_CONFIG['host']
+DB_PORT = config.DB_CONFIG['port']
+DB_NAME = config.DB_CONFIG['database']
+ADMIN_USER = config.DB_CONFIG['user']
+ADMIN_PASSWORD = config.DB_CONFIG['password']
+READONLY_USER = os.getenv('READONLY_USER', 'user1')
 READONLY_PASSWORD = os.getenv('READONLY_PASSWORD', 'OAUserLetmein!234')
 
 def create_database():

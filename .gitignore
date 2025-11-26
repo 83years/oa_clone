@@ -1,4 +1,29 @@
+# Environment files
+.env
+*.env
+!.env.example
+
+# Docker volumes
+docker/volumes/
+pg_data/
+backups/
+
 # Log directories
+*.log
+logs/
 03_snapshot_parsing/small_tables/logs/
 03_snapshot_parsing/big_tables/works/logs/
 03_snapshot_parsing/big_tables/authors/logs/
+03_snapshot_parsing/logs/
+03_snapshot_parsing/constraint_building/logs/
+
+# Temporary data
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Orchestrator state
+orchestrator_state.json

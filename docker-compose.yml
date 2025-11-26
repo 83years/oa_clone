@@ -1,0 +1,118 @@
+version: '3.8'
+
+services:
+  postgres:
+    build:
+      context: ./docker/postgres
+      dockerfile: Dockerfile
+    container_name: openalex_postgres
+    environment:
+      - POSTGRES_DB=${DB_NAME:-oadbv5}
+      - POSTGRES_USER=${DB_USER:-admin}
+      - POSTGRES_PASSWORD=${ADMIN_PASSWORD:-secure_password_123}
+      - POSTGRES_INITDB_ARGS=--encoding=UTF8 --locale=en_US.UTF-8
+    ports:
+      - "55432:5432"  # Expose PostgreSQL on host port 55432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres/init-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - openalex_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-admin} -d ${DB_NAME:-oadbv5}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    shm_size: '2gb'  # Shared memory for PostgreSQL
+
+  parser:
+    build:
+      context: .
+      dockerfile: ./docker/parser/Dockerfile
+    container_name: openalex_parser
+    environment:
+      # Database connection (use container name for host)
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME:-oadbv5}
+      - DB_USER=${DB_USER:-admin}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-secure_password_123}
+      # Paths for container
+      - SNAPSHOT_DIR=/data
+      - LOG_DIR=/logs
+      - PARSING_DIR=/app/03_snapshot_parsing
+      # Parser configuration
+      - BATCH_SIZE=${BATCH_SIZE:-50000}
+      - PARALLEL_PARSERS=${PARALLEL_PARSERS:-4}
+    volumes:
+      # Mount snapshot data (read-only)
+      - ${SNAPSHOT_PATH:-/Volumes/Series/25NOV2025/data}:/data:ro
+      # Mount logs directory
+      - parser_logs:/logs
+      # Mount orchestrator state
+      - parser_state:/app/03_snapshot_parsing
+      # Mount the application code
+      - ./:/app
+    networks:
+      - openalex_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # Don't start automatically - run manually as needed
+    profiles:
+      - manual
+    stdin_open: true
+    tty: true
+
+  backup:
+    build:
+      context: ./docker/backup
+      dockerfile: Dockerfile
+    container_name: openalex_backup
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME:-oadbv5}
+      - DB_USER=${DB_USER:-admin}
+      - PGPASSWORD=${ADMIN_PASSWORD:-secure_password_123}
+      - BACKUP_RETENTION_DAYS=${BACKUP_RETENTION_DAYS:-7}
+      - BACKUP_RETENTION_WEEKS=${BACKUP_RETENTION_WEEKS:-4}
+    volumes:
+      - backups:/backups
+    networks:
+      - openalex_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+networks:
+  openalex_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /volume1/docker/openalex/pg_data
+  backups:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /volume2/postgres_backup
+  parser_logs:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /volume1/docker/openalex/logs
+  parser_state:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /volume1/docker/openalex/state

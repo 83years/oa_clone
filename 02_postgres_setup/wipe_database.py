@@ -1,17 +1,16 @@
-# code to remove database and all data - should not be run unless eseential 
+# code to remove database and all data - should not be run unless essential
 
 import os
+import sys
 import psycopg2
 from psycopg2 import sql
 
-# Database configuration - matches Docker setup
-DB_CONFIG = {
-    'host': os.getenv('DB_HOST', '192.168.1.100'),
-    'port': int(os.getenv('DB_PORT', '55432')),
-    'database': os.getenv('DB_NAME', 'OADB'),
-    'user': os.getenv('DB_USER', 'admin'),
-    'password': os.getenv('DB_PASSWORD', 'secure_password_123')
-}
+# Import centralized configuration
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import config
+
+# Use centralized database configuration
+DB_CONFIG = config.DB_CONFIG
 
 def wipe_database():
     """

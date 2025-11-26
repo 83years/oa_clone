@@ -176,12 +176,12 @@ class PrimaryKeyBuilder:
         # Phase 2: Composite primary keys (relationship tables)
         self.log("\nPHASE 2: Composite Primary Keys (Relationship Tables)")
         composite_pks = [
-            ('authorship', ['work_id', 'author_id', 'institution_id']),
+            ('authorship', ['work_id', 'author_id', 'author_position']),
             ('work_topics', ['work_id', 'topic_id']),
             ('work_concepts', ['work_id', 'concept_id']),
             ('work_sources', ['work_id', 'source_id']),
             ('work_keywords', ['work_id', 'keyword']),
-            ('work_funders', ['work_id', 'funder_id']),
+            ('work_funders', ['work_id', 'funder_id', 'award_id']),
             ('citations_by_year', ['work_id', 'year']),
             ('referenced_works', ['work_id', 'referenced_work_id']),
             ('related_works', ['work_id', 'related_work_id']),
@@ -190,7 +190,7 @@ class PrimaryKeyBuilder:
             ('author_institutions', ['author_id', 'institution_id']),
             ('authors_works_by_year', ['author_id', 'year']),
             ('source_publishers', ['source_id', 'publisher_id']),
-            ('institution_hierarchy', ['parent_institution_id', 'child_institution_id']),
+            ('institution_hierarchy', ['parent_institution_id', 'child_institution_id', 'hierarchy_level']),
             ('topic_hierarchy', ['parent_topic_id', 'child_topic_id']),
         ]
 

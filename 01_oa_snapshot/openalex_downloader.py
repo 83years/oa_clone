@@ -19,7 +19,7 @@ import time
 
 # Configuration
 BUCKET_NAME = "openalex"
-LOCAL_BASE_PATH = "/Volumes/OA_snapshot/24OCT2025"
+LOCAL_BASE_PATH = "/Volumes/Series/25NOV2025"
 MAX_WORKERS = 10  # Adjust based on your bandwidth and system
 CHUNK_SIZE = 8 * 1024 * 1024  # 8MB chunks
 
