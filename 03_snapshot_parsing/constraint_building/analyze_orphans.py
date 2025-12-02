@@ -33,7 +33,7 @@ class OrphanAnalyzer:
         """
         self.test_mode = test_mode
         db_config = DB_CONFIG.copy()
-        db_config['database'] = 'OADB_test' if test_mode else 'OADB'
+        db_config['database'] = 'oadbv5_test' if test_mode else 'oadbv5'
 
         self.conn = psycopg2.connect(**db_config)
         self.cursor = self.conn.cursor()

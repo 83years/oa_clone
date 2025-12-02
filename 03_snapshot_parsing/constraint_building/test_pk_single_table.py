@@ -95,7 +95,7 @@ def main():
 
     # Connect to test database
     db_config = DB_CONFIG.copy()
-    db_config['database'] = 'OADB_test'
+    db_config['database'] = 'oadbv5_test'
 
     log(f"\nConnecting to {db_config['database']}...")
     conn = psycopg2.connect(**db_config)

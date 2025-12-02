@@ -105,9 +105,9 @@ def main():
         print(f"  Loaded {len(merged_ids):,} merged ID mappings")
 
     # Connect to test database
-    print(f"\nConnecting to OADB_test...")
+    print(f"\nConnecting to oadbv5_test...")
     db_config = DB_CONFIG.copy()
-    db_config['database'] = 'OADB_test'
+    db_config['database'] = 'oadbv5_test'
     conn = psycopg2.connect(**db_config)
 
     # Tables to check (using actual table names from database)

@@ -40,6 +40,57 @@
 - Don't let the programme crash silently; always indicate what went wrong
 - For data processing: validate inputs and handle missing/malformed data appropriately
 
+## Logging
+**CRITICAL**: All scripts MUST implement proper logging. Never allow days to pass without knowing what a script is doing.
+
+### Required Logging Standards:
+- **Always log to both console AND file** - dual output ensures visibility
+- **Use Python's logging module** with proper configuration
+- **Include timestamps** in all log messages (format: `[YYYY-MM-DD HH:MM:SS]`)
+- **Store log files** in a dedicated `logs/` directory within each phase folder
+- **Name log files** with timestamps: `{script_name}_{YYYYMMDD_HHMMSS}.log`
+
+### Progress Logging for Long-Running Operations:
+- Log progress at regular intervals (e.g., every 100k records, every 5 minutes)
+- Include completion percentage when total is known
+- Log current state, records processed, and estimated time remaining
+- For batch operations, log: batch number, records in batch, total processed, time elapsed
+- Always log when starting and completing major phases
+
+### Log Levels:
+- **INFO**: Normal progress updates, milestones, summaries
+- **WARNING**: Non-fatal issues, degraded performance, missing optional data
+- **ERROR**: Failures that don't stop execution, recoverable errors
+- **CRITICAL**: Fatal errors that stop execution
+
+### Example Logging Setup:
+```python
+import logging
+from datetime import datetime
+from pathlib import Path
+
+# Create logs directory
+log_dir = Path(__file__).parent / 'logs'
+log_dir.mkdir(exist_ok=True)
+
+# Setup logging to both file and console
+log_file = log_dir / f'{Path(__file__).stem}_{datetime.now():%Y%m%d_%H%M%S}.log'
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s] [%(levelname)s] %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S',
+    handlers=[
+        logging.FileHandler(log_file),
+        logging.StreamHandler()  # Console output
+    ]
+)
+
+logger = logging.getLogger(__name__)
+logger.info(f"Starting {Path(__file__).name}")
+logger.info(f"Log file: {log_file}")
+```
+
 ## File structure
 01_oa_snapshot:
 - Code that deals with the downloading of the OpenAlex snapshot files and how they are stored locally

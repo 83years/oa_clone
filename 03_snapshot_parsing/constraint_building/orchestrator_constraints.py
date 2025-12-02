@@ -34,7 +34,7 @@ class ConstraintOrchestrator:
             test_mode: Use test database clone (oadb2_test)
         """
         self.test_mode = test_mode
-        self.db_name = 'OADB_test' if test_mode else 'OADB'
+        self.db_name = 'oadbv5_test' if test_mode else 'oadbv5'
         self.state = self.load_state()
 
     def load_state(self):

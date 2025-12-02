@@ -16,9 +16,9 @@ from config import DB_CONFIG
 def count_authorship_rows():
     """Count and display the number of rows in the authorship table"""
 
-    # Connect to OADB database
+    # Connect to oadbv5 database
     db_config = DB_CONFIG.copy()
-    db_config['database'] = 'OADB'
+    db_config['database'] = 'oadbv5'
 
     conn = psycopg2.connect(**db_config)
     cursor = conn.cursor()
