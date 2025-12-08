@@ -289,15 +289,16 @@ docker-compose exec postgres tail -f /var/lib/postgresql/data/log/postgresql-*.l
 
 ## Resource Limits
 
-### Current Limits
+### Current Limits (Optimized for 64GB RAM System)
 
 ```yaml
 postgres:
-  shm_size: '2gb'
+  shm_size: '12gb'
   # Configured in postgresql.conf:
-  # - shared_buffers: 4GB
-  # - work_mem: 256MB
-  # - maintenance_work_mem: 2GB
+  # - shared_buffers: 10GB
+  # - work_mem: 512MB
+  # - maintenance_work_mem: 4GB
+  # - effective_cache_size: 40GB
 ```
 
 ### Adding Resource Constraints
@@ -419,9 +420,11 @@ docker-compose down -v  # Removes volumes too!
 ### PostgreSQL Settings
 
 Edit `docker/postgres/postgresql.conf` and rebuild:
-- `shared_buffers`: Increase for more caching
-- `work_mem`: Increase for complex queries
-- `max_wal_size`: Increase for fewer checkpoints
+- `shared_buffers`: Currently 10GB (~16% of 64GB RAM) - increase for more caching
+- `work_mem`: Currently 512MB - increase for more complex queries (watch total: work_mem × max_connections)
+- `maintenance_work_mem`: Currently 4GB - increase for faster index builds and VACUUM
+- `effective_cache_size`: Currently 40GB (~63% of 64GB RAM) - tells planner how much OS cache is available
+- `max_wal_size`: Increase for fewer checkpoints during bulk loading
 
 ### Parser Performance
 

@@ -4,23 +4,112 @@ Complete guide for adding primary keys, indexes, and foreign keys to the OpenAle
 
 ---
 
+## 🚀 Quick Start for Career Trajectory Analysis
+
+**NEW (December 2025):** Added `--scope` flag to selectively build only the constraints you need right now.
+
+For **immediate career trajectory calculations** (author first/last publication year, current status, authors_works_by_year):
+
+```bash
+cd constraint_building
+
+# 1. Add primary keys (REQUIRED FIRST - remove duplicates if needed)
+python3 add_primary_keys.py --test
+
+# 2. Add only authorship-related indexes (~20 indexes, <1 hour)
+python3 add_indexes.py --scope authorship --test
+
+# 3. (OPTIONAL) Add only authorship-related foreign keys (~10 FKs, <2 minutes)
+python3 add_foreign_keys.py --scope authorship --test
+```
+
+**What this gives you:**
+- ✅ Fast queries on `authorship.author_id` (indexed)
+- ✅ Fast queries on `authorship.work_id` (indexed)
+- ✅ Fast queries on `works.publication_year` and `works.publication_date` (indexed)
+- ✅ Fast queries on `authors_works_by_year` (indexed)
+- ✅ Primary keys on all tables for data integrity
+- ❌ No keyword search indexes (defer until needed)
+- ❌ No work_topics/work_concepts indexes (defer until needed)
+
+**What to skip for now:**
+- `--scope keywords` - Only needed when you start searching by title/abstract/keywords
+- `--scope all` - Builds ALL indexes (2-4 hours) - only needed for full database queries
+
+**Why scope matters:** Building only authorship indexes saves 60-70% of indexing time and lets you start your career trajectory analysis immediately.
+
+---
+
+## 📋 Recent Updates (December 2025)
+
+### Schema Correction: authorship vs authorship_institutions
+
+**IMPORTANT:** The `authorship` table does NOT have an `institution_id` column. Institution relationships are stored in a separate `authorship_institutions` table.
+
+**Corrected schema:**
+- `authorship` table columns: `work_id`, `author_id`, `author_position`, `is_corresponding`, `raw_affiliation_string`
+- `authorship_institutions` table columns: `work_id`, `author_id`, `institution_id`
+
+**Scripts updated to fix this:**
+- ✅ `add_indexes.py` - Now correctly indexes `authorship_institutions` table
+- ✅ `add_foreign_keys.py` - Now correctly creates FKs for `authorship_institutions` table
+- ✅ `analyze_orphans.py` - Now correctly analyzes both tables separately
+
+**What changed:**
+- Removed incorrect `authorship.institution_id` references
+- Added correct `authorship_institutions` table handling
+- Added `--scope` flag to both `add_indexes.py` and `add_foreign_keys.py`
+
+---
+
 ## Current Status
 
-**Last Updated:** November 9, 2025
+**Last Updated:** December 6, 2025
 
-**Database:** OADB_test (1013 GB test copy of OADB)
+**Database:** `oadbv5` (production database on NVMe drives, daily backups to HDD volume)
 
 **Progress:**
-- ✅ Database validation - Database names corrected (OADB_test/OADB)
-- ✅ Merged IDs validation - Tested and **SKIPPED** (0.05% match rate, minimal impact)
-- ✅ Primary key timing test - Completed on small tables (~159k rows/sec throughput)
-- ⚠️ **ISSUE DISCOVERED:** Duplicate records found (2.8M in works, 750K in authors)
-- 🔄 **CURRENTLY INVESTIGATING:** Duplicate analysis to determine if data is identical or different
-- ⏸️ Duplicate removal - Pending investigation results
-- ⏸️ Primary keys - Blocked by duplicates
-- ⏸️ Indexes - Not started
-- ⏸️ Foreign keys - Not started
-- ⏸️ Validation - Not started
+- ✅ **Merged IDs** - Skipped (testing showed 0.05% match rate, minimal impact)
+- ✅ **Duplicates** - Removed (Nov 29 - Dec 2, 2025)
+  - Investigated, analyzed, and removed duplicates from all tables
+  - Vacuumed tables to reclaim space
+  - Logs in `constraint_building/logs/`
+- ✅ **Primary Keys** - Complete except `work_keyword` (Dec 2-6, 2025)
+  - All entity tables: works, authors, institutions, sources, etc.
+  - All relationship tables: authorship, work_topics, citations_by_year, etc.
+  - `work_keyword` table: Deferred (will add later when needed for text search)
+  - Throughput: ~159k rows/second
+- 🔄 **Indexes** - In progress (started Dec 6, 2025)
+  - Currently running: `--scope authorship` (priority for career trajectory analysis)
+  - Next: `--scope all` when capacity allows
+- ⏸️ **Foreign keys** - Pending (after indexes complete)
+- ⏸️ **Orphan analysis** - Deferred (will run after FKs and author trajectory analysis)
+- ⏸️ **Validation** - Deferred
+
+**Parallel Work:**
+- 🔄 **Author gender inference** - Running in `04_author_profile_building/`
+
+---
+
+## Production Timeline
+
+Actual work completed on `oadbv5`:
+
+| Phase | Dates | Duration | Status | Notes |
+|-------|-------|----------|--------|-------|
+| Duplicate Investigation | Nov 29, 2025 | 1 day | ✅ Complete | `investigate_duplicates.py`, `analyze_duplicates.py` |
+| Duplicate Removal | Nov 29 - Dec 2, 2025 | 4 days | ✅ Complete | Multiple runs with error corrections |
+| Table Vacuuming | Dec 2-5, 2025 | 3 days | ✅ Complete | Reclaimed space from deleted duplicates |
+| Primary Keys (all except work_keyword) | Dec 2-6, 2025 | 4 days | ✅ Complete | ~159k rows/sec throughput |
+| Indexes (authorship scope) | Dec 6, 2025 - TBD | In progress | 🔄 Running | Priority for career trajectories |
+| Indexes (all scope) | TBD | Pending | ⏸️ Queued | When capacity allows |
+| Foreign Keys | TBD | Pending | ⏸️ Queued | After indexes complete |
+| work_keyword Primary Key | TBD | Deferred | ⏸️ Queued | Needed later for text search |
+| Orphan Analysis | TBD | Deferred | ⏸️ Queued | After FKs and author analysis |
+
+**Logs location:**
+- Database build: `03_snapshot_parsing/logs/`
+- Constraint building: `03_snapshot_parsing/constraint_building/logs/`
 
 ---
 
@@ -61,8 +150,15 @@ cd ../
 python3 orchestrator.py --status
 ```
 
-### 2. Database Cloning for Testing (Recommended)
+### 2. Database Backup Strategy (IMPORTANT)
 
+**Current setup for `oadbv5`:**
+- Production database on NVMe drives for performance
+- Daily automated backups to separate HDD volume on NAS
+- Working directly on production database
+- Can restore from backup if needed
+
+**For testing (optional):**
 Clone the production database for safe testing:
 ```bash
 # Use the Python script to handle connection termination
@@ -72,10 +168,10 @@ python3 create_test_database.py
 Or manually with SQL (requires terminating active connections first):
 ```sql
 -- Connect to PostgreSQL as admin
-CREATE DATABASE "OADB_test" WITH TEMPLATE "OADB" OWNER admin;
+CREATE DATABASE "oadbv5_test" WITH TEMPLATE "oadbv5" OWNER admin;
 ```
 
-**Note:** Database names are case-sensitive. Use `OADB_test` and `OADB` (not oadb2_test/oadb2).
+**Note:** All scripts support `--test` flag for working on a test database clone.
 
 ### 3. Merged IDs Available (OPTIONAL)
 
@@ -156,77 +252,85 @@ constraint_building/
 
 ## Quick Start
 
-### Step 0: Check for and Remove Duplicates (REQUIRED FIRST)
+**Note:** These instructions reflect the workflow used on `oadbv5` production database. For safety, consider testing on a clone first using `--test` flag.
+
+### Step 0: Check for and Remove Duplicates (✅ COMPLETE on oadbv5)
 
 ```bash
 cd constraint_building
 
 # Investigate duplicates
-python3 investigate_duplicates.py --test --quick
+python3 investigate_duplicates.py --quick
 
 # Get detailed analysis
-python3 analyze_duplicates.py --test
+python3 analyze_duplicates.py
 
 # Remove duplicates (dry-run first!)
-python3 remove_duplicates.py --test --dry-run
-python3 remove_duplicates.py --test
+python3 remove_duplicates.py --dry-run
+python3 remove_duplicates.py
 ```
 
 **⚠️ CRITICAL:** Primary keys cannot be created if duplicates exist. This step must be completed first.
 
-### Step 1: Test Run on Cloned Database
+**Status on oadbv5:** ✅ Complete (Nov 29 - Dec 2, 2025)
+
+### Step 1: Add Primary Keys (✅ COMPLETE on oadbv5)
 
 After removing duplicates:
 
 ```bash
 cd constraint_building
 
-# Reset state (if needed)
-python3 orchestrator_constraints.py --reset
-
-# Run full pipeline on test database
-export ADMIN_PASSWORD='your_password'
-python3 orchestrator_constraints.py --start --test
+# Add primary keys to all tables (except work_keywords - deferred)
+python3 add_primary_keys.py
 ```
 
-**Note:** The orchestrator does NOT handle duplicate removal. You must remove duplicates manually before starting the pipeline.
+**Status on oadbv5:** ✅ Complete (Dec 2-6, 2025)
 
-### Step 2: Review Test Results
+### Step 2: Add Indexes (🔄 IN PROGRESS on oadbv5)
 
 ```bash
-# Check final status
-python3 orchestrator_constraints.py --status --test
+# Add authorship-related indexes (for career trajectory analysis)
+python3 add_indexes.py --scope authorship
 
-# Review orphan manifests
-ls -lh orphan_manifests/
-
-# Review final summary report
-cat reports/CONSTRAINT_SUMMARY_*.md
+# Later: Add all remaining indexes
+python3 add_indexes.py --scope all
 ```
 
-### Step 3: Production Run
+**Status on oadbv5:** 🔄 In progress (started Dec 6, 2025)
 
-If test run successful:
+### Step 3: Next Steps (Pending)
+
+After indexes complete:
+
 ```bash
-# Reset state
-python3 orchestrator_constraints.py --reset
+# Add foreign keys
+python3 add_foreign_keys.py --scope authorship  # Or --scope all
 
-# Run on production database
-export ADMIN_PASSWORD='your_password'
-python3 orchestrator_constraints.py --start
+# (Optional) Run orphan analysis after author trajectory work
+python3 analyze_orphans.py
+
+# (Optional) Validate constraints
+python3 validate_constraints.py
+
+# Generate final reports
+python3 generate_report.py
 ```
 
 ---
 
-## Handling Duplicate Records (REQUIRED BEFORE PRIMARY KEYS)
+## Handling Duplicate Records (✅ COMPLETE on oadbv5)
 
 ### Issue Discovery
 
-During primary key creation, the script checks for duplicate values and will fail if duplicates exist. In our case:
+During primary key creation, the script checks for duplicate values and will fail if duplicates exist. In the initial oadbv5 build:
 - **works table:** 2,838,995 duplicate groups found
 - **authors table:** 750,000 duplicate groups found
+- Other tables also had duplicates
 
 Primary keys CANNOT be created until duplicates are resolved.
+
+**Status on oadbv5:** ✅ Duplicates removed (Nov 29 - Dec 2, 2025)
 
 ### Three-Step Workflow
 
@@ -303,9 +407,21 @@ python3 remove_duplicates.py --test
 ### After Duplicate Removal
 
 Once duplicates are removed:
-1. Re-run primary key creation: `python3 add_primary_keys.py --test`
-2. Verify no duplicates remain
-3. Continue with rest of pipeline (indexes → foreign keys → validation)
+1. **Vacuum tables** to reclaim disk space from deleted rows:
+   ```bash
+   # Vacuum individual tables
+   python3 vacuum_table.py --table works
+   python3 vacuum_table.py --table authors
+   # etc.
+   ```
+2. Re-run primary key creation: `python3 add_primary_keys.py`
+3. Verify no duplicates remain
+4. Continue with rest of pipeline (indexes → foreign keys → validation)
+
+**On oadbv5:**
+- ✅ Duplicates removed (Nov 29 - Dec 2, 2025)
+- ✅ Tables vacuumed (Dec 2-5, 2025)
+- ✅ Primary keys added (Dec 2-6, 2025)
 
 ---
 
@@ -383,7 +499,7 @@ python3 analyze_orphans.py
 
 ---
 
-### Phase 3: Add Primary Keys (~7 hours)
+### Phase 3: Add Primary Keys (~4 days actual, ✅ COMPLETE on oadbv5)
 
 **Script:** `add_primary_keys.py`
 
@@ -399,17 +515,12 @@ python3 analyze_orphans.py
 **Tables with PKs:**
 - **Single-column:** works, authors, institutions, sources, publishers, funders, concepts, topics
 - **Composite:** authorship, work_topics, work_concepts, citations_by_year, referenced_works, etc.
+- **Deferred:** `work_keywords` - keyword column can be very long, PK deferred until needed for text search
 
-**Timing (based on test runs):**
-- Small tables (<1M rows): Seconds
-- Medium tables (100M rows): ~10-30 minutes
-- Large tables (1-2B rows): ~2-4 hours
-- **Total estimated:** ~7.1 hours (throughput: ~159k rows/second)
-
-**Test timing first:**
-```bash
-python3 test_pk_single_table.py
-```
+**Status on oadbv5:**
+- ✅ Complete (Dec 2-6, 2025)
+- Actual throughput: ~159k rows/second
+- All tables have PKs except `work_keywords` (intentionally deferred)
 
 **Run independently:**
 ```bash
@@ -417,14 +528,11 @@ python3 add_primary_keys.py --test
 python3 add_primary_keys.py
 ```
 
-**Note:** No log file is created by default. Output is to stdout only. Redirect to capture:
-```bash
-python3 add_primary_keys.py --test > logs/add_primary_keys.log 2>&1
-```
+**Note:** Logging configured to both console and `logs/add_primary_keys.log`
 
 ---
 
-### Phase 4: Add Indexes (2-4 hours)
+### Phase 4: Add Indexes (🔄 IN PROGRESS on oadbv5)
 
 **Script:** `add_indexes.py`
 
@@ -442,15 +550,38 @@ python3 add_primary_keys.py --test > logs/add_primary_keys.log 2>&1
 - Query column indexes (btree): ~15 indexes
 - Composite indexes: ~5 indexes
 
-**Run independently:**
+**Status on oadbv5:**
+- 🔄 In progress (started Dec 6, 2025)
+- Currently running: `--scope authorship` (priority for career trajectory calculations)
+- Next phase: `--scope all` when capacity allows
+
+**NEW: Scope flag for selective indexing:**
 ```bash
+# Only indexes for career trajectory calculations (RECOMMENDED for immediate needs)
+python3 add_indexes.py --scope authorship --test
+python3 add_indexes.py --scope authorship
+
+# Only keyword/search indexes (defer until needed)
+python3 add_indexes.py --scope keywords --test
+python3 add_indexes.py --scope keywords
+
+# All indexes (full database)
+python3 add_indexes.py --scope all --test
+python3 add_indexes.py --scope all
+
+# Default (same as --scope all)
 python3 add_indexes.py --test
 python3 add_indexes.py
 ```
 
+**Scope options:**
+- `authorship`: Only authorship, authors, works, authors_works_by_year tables (~20 indexes) - for career trajectory analysis
+- `keywords`: Only work_keywords table indexes - for text search capabilities
+- `all`: All tables and all indexes (default)
+
 ---
 
-### Phase 5: Add Foreign Keys (5-10 minutes)
+### Phase 5: Add Foreign Keys (5-10 minutes for all, <2 minutes for authorship scope)
 
 **Script:** `add_foreign_keys.py`
 
@@ -464,17 +595,36 @@ python3 add_indexes.py
 **Why NOT VALID:** Creating FKs without validation is instant. Validation happens separately.
 
 **Foreign keys created:**
-- Authorship: author_id, work_id, institution_id
+- Authorship: author_id, work_id (NOTE: authorship table has NO institution_id column!)
+- Authorship institutions: work_id, author_id, institution_id (separate table!)
 - Work relationships: work_topics, work_concepts, work_sources, etc.
 - Author relationships: author_topics, author_concepts, author_institutions
 - Citations: citations_by_year, referenced_works, related_works
 - Hierarchies: institution_hierarchy, topic_hierarchy
 
-**Run independently:**
+**NEW: Scope flag for selective FK creation:**
 ```bash
+# Only FKs for career trajectory calculations (RECOMMENDED for immediate needs)
+python3 add_foreign_keys.py --scope authorship --test
+python3 add_foreign_keys.py --scope authorship
+
+# Only keyword/search FKs (defer until needed)
+python3 add_foreign_keys.py --scope keywords --test
+python3 add_foreign_keys.py --scope keywords
+
+# All foreign keys (full database)
+python3 add_foreign_keys.py --scope all --test
+python3 add_foreign_keys.py --scope all
+
+# Default (same as --scope all)
 python3 add_foreign_keys.py --test
 python3 add_foreign_keys.py
 ```
+
+**Scope options:**
+- `authorship`: Only authorship, authorship_institutions, authors, works tables (~10 FKs) - for career trajectory analysis
+- `keywords`: Only work_keywords table FKs - for text search capabilities
+- `all`: All tables and all foreign keys (default)
 
 ---
 
@@ -574,36 +724,34 @@ The orchestrator saves state after each phase, so progress is never lost.
 
 ---
 
-## Expected Results
+## Actual Results on oadbv5
 
-### Test Database (oadb2_test)
+### Completed Phases
 
-Assuming test database is a clone of production:
+| Phase | Actual Result | Duration | Status |
+|-------|---------------|----------|--------|
+| Merged IDs | Skipped (0.05% impact) | - | ✅ Skipped |
+| Duplicate Removal | All duplicates removed from all tables | 4 days | ✅ Complete |
+| Table Vacuuming | Space reclaimed from deleted rows | 3 days | ✅ Complete |
+| Primary Keys | ~24 PKs created (all except work_keywords) | 4 days | ✅ Complete |
+| Indexes (authorship) | ~20 indexes for career trajectories | In progress | 🔄 Running |
 
-| Phase | Expected Result |
-|-------|-----------------|
-| Merged IDs | ~500k-2M ID updates across critical tables |
-| Orphan Analysis | 10-30% orphan rate in referenced_works, 1-5% in authorship |
-| Primary Keys | ~25 PKs created |
-| Indexes | ~70 indexes created |
-| Foreign Keys | ~40 FKs created (NOT VALID) |
-| Validation | 5-15 FKs fail validation (orphans exist) |
-| Reports | 5 report files generated |
+### Pending Phases
 
-### Production Database (oadb2)
+| Phase | Expected Result | Estimated Time |
+|-------|-----------------|----------------|
+| Indexes (all) | ~70 total indexes | 2-4 hours |
+| Foreign Keys (authorship) | ~10 FKs (NOT VALID) | <2 minutes |
+| Foreign Keys (all) | ~40 FKs (NOT VALID) | 5-10 minutes |
+| Orphan Analysis | Deferred until after author analysis | 30-45 minutes |
+| Validation | Deferred until needed | 4-8 hours |
+| Reports | 5 report files | 1-2 minutes |
 
-Same as test, but larger scale.
+### Actual Timing vs Estimates
 
-**Estimated Time:**
-- Merged IDs: 1-2 hours
-- Orphan Analysis: 30-45 minutes
-- Primary Keys: 20-30 minutes
-- Indexes: 2-4 hours
-- Foreign Keys: 5-10 minutes
-- Validation: 4-8 hours
-- Reporting: 1-2 minutes
-
-**Total: 8-15 hours**
+- **Duplicates:** 4 days actual (included investigation, removal, vacuum)
+- **Primary Keys:** 4 days actual (vs. ~7 hours estimated) - likely due to large table sizes
+- **Throughput:** ~159k rows/second (as estimated)
 
 ---
 
@@ -849,8 +997,19 @@ python3 orchestrator_constraints.py --reset
 python3 apply_merged_ids.py --test
 python3 analyze_orphans.py --test
 python3 add_primary_keys.py --test
-python3 add_indexes.py --test
-python3 add_foreign_keys.py --test
+
+# Run indexes with scope
+python3 add_indexes.py --scope authorship --test  # Only authorship indexes (RECOMMENDED)
+python3 add_indexes.py --scope keywords --test    # Only keyword indexes
+python3 add_indexes.py --scope all --test         # All indexes
+python3 add_indexes.py --test                     # All indexes (default)
+
+# Run foreign keys with scope
+python3 add_foreign_keys.py --scope authorship --test  # Only authorship FKs (RECOMMENDED)
+python3 add_foreign_keys.py --scope keywords --test    # Only keyword FKs
+python3 add_foreign_keys.py --scope all --test         # All FKs
+python3 add_foreign_keys.py --test                     # All FKs (default)
+
 python3 validate_constraints.py --test
 python3 generate_report.py --test
 
@@ -906,5 +1065,25 @@ For issues or questions:
 
 ---
 
-**Last Updated:** November 2025
-**Version:** 1.0 (Constraint Building Pipeline)
+## Summary
+
+This README documents the constraint building pipeline for the OpenAlex database clone project. The pipeline has been successfully applied to the `oadbv5` production database with the following key outcomes:
+
+- ✅ All duplicates removed (Nov 29 - Dec 2, 2025)
+- ✅ All tables vacuumed (Dec 2-5, 2025)
+- ✅ Primary keys added to all tables except `work_keywords` (Dec 2-6, 2025)
+- 🔄 Authorship indexes in progress (started Dec 6, 2025)
+- ⏸️ Full indexing, foreign keys, and validation deferred until after author trajectory analysis
+
+**Next Steps:**
+1. Complete authorship indexes
+2. Begin author career trajectory calculations
+3. Add remaining indexes when capacity allows
+4. Add foreign keys for data integrity
+5. Run orphan analysis for missing entity retrieval
+
+---
+
+**Last Updated:** December 6, 2025
+**Database:** oadbv5 (production)
+**Version:** 2.0 (Updated with actual production results)

@@ -24,7 +24,7 @@ services:
       timeout: 5s
       retries: 5
     restart: unless-stopped
-    shm_size: '2gb'  # Shared memory for PostgreSQL
+    shm_size: '12gb'  # Shared memory for PostgreSQL (must be >= shared_buffers)
 
   parser:
     build:

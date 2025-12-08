@@ -56,3 +56,8 @@ os.makedirs(LOG_DIR, exist_ok=True)
 # Performance settings
 USE_UNLOGGED_TABLES = False  # Set True to disable WAL (faster, but no crash recovery)
 PARALLEL_PARSERS = 4  # Number of parsers to run in parallel for Phase 1
+
+# OpenAI API configuration
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+if not OPENAI_API_KEY:
+    raise ValueError("OPENAI_API_KEY environment variable must be set")

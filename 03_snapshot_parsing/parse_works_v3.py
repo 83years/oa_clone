@@ -1,0 +1,629 @@
+#!/usr/bin/env python3
+"""
+Parse OpenAlex Works - Version 3 with Enhanced Author Data Capture
+Populates: works, authorship (with names), authorship_countries, author_names,
+           authorship_institutions, work_locations, work_topics, work_concepts,
+           work_sources, work_keywords, work_funders, citations_by_year,
+           referenced_works, related_works
+
+KEY CHANGES FROM V2:
+- Captures author display_name and raw_author_name in authorship table
+- Creates author_names table with forename/lastname parsing using nameparser
+- Creates authorship_countries table for geographic tracking
+- Adds country_code to authorship_institutions for performance
+- Creates work_locations table for detailed OA analysis
+- Adds has_content_pdf, has_content_grobid_xml, topics_key to works table
+"""
+import json
+import time
+import argparse
+import sys
+from pathlib import Path
+
+SCRIPT_DIR = Path(__file__).parent
+sys.path.insert(0, str(SCRIPT_DIR))
+
+from base_parser import BaseParser
+
+# Import nameparser for name parsing
+try:
+    from nameparser import HumanName
+    NAMEPARSER_AVAILABLE = True
+except ImportError:
+    print("⚠️  Warning: nameparser not installed. Name parsing will be skipped.")
+    print("   Install with: pip install nameparser")
+    NAMEPARSER_AVAILABLE = False
+
+
+class WorksParserV3(BaseParser):
+    """Enhanced parser for works with comprehensive author data capture"""
+
+    def __init__(self, input_file, line_limit=None):
+        super().__init__('works_v3', input_file, line_limit)
+
+        # Column definitions for all tables
+        self.works_columns = [
+            'work_id', 'display_name', 'title', 'abstract', 'doi', 'publication_date',
+            'publication_year', 'type', 'is_oa_anywhere', 'oa_status', 'oa_url',
+            'any_repository_has_fulltext', 'source_display_name', 'host_organization',
+            'host_organization_name', 'host_organization_lineage', 'landing_page_url',
+            'license', 'version', 'referenced_works_count', 'is_retracted', 'language',
+            'language_id', 'first_page', 'last_page', 'volume', 'issue', 'keywords',
+            'sustainable_development_goals', 'grants', 'referenced_works_score',
+            'cited_by_count', 'created_date', 'updated_date', 'mesh_id', 'search_id',
+            'biblio_volume', 'biblio_issue', 'biblio_first_page', 'biblio_last_page',
+            'is_paratext', 'fwci', 'citation_normalized_percentile_value',
+            'citation_normalized_percentile_top_1_percent', 'citation_normalized_percentile_top_10_percent',
+            'cited_by_percentile_year_min', 'cited_by_percentile_year_max', 'type_crossref',
+            'indexed_in', 'locations_count', 'authors_count', 'concepts_count', 'topics_count',
+            'has_fulltext', 'countries_distinct_count', 'institutions_distinct_count',
+            'best_oa_pdf_url', 'best_oa_landing_page_url', 'best_oa_is_oa', 'best_oa_version',
+            'best_oa_license', 'primary_location_is_accepted', 'primary_location_is_published',
+            'primary_location_pdf_url', 'has_content_pdf', 'has_content_grobid_xml', 'topics_key'
+        ]
+
+        # UPDATED: Add name columns to authorship
+        self.authorship_columns = [
+            'work_id', 'author_id', 'author_position', 'is_corresponding',
+            'raw_affiliation_string', 'raw_author_name', 'author_display_name'
+        ]
+
+        # UPDATED: Add country_code to authorship_institutions
+        self.authorship_institutions_columns = [
+            'work_id', 'author_id', 'institution_id', 'country_code'
+        ]
+
+        # NEW: Authorship countries table
+        self.authorship_countries_columns = [
+            'work_id', 'author_id', 'country_code'
+        ]
+
+        # NEW: Author names table with parsed forename/lastname
+        self.author_names_columns = [
+            'author_id', 'work_id', 'raw_author_name', 'display_name',
+            'publication_year', 'forename', 'lastname'
+        ]
+
+        # NEW: Work locations table
+        self.work_locations_columns = [
+            'work_id', 'is_oa', 'landing_page_url', 'source_id', 'provenance', 'is_primary'
+        ]
+
+        # Existing columns (unchanged)
+        self.work_topics_columns = ['work_id', 'topic_id', 'score', 'is_primary_topic']
+        self.work_concepts_columns = ['work_id', 'concept_id', 'score']
+        self.work_sources_columns = ['work_id', 'source_id']
+        self.work_keywords_columns = ['work_id', 'keyword']
+        self.work_funders_columns = ['work_id', 'funder_id', 'award_id']
+        self.citations_by_year_columns = ['work_id', 'year', 'citation_count']
+        self.referenced_works_columns = ['work_id', 'referenced_work_id']
+        self.related_works_columns = ['work_id', 'related_work_id']
+        self.apc_columns = ['work_id', 'value', 'currency', 'value_usd', 'provenance']
+        self.alternate_ids_columns = ['work_id', 'id_type', 'id_value']
+
+    def parse_name(self, name_str):
+        """
+        Parse a name string into forename and lastname using nameparser.
+
+        Args:
+            name_str: Full name string (e.g., "John Smith", "Smith, John")
+
+        Returns:
+            tuple: (forename, lastname)
+        """
+        if not name_str or not NAMEPARSER_AVAILABLE:
+            return None, None
+
+        try:
+            name = HumanName(name_str)
+            # Combine first and middle names as forename
+            forename = f"{name.first} {name.middle}".strip() if name.middle else name.first
+            lastname = name.last
+            return forename, lastname
+        except Exception:
+            # If parsing fails, return None
+            return None, None
+
+    def parse(self):
+        """Main parsing logic with enhanced author data capture"""
+        self.stats['start_time'] = time.time()
+        self.connect_db()
+
+        # Batches for each table
+        works_batch = []
+        authorship_batch = []
+        authorship_institutions_batch = []
+        authorship_countries_batch = []  # NEW
+        author_names_batch = []  # NEW
+        work_locations_batch = []  # NEW
+        work_topics_batch = []
+        work_concepts_batch = []
+        work_sources_batch = []
+        work_keywords_batch = []
+        work_funders_batch = []
+        citations_by_year_batch = []
+        referenced_works_batch = []
+        related_works_batch = []
+        apc_batch = []
+        alternate_ids_batch = []
+
+        unique_ids = set()
+
+        try:
+            for work in self.read_gz_stream():
+                work_id = self.clean_openalex_id(work.get('id'))
+                if not work_id or work_id in unique_ids:
+                    continue
+
+                unique_ids.add(work_id)
+                publication_year = work.get('publication_year')
+
+                # Extract open access info
+                oa_info = work.get('open_access', {}) or {}
+                best_oa = work.get('best_oa_location', {}) or {}
+                primary_location = work.get('primary_location', {}) or {}
+                biblio = work.get('biblio', {}) or {}
+
+                # NEW: Extract has_content flags
+                has_content = work.get('has_content', {}) or {}
+                has_content_pdf = has_content.get('pdf')
+                has_content_grobid_xml = has_content.get('grobid_xml')
+
+                # NEW: Extract topics_key
+                topics_key = work.get('topics_key')
+
+                # Extract host organization info from primary location
+                primary_source = primary_location.get('source', {}) or {}
+                host_org = None
+                host_org_name = None
+                host_org_lineage = None
+                source_display_name = primary_source.get('display_name') if primary_source else None
+
+                if primary_source and primary_source.get('host_organization'):
+                    host_org = self.clean_openalex_id(primary_source.get('host_organization'))
+                    host_org_name = primary_source.get('host_organization_name')
+                    host_org_lineage = primary_source.get('host_organization_lineage')
+
+                # Convert arrays to text
+                keywords_list = work.get('keywords')
+                keywords_str = json.dumps([k.get('keyword') for k in keywords_list]) if keywords_list else None
+
+                sdgs = work.get('sustainable_development_goals')
+                sdgs_str = json.dumps(sdgs) if sdgs else None
+
+                grants = work.get('grants')
+                grants_str = json.dumps(grants) if grants else None
+
+                indexed_in = work.get('indexed_in')
+                indexed_str = json.dumps(indexed_in) if indexed_in else None
+
+                # Abstract handling
+                abstract_inverted = work.get('abstract_inverted_index')
+                abstract_text = None
+                if abstract_inverted:
+                    # Reconstruct abstract from inverted index
+                    words = []
+                    for word, positions in abstract_inverted.items():
+                        for pos in positions:
+                            words.append((pos, word))
+                    words.sort()
+                    abstract_text = ' '.join([w[1] for w in words])
+
+                # Main work record (with new fields)
+                works_batch.append({
+                    'work_id': work_id,
+                    'display_name': work.get('display_name'),
+                    'title': work.get('title'),
+                    'abstract': abstract_text,
+                    'doi': work.get('doi'),
+                    'publication_date': work.get('publication_date'),
+                    'publication_year': publication_year,
+                    'type': work.get('type'),
+                    'is_oa_anywhere': oa_info.get('is_oa'),
+                    'oa_status': oa_info.get('oa_status'),
+                    'oa_url': oa_info.get('oa_url'),
+                    'any_repository_has_fulltext': oa_info.get('any_repository_has_fulltext'),
+                    'source_display_name': source_display_name,
+                    'host_organization': host_org,
+                    'host_organization_name': host_org_name,
+                    'host_organization_lineage': host_org_lineage,
+                    'landing_page_url': work.get('landing_page_url') or primary_location.get('landing_page_url'),
+                    'license': primary_location.get('license'),
+                    'version': primary_location.get('version'),
+                    'referenced_works_count': len(work.get('referenced_works', [])),
+                    'is_retracted': work.get('is_retracted'),
+                    'language': work.get('language'),
+                    'language_id': self.clean_openalex_id(work.get('language_id')),
+                    'first_page': biblio.get('first_page'),
+                    'last_page': biblio.get('last_page'),
+                    'volume': biblio.get('volume'),
+                    'issue': biblio.get('issue'),
+                    'keywords': keywords_str,
+                    'sustainable_development_goals': sdgs_str,
+                    'grants': grants_str,
+                    'referenced_works_score': None,
+                    'cited_by_count': work.get('cited_by_count'),
+                    'created_date': work.get('created_date'),
+                    'updated_date': work.get('updated_date'),
+                    'mesh_id': None,
+                    'search_id': None,
+                    'biblio_volume': biblio.get('volume'),
+                    'biblio_issue': biblio.get('issue'),
+                    'biblio_first_page': biblio.get('first_page'),
+                    'biblio_last_page': biblio.get('last_page'),
+                    'is_paratext': work.get('is_paratext'),
+                    'fwci': None,
+                    'citation_normalized_percentile_value': None,
+                    'citation_normalized_percentile_top_1_percent': None,
+                    'citation_normalized_percentile_top_10_percent': None,
+                    'cited_by_percentile_year_min': None,
+                    'cited_by_percentile_year_max': None,
+                    'type_crossref': work.get('type_crossref'),
+                    'indexed_in': indexed_str,
+                    'locations_count': len(work.get('locations', [])),
+                    'authors_count': len(work.get('authorships', [])),
+                    'concepts_count': len(work.get('concepts', [])),
+                    'topics_count': len(work.get('topics', [])),
+                    'has_fulltext': work.get('has_fulltext'),
+                    'countries_distinct_count': work.get('countries_distinct_count'),
+                    'institutions_distinct_count': work.get('institutions_distinct_count'),
+                    'best_oa_pdf_url': best_oa.get('pdf_url'),
+                    'best_oa_landing_page_url': best_oa.get('landing_page_url'),
+                    'best_oa_is_oa': best_oa.get('is_oa'),
+                    'best_oa_version': best_oa.get('version'),
+                    'best_oa_license': best_oa.get('license'),
+                    'primary_location_is_accepted': primary_location.get('is_accepted'),
+                    'primary_location_is_published': primary_location.get('is_published'),
+                    'primary_location_pdf_url': primary_location.get('pdf_url'),
+                    'has_content_pdf': has_content_pdf,  # NEW
+                    'has_content_grobid_xml': has_content_grobid_xml,  # NEW
+                    'topics_key': topics_key  # NEW
+                })
+
+                # ENHANCED: Authorships with author names
+                authorships = work.get('authorships', [])
+                for authorship in authorships:
+                    author = authorship.get('author', {}) or {}
+                    author_id = self.clean_openalex_id(author.get('id'))
+
+                    if not author_id:
+                        continue
+
+                    # NEW: Extract author names
+                    author_display_name = author.get('display_name')
+                    raw_author_name = authorship.get('raw_author_name')
+
+                    author_position = authorship.get('author_position')
+                    is_corresponding = authorship.get('is_corresponding')
+
+                    # Get raw affiliation strings
+                    raw_affs = authorship.get('raw_affiliation_strings', [])
+                    raw_aff_str = '; '.join(raw_affs) if raw_affs else None
+
+                    # UPDATED: Authorship row with names
+                    authorship_batch.append({
+                        'work_id': work_id,
+                        'author_id': author_id,
+                        'author_position': author_position,
+                        'is_corresponding': is_corresponding,
+                        'raw_affiliation_string': raw_aff_str,
+                        'raw_author_name': raw_author_name,  # NEW
+                        'author_display_name': author_display_name  # NEW
+                    })
+
+                    # NEW: Author names table entry with parsed names
+                    if author_display_name or raw_author_name:
+                        # Prefer display_name for parsing, fallback to raw_author_name
+                        name_to_parse = author_display_name or raw_author_name
+                        forename, lastname = self.parse_name(name_to_parse)
+
+                        author_names_batch.append({
+                            'author_id': author_id,
+                            'work_id': work_id,
+                            'raw_author_name': raw_author_name,
+                            'display_name': author_display_name,
+                            'publication_year': publication_year,
+                            'forename': forename,
+                            'lastname': lastname
+                        })
+
+                    # NEW: Authorship countries
+                    countries = authorship.get('countries', [])
+                    for country_code in countries:
+                        if country_code:
+                            authorship_countries_batch.append({
+                                'work_id': work_id,
+                                'author_id': author_id,
+                                'country_code': country_code
+                            })
+
+                    # UPDATED: Authorship institutions with country_code
+                    institutions = authorship.get('institutions', [])
+                    for inst in institutions:
+                        inst_id = self.clean_openalex_id(inst.get('id'))
+                        if inst_id:
+                            # NEW: Include country_code from institution
+                            inst_country_code = inst.get('country_code')
+                            authorship_institutions_batch.append({
+                                'work_id': work_id,
+                                'author_id': author_id,
+                                'institution_id': inst_id,
+                                'country_code': inst_country_code  # NEW
+                            })
+
+                # NEW: Work locations (detailed OA analysis)
+                locations = work.get('locations', [])
+                for location in locations:
+                    source = location.get('source', {}) or {}
+                    source_id = self.clean_openalex_id(source.get('id'))
+
+                    # Check if this is the primary location
+                    is_primary = (location == primary_location)
+
+                    work_locations_batch.append({
+                        'work_id': work_id,
+                        'is_oa': location.get('is_oa'),
+                        'landing_page_url': location.get('landing_page_url'),
+                        'source_id': source_id,
+                        'provenance': location.get('provenance'),
+                        'is_primary': is_primary
+                    })
+
+                # Work topics
+                topics = work.get('topics', [])
+                for topic in topics:
+                    topic_id = self.clean_openalex_id(topic.get('id'))
+                    if topic_id:
+                        work_topics_batch.append({
+                            'work_id': work_id,
+                            'topic_id': topic_id,
+                            'score': topic.get('score'),
+                            'is_primary_topic': topic.get('is_primary_topic', False)
+                        })
+
+                # Work concepts
+                concepts = work.get('concepts', [])
+                for concept in concepts:
+                    concept_id = self.clean_openalex_id(concept.get('id'))
+                    if concept_id:
+                        work_concepts_batch.append({
+                            'work_id': work_id,
+                            'concept_id': concept_id,
+                            'score': concept.get('score')
+                        })
+
+                # Work sources (from locations)
+                for location in locations:
+                    source = location.get('source', {}) or {}
+                    source_id = self.clean_openalex_id(source.get('id'))
+                    if source_id:
+                        work_sources_batch.append({
+                            'work_id': work_id,
+                            'source_id': source_id
+                        })
+
+                # Work keywords
+                keywords_list = work.get('keywords', [])
+                for kw in keywords_list:
+                    keyword = kw.get('keyword') or kw.get('display_name')
+                    if keyword:
+                        work_keywords_batch.append({
+                            'work_id': work_id,
+                            'keyword': keyword[:255]
+                        })
+
+                # Work funders
+                grants_list = work.get('grants', [])
+                for grant in grants_list:
+                    funder_id = self.clean_openalex_id(grant.get('funder'))
+                    if funder_id:
+                        work_funders_batch.append({
+                            'work_id': work_id,
+                            'funder_id': funder_id,
+                            'award_id': grant.get('award_id')
+                        })
+
+                # Citations by year
+                counts_by_year = work.get('counts_by_year', [])
+                for count in counts_by_year:
+                    year = count.get('year')
+                    if year:
+                        citations_by_year_batch.append({
+                            'work_id': work_id,
+                            'year': year,
+                            'citation_count': count.get('cited_by_count')
+                        })
+
+                # Referenced works
+                referenced = work.get('referenced_works', [])
+                for ref_work in referenced:
+                    ref_work_id = self.clean_openalex_id(ref_work)
+                    if ref_work_id:
+                        referenced_works_batch.append({
+                            'work_id': work_id,
+                            'referenced_work_id': ref_work_id
+                        })
+
+                # Related works
+                related = work.get('related_works', [])
+                for rel_work in related:
+                    rel_work_id = self.clean_openalex_id(rel_work)
+                    if rel_work_id:
+                        related_works_batch.append({
+                            'work_id': work_id,
+                            'related_work_id': rel_work_id
+                        })
+
+                # APC
+                apc_list = work.get('apc_list', {}) or {}
+                apc_paid = work.get('apc_paid', {}) or {}
+
+                if apc_paid:
+                    apc_batch.append({
+                        'work_id': work_id,
+                        'value': apc_paid.get('value'),
+                        'currency': apc_paid.get('currency'),
+                        'value_usd': apc_paid.get('value_usd'),
+                        'provenance': apc_paid.get('provenance')
+                    })
+                elif apc_list:
+                    apc_batch.append({
+                        'work_id': work_id,
+                        'value': apc_list.get('value'),
+                        'currency': apc_list.get('currency'),
+                        'value_usd': apc_list.get('value_usd'),
+                        'provenance': apc_list.get('provenance')
+                    })
+
+                # Alternate IDs
+                ids_dict = work.get('ids', {}) or {}
+                for id_type, id_value in ids_dict.items():
+                    if id_type.lower() == 'openalex':
+                        continue
+
+                    if id_value:
+                        clean_value = str(id_value)
+
+                        if 'doi.org/' in clean_value:
+                            clean_value = clean_value.split('doi.org/')[-1]
+                        elif 'pubmed.ncbi.nlm.nih.gov/' in clean_value:
+                            clean_value = clean_value.split('pubmed.ncbi.nlm.nih.gov/')[-1]
+                        elif 'ncbi.nlm.nih.gov/pmc/articles/' in clean_value:
+                            clean_value = clean_value.split('ncbi.nlm.nih.gov/pmc/articles/')[-1]
+                        elif '://' in clean_value:
+                            clean_value = clean_value.split('/')[-1]
+
+                        alternate_ids_batch.append({
+                            'work_id': work_id,
+                            'id_type': id_type,
+                            'id_value': clean_value[:255]
+                        })
+
+                self.stats['records_parsed'] += 1
+
+                # Batch writes when threshold reached
+                if len(works_batch) >= 10000:
+                    self.write_with_copy('works', works_batch, self.works_columns)
+                    works_batch = []
+
+                if len(authorship_batch) >= 50000:
+                    self.write_with_copy('authorship', authorship_batch, self.authorship_columns)
+                    authorship_batch = []
+
+                if len(authorship_institutions_batch) >= 50000:
+                    self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
+                    authorship_institutions_batch = []
+
+                # NEW batch writes
+                if len(authorship_countries_batch) >= 50000:
+                    self.write_with_copy('authorship_countries', authorship_countries_batch, self.authorship_countries_columns)
+                    authorship_countries_batch = []
+
+                if len(author_names_batch) >= 50000:
+                    self.write_with_copy('author_names', author_names_batch, self.author_names_columns)
+                    author_names_batch = []
+
+                if len(work_locations_batch) >= 50000:
+                    self.write_with_copy('work_locations', work_locations_batch, self.work_locations_columns)
+                    work_locations_batch = []
+
+                # Existing batch writes
+                if len(work_topics_batch) >= 50000:
+                    self.write_with_copy('work_topics', work_topics_batch, self.work_topics_columns)
+                    work_topics_batch = []
+
+                if len(work_concepts_batch) >= 50000:
+                    self.write_with_copy('work_concepts', work_concepts_batch, self.work_concepts_columns)
+                    work_concepts_batch = []
+
+                if len(work_sources_batch) >= 50000:
+                    self.write_with_copy('work_sources', work_sources_batch, self.work_sources_columns)
+                    work_sources_batch = []
+
+                if len(work_keywords_batch) >= 50000:
+                    self.write_with_copy('work_keywords', work_keywords_batch, self.work_keywords_columns)
+                    work_keywords_batch = []
+
+                if len(work_funders_batch) >= 50000:
+                    self.write_with_copy('work_funders', work_funders_batch, self.work_funders_columns)
+                    work_funders_batch = []
+
+                if len(citations_by_year_batch) >= 50000:
+                    self.write_with_copy('citations_by_year', citations_by_year_batch, self.citations_by_year_columns)
+                    citations_by_year_batch = []
+
+                if len(referenced_works_batch) >= 50000:
+                    self.write_with_copy('referenced_works', referenced_works_batch, self.referenced_works_columns)
+                    referenced_works_batch = []
+
+                if len(related_works_batch) >= 50000:
+                    self.write_with_copy('related_works', related_works_batch, self.related_works_columns)
+                    related_works_batch = []
+
+                if len(apc_batch) >= 50000:
+                    self.write_with_copy('apc', apc_batch, self.apc_columns)
+                    apc_batch = []
+
+                if len(alternate_ids_batch) >= 50000:
+                    self.write_with_copy('alternate_ids', alternate_ids_batch, self.alternate_ids_columns)
+                    alternate_ids_batch = []
+
+            # Write remaining records
+            if works_batch:
+                self.write_with_copy('works', works_batch, self.works_columns)
+            if authorship_batch:
+                self.write_with_copy('authorship', authorship_batch, self.authorship_columns)
+            if authorship_institutions_batch:
+                self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
+            # NEW: Write remaining records for new tables
+            if authorship_countries_batch:
+                self.write_with_copy('authorship_countries', authorship_countries_batch, self.authorship_countries_columns)
+            if author_names_batch:
+                self.write_with_copy('author_names', author_names_batch, self.author_names_columns)
+            if work_locations_batch:
+                self.write_with_copy('work_locations', work_locations_batch, self.work_locations_columns)
+            # Existing writes
+            if work_topics_batch:
+                self.write_with_copy('work_topics', work_topics_batch, self.work_topics_columns)
+            if work_concepts_batch:
+                self.write_with_copy('work_concepts', work_concepts_batch, self.work_concepts_columns)
+            if work_sources_batch:
+                self.write_with_copy('work_sources', work_sources_batch, self.work_sources_columns)
+            if work_keywords_batch:
+                self.write_with_copy('work_keywords', work_keywords_batch, self.work_keywords_columns)
+            if work_funders_batch:
+                self.write_with_copy('work_funders', work_funders_batch, self.work_funders_columns)
+            if citations_by_year_batch:
+                self.write_with_copy('citations_by_year', citations_by_year_batch, self.citations_by_year_columns)
+            if referenced_works_batch:
+                self.write_with_copy('referenced_works', referenced_works_batch, self.referenced_works_columns)
+            if related_works_batch:
+                self.write_with_copy('related_works', related_works_batch, self.related_works_columns)
+            if apc_batch:
+                self.write_with_copy('apc', apc_batch, self.apc_columns)
+            if alternate_ids_batch:
+                self.write_with_copy('alternate_ids', alternate_ids_batch, self.alternate_ids_columns)
+
+        finally:
+            self.stats['end_time'] = time.time()
+            self.close_db()
+            self.print_stats()
+
+        return self.stats
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Parse OpenAlex works v3 with enhanced author data')
+    parser.add_argument('--input-file', required=True, help='Path to works .gz file')
+    parser.add_argument('--limit', type=int, help='Limit number of lines (testing)')
+    args = parser.parse_args()
+
+    try:
+        works_parser = WorksParserV3(args.input_file, line_limit=args.limit)
+        stats = works_parser.parse()
+        sys.exit(0 if stats['errors'] == 0 else 1)
+    except Exception as e:
+        print(f"❌ Fatal error: {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)

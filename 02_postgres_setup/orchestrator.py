@@ -333,7 +333,10 @@ def create_tables_no_constraints():
                 best_oa_license VARCHAR(100),
                 primary_location_is_accepted BOOLEAN,
                 primary_location_is_published BOOLEAN,
-                primary_location_pdf_url TEXT
+                primary_location_pdf_url TEXT,
+                has_content_pdf BOOLEAN,
+                has_content_grobid_xml BOOLEAN,
+                topics_key BIGINT
             );
         """)
 
@@ -347,7 +350,9 @@ def create_tables_no_constraints():
                 author_id VARCHAR(255),
                 author_position TEXT,
                 is_corresponding BOOLEAN,
-                raw_affiliation_string TEXT
+                raw_affiliation_string TEXT,
+                raw_author_name TEXT,
+                author_display_name TEXT
             );
         """)
 
@@ -356,7 +361,42 @@ def create_tables_no_constraints():
             CREATE TABLE IF NOT EXISTS authorship_institutions (
                 work_id VARCHAR(255),
                 author_id VARCHAR(255),
-                institution_id VARCHAR(255)
+                institution_id VARCHAR(255),
+                country_code VARCHAR(10)
+            );
+        """)
+
+        # 10c. AUTHORSHIP_COUNTRIES TABLE (NEW)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS authorship_countries (
+                work_id VARCHAR(255),
+                author_id VARCHAR(255),
+                country_code VARCHAR(10)
+            );
+        """)
+
+        # 10d. AUTHOR_NAMES TABLE (NEW)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS author_names (
+                author_id VARCHAR(255),
+                work_id VARCHAR(255),
+                raw_author_name TEXT,
+                display_name TEXT,
+                publication_year INTEGER,
+                forename TEXT,
+                lastname TEXT
+            );
+        """)
+
+        # 10e. WORK_LOCATIONS TABLE (NEW - MEDIUM PRIORITY)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS work_locations (
+                work_id VARCHAR(255),
+                is_oa BOOLEAN,
+                landing_page_url TEXT,
+                source_id VARCHAR(255),
+                provenance VARCHAR(100),
+                is_primary BOOLEAN
             );
         """)
 
@@ -650,7 +690,7 @@ def print_summary():
     print(f"Port: {DB_PORT}")
     print(f"\n🚀 READY FOR CONSTRAINT-FREE BULK LOADING")
     print("\n📊 Database Characteristics:")
-    print("  ✅ 32 tables created")
+    print("  ✅ 35 tables created (32 original + 3 new)")
     print("  ✅ NO primary keys")
     print("  ✅ NO foreign keys")
     print("  ✅ NO unique constraints")
