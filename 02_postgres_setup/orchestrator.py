@@ -214,7 +214,8 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 7. INSTITUTION GEO TABLE
+        # 7. INSTITUTION GEO TABLE - COMMENTED OUT (not populated from snapshot)
+        # Will be created when needed for geographic analysis
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS institution_geo (
                 institution_id TEXT,
@@ -230,41 +231,43 @@ def create_tables_no_constraints():
 
         # PHASE 1: LARGE ENTITY TABLES
 
-        # 8. AUTHORS TABLE
-        print(f"[{datetime.now()}] Creating authors table...")
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS authors (
-                author_id VARCHAR(255),
-                display_name VARCHAR(500),
-                orcid VARCHAR(100),
-                forenames_extracted TEXT,
-                forename_confidence NUMERIC(5,4),
-                works_count INTEGER,
-                cited_by_count INTEGER,
-                summary_stats_2yr_mean_citedness DECIMAL(15,7),
-                summary_stats_h_index INTEGER,
-                summary_stats_i10_index INTEGER,
-                created_date TIMESTAMP,
-                updated_date TIMESTAMP,
-                gender VARCHAR(20),
-                current_affiliation_id VARCHAR(255),
-                current_affiliation_name VARCHAR(500),
-                current_affiliation_country VARCHAR(100),
-                current_affiliation_type VARCHAR(100),
-                api_response_date DATE,
-                api_source VARCHAR(100),
-                most_cited_work TEXT,
-                first_publication_year INTEGER,
-                last_publication_year INTEGER,
-                freq_corresponding_author DECIMAL(12,7),
-                total_works INTEGER,
-                total_citations INTEGER,
-                corresponding_authorships INTEGER,
-                career_length_years INTEGER,
-                current INTEGER,
-                career_stage_aff TEXT
-            );
-        """)
+        # 8. AUTHORS TABLE - COMMENTED OUT (not populated from snapshot)
+        # Authors data is captured in author_names table from works parsing
+        # This table will be built later from aggregated authorship data
+        # print(f"[{datetime.now()}] Creating authors table...")
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS authors (
+        #         author_id VARCHAR(255),
+        #         display_name VARCHAR(500),
+        #         orcid VARCHAR(100),
+        #         forenames_extracted TEXT,
+        #         forename_confidence NUMERIC(5,4),
+        #         works_count INTEGER,
+        #         cited_by_count INTEGER,
+        #         summary_stats_2yr_mean_citedness DECIMAL(15,7),
+        #         summary_stats_h_index INTEGER,
+        #         summary_stats_i10_index INTEGER,
+        #         created_date TIMESTAMP,
+        #         updated_date TIMESTAMP,
+        #         gender VARCHAR(20),
+        #         current_affiliation_id VARCHAR(255),
+        #         current_affiliation_name VARCHAR(500),
+        #         current_affiliation_country VARCHAR(100),
+        #         current_affiliation_type VARCHAR(100),
+        #         api_response_date DATE,
+        #         api_source VARCHAR(100),
+        #         most_cited_work TEXT,
+        #         first_publication_year INTEGER,
+        #         last_publication_year INTEGER,
+        #         freq_corresponding_author DECIMAL(12,7),
+        #         total_works INTEGER,
+        #         total_citations INTEGER,
+        #         corresponding_authorships INTEGER,
+        #         career_length_years INTEGER,
+        #         current INTEGER,
+        #         career_stage_aff TEXT
+        #     );
+        # """)
 
         # 9. WORKS TABLE
         print(f"[{datetime.now()}] Creating works table...")
@@ -366,16 +369,7 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 10c. AUTHORSHIP_COUNTRIES TABLE (NEW)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS authorship_countries (
-                work_id VARCHAR(255),
-                author_id VARCHAR(255),
-                country_code VARCHAR(10)
-            );
-        """)
-
-        # 10d. AUTHOR_NAMES TABLE (NEW)
+        # 10c. AUTHOR_NAMES TABLE (ENHANCED - includes country and initial detection)
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS author_names (
                 author_id VARCHAR(255),
@@ -384,7 +378,9 @@ def create_tables_no_constraints():
                 display_name TEXT,
                 publication_year INTEGER,
                 forename TEXT,
-                lastname TEXT
+                lastname TEXT,
+                country_code VARCHAR(10),
+                forename_is_initial BOOLEAN
             );
         """)
 
@@ -469,39 +465,44 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 19. AUTHOR_TOPICS TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS author_topics (
-                author_id VARCHAR(255),
-                topic_id VARCHAR(255),
-                score DECIMAL(12,7),
-                work_count INTEGER,
-                recent_work_count INTEGER
-            );
-        """)
+        # 19. AUTHOR_TOPICS TABLE - COMMENTED OUT (derived data, not from snapshot)
+        # Will be created when building author profiles from authorship data
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS author_topics (
+        #         author_id VARCHAR(255),
+        #         topic_id VARCHAR(255),
+        #         score DECIMAL(12,7),
+        #         work_count INTEGER,
+        #         recent_work_count INTEGER
+        #     );
+        # """)
 
-        # 20. AUTHOR_CONCEPTS TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS author_concepts (
-                author_id VARCHAR(255),
-                concept_id VARCHAR(255),
-                score DECIMAL(20,7),
-                work_count INTEGER
-            );
-        """)
+        # 20. AUTHOR_CONCEPTS TABLE - COMMENTED OUT (derived data, not from snapshot)
+        # Will be created when building author profiles from authorship data
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS author_concepts (
+        #         author_id VARCHAR(255),
+        #         concept_id VARCHAR(255),
+        #         score DECIMAL(20,7),
+        #         work_count INTEGER
+        #     );
+        # """)
 
-        # 21. AUTHOR_INSTITUTIONS TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS author_institutions (
-                author_id VARCHAR(255),
-                institution_id VARCHAR(255),
-                start_date DATE,
-                end_date DATE,
-                affiliation_string TEXT
-            );
-        """)
+        # 21. AUTHOR_INSTITUTIONS TABLE - COMMENTED OUT (derived data, not from snapshot)
+        # This tracks historical/current affiliations, not per-work affiliations
+        # Will be created when needed, derived from authorship_institutions
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS author_institutions (
+        #         author_id VARCHAR(255),
+        #         institution_id VARCHAR(255),
+        #         start_date DATE,
+        #         end_date DATE,
+        #         affiliation_string TEXT
+        #     );
+        # """)
 
-        # 22. SOURCE_PUBLISHERS TABLE
+        # 22. SOURCE_PUBLISHERS TABLE - COMMENTED OUT (not populated from snapshot)
+        # Will be created if needed for publisher analysis
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS source_publishers (
                 source_id VARCHAR(255),
@@ -511,7 +512,8 @@ def create_tables_no_constraints():
 
         # PHASE 3: HIERARCHY TABLES
 
-        # 23. INSTITUTION_HIERARCHY TABLE
+        # 23. INSTITUTION_HIERARCHY TABLE - COMMENTED OUT (not populated from snapshot)
+        # Will be created when needed for hierarchical institution analysis
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS institution_hierarchy (
                 parent_institution_id VARCHAR(255),
@@ -521,7 +523,8 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 24. TOPIC_HIERARCHY TABLE
+        # 24. TOPIC_HIERARCHY TABLE - COMMENTED OUT (not populated from snapshot)
+        # Will be created when needed for hierarchical topic analysis
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS topic_hierarchy (
                 parent_topic_id VARCHAR(255),
@@ -553,65 +556,70 @@ def create_tables_no_constraints():
             );
         """)
 
-        # 28. SEARCH_METADATA TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS search_metadata (
-                search_id VARCHAR(255),
-                search_term TEXT,
-                publication_year INTEGER,
-                search_date TIMESTAMP,
-                papers_found INTEGER,
-                papers_added INTEGER
-            );
-        """)
+        # 28. SEARCH_METADATA TABLE - COMMENTED OUT (user-generated data, not from snapshot)
+        # Will be created when implementing search functionality
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS search_metadata (
+        #         search_id VARCHAR(255),
+        #         search_term TEXT,
+        #         publication_year INTEGER,
+        #         search_date TIMESTAMP,
+        #         papers_found INTEGER,
+        #         papers_added INTEGER
+        #     );
+        # """)
 
-        # 29. SEARCH_INDEX TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS search_index (
-                search_term_id SERIAL,
-                search_term VARCHAR(500),
-                entity_type VARCHAR(100),
-                entity_id VARCHAR(255),
-                entity_name TEXT,
-                search_vector TSVECTOR
-            );
-        """)
+        # 29. SEARCH_INDEX TABLE - COMMENTED OUT (user-generated data, not from snapshot)
+        # Will be created when implementing search functionality
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS search_index (
+        #         search_term_id SERIAL,
+        #         search_term VARCHAR(500),
+        #         entity_type VARCHAR(100),
+        #         entity_id VARCHAR(255),
+        #         entity_name TEXT,
+        #         search_vector TSVECTOR
+        #     );
+        # """)
 
-        # 30. AUTHOR_NAME_VARIANTS TABLE
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS author_name_variants (
-                variant_id SERIAL,
-                author_id VARCHAR(255),
-                name_variant TEXT,
-                variant_type VARCHAR(100),
-                confidence_score DECIMAL(12,7)
-            );
-        """)
+        # 30. AUTHOR_NAME_VARIANTS TABLE - COMMENTED OUT (derived data, not from snapshot)
+        # Will be created when building author disambiguation/matching systems
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS author_name_variants (
+        #         variant_id SERIAL,
+        #         author_id VARCHAR(255),
+        #         name_variant TEXT,
+        #         variant_type VARCHAR(100),
+        #         confidence_score DECIMAL(12,7)
+        #     );
+        # """)
 
-        # 31. AUTHORS_WORKS_BY_YEAR TABLE
-        print(f"[{datetime.now()}] Creating authors_works_by_year table...")
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS authors_works_by_year (
-                author_id VARCHAR(255),
-                year INTEGER,
-                works_count INTEGER,
-                oa_works_count INTEGER,
-                cited_by_count INTEGER
-            );
-        """)
+        # 31. AUTHORS_WORKS_BY_YEAR TABLE - COMMENTED OUT (derived data, not from snapshot)
+        # Will be created when building author profiles from authorship data
+        # print(f"[{datetime.now()}] Creating authors_works_by_year table...")
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS authors_works_by_year (
+        #         author_id VARCHAR(255),
+        #         year INTEGER,
+        #         works_count INTEGER,
+        #         oa_works_count INTEGER,
+        #         cited_by_count INTEGER
+        #     );
+        # """)
 
-        # 32. DATA_MODIFICATION_LOG TABLE (for audit)
-        cursor.execute("""
-            CREATE TABLE IF NOT EXISTS data_modification_log (
-                log_id SERIAL,
-                username TEXT NOT NULL,
-                table_name TEXT,
-                action TEXT,
-                ip_address INET,
-                modified_at TIMESTAMP DEFAULT NOW(),
-                row_count INTEGER
-            );
-        """)
+        # 32. DATA_MODIFICATION_LOG TABLE - COMMENTED OUT (audit log, not from snapshot)
+        # Will be created when implementing audit logging
+        # cursor.execute("""
+        #     CREATE TABLE IF NOT EXISTS data_modification_log (
+        #         log_id SERIAL,
+        #         username TEXT NOT NULL,
+        #         table_name TEXT,
+        #         action TEXT,
+        #         ip_address INET,
+        #         modified_at TIMESTAMP DEFAULT NOW(),
+        #         row_count INTEGER
+        #     );
+        # """)
 
         conn.commit()
         print(f"[{datetime.now()}] ✅ All tables created without constraints!")

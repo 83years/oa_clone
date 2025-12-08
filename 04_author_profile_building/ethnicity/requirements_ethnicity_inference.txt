@@ -1,0 +1,61 @@
+# Ethnicity Inference Pipeline Requirements
+# Python >= 3.7 required
+
+# Database
+duckdb>=0.9.0
+
+# Ethnicity Inference Tools
+
+# ethnicseer - 12 ethnic categories (84% accuracy)
+# Predicts: Chinese, English, French, German, Indian, Italian, Japanese,
+#           Korean, Middle-Eastern, Russian, Spanish, Vietnamese
+ethnicseer>=0.1.2
+
+# pyethnicity - US-centric race prediction with ML models
+# Predicts: Asian, Black, Hispanic, White
+# Note: Requires onnxruntime for ML model inference
+pyethnicity>=0.0.27
+onnxruntime>=1.15.0
+polars>=0.19.0  # Required by pyethnicity for DataFrame operations
+
+# ethnidata - Nationality/country prediction with regional context
+# Predicts: 238 countries, 6 regions, 72 languages
+ethnidata>=3.0.3
+
+# name2nat - Global nationality prediction (254 nationalities)
+# Predicts: 254 nationalities from Wikipedia data
+# Note: May have dependency conflicts in some environments
+# If installation fails, you can skip this tool
+name2nat>=0.5.1
+
+# raceBERT - State-of-the-art transformer-based prediction (86% f1-score)
+# Predicts: Race/ethnicity using RoBERTa transformer models
+# IMPORTANT: Requires PyTorch
+# Note: PyTorch is NOT available for Intel Macs
+# Works on Apple Silicon Macs, Linux, and Windows
+# Installation instructions: https://pytorch.org/get-started/locally/
+racebert>=1.1.0
+# torch>=2.0.0  # Uncomment after installing PyTorch for your system
+# transformers>=4.0.0  # Required by raceBERT
+
+# Machine Learning Dependencies
+scikit-learn>=1.0.0
+numpy>=1.21.0
+
+# Optional: Enhanced Performance
+# numba>=0.56.0  # Uncomment for faster numerical computations
+
+# Note on TensorFlow/ethnicolr:
+# ethnicolr (alternative tool) requires TensorFlow, which may have
+# compatibility issues with some Python versions. If you want to use
+# ethnicolr, add:
+# tensorflow>=2.0.0
+# ethnicolr>=0.19.0
+
+# Installation Tips:
+# 1. Install core tools first: pip install ethnicseer pyethnicity ethnidata
+# 2. Try name2nat: pip install name2nat (may fail due to dependencies)
+# 3. For raceBERT on new Mac Studio:
+#    - Visit https://pytorch.org/get-started/locally/
+#    - Install PyTorch for your system
+#    - Then: pip install racebert transformers

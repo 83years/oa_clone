@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 """
 Parse OpenAlex Works - Version 3 with Enhanced Author Data Capture
-Populates: works, authorship (with names), authorship_countries, author_names,
+Populates: works, authorship (with names), author_names (with country & initial detection),
            authorship_institutions, work_locations, work_topics, work_concepts,
            work_sources, work_keywords, work_funders, citations_by_year,
            referenced_works, related_works
 
 KEY CHANGES FROM V2:
 - Captures author display_name and raw_author_name in authorship table
-- Creates author_names table with forename/lastname parsing using nameparser
-- Creates authorship_countries table for geographic tracking
+- Creates author_names table with:
+  * forename/lastname parsing using nameparser
+  * country_code (from authorship countries)
+  * forename_is_initial (boolean to detect initials like "J." or "J")
 - Adds country_code to authorship_institutions for performance
 - Creates work_locations table for detailed OA analysis
 - Adds has_content_pdf, has_content_grobid_xml, topics_key to works table
+- Removes separate authorship_countries table (data now in author_names)
 """
 import json
 import time
@@ -73,15 +76,10 @@ class WorksParserV3(BaseParser):
             'work_id', 'author_id', 'institution_id', 'country_code'
         ]
 
-        # NEW: Authorship countries table
-        self.authorship_countries_columns = [
-            'work_id', 'author_id', 'country_code'
-        ]
-
-        # NEW: Author names table with parsed forename/lastname
+        # UPDATED: Author names table with country_code and forename_is_initial
         self.author_names_columns = [
             'author_id', 'work_id', 'raw_author_name', 'display_name',
-            'publication_year', 'forename', 'lastname'
+            'publication_year', 'forename', 'lastname', 'country_code', 'forename_is_initial'
         ]
 
         # NEW: Work locations table
@@ -103,26 +101,37 @@ class WorksParserV3(BaseParser):
 
     def parse_name(self, name_str):
         """
-        Parse a name string into forename and lastname using nameparser.
+        Parse a name string into forename, lastname, and detect if forename is an initial.
 
         Args:
             name_str: Full name string (e.g., "John Smith", "Smith, John")
 
         Returns:
-            tuple: (forename, lastname)
+            tuple: (forename, lastname, forename_is_initial)
         """
         if not name_str or not NAMEPARSER_AVAILABLE:
-            return None, None
+            return None, None, None
 
         try:
             name = HumanName(name_str)
             # Combine first and middle names as forename
             forename = f"{name.first} {name.middle}".strip() if name.middle else name.first
             lastname = name.last
-            return forename, lastname
+
+            # Detect if forename is an initial
+            # An initial is 1-2 characters, optionally ending with a period
+            forename_is_initial = False
+            if forename:
+                # Remove periods and spaces to check length
+                clean_forename = forename.replace('.', '').replace(' ', '')
+                # Check if it's 1-2 characters after removing periods
+                if len(clean_forename) <= 2 and clean_forename.isalpha():
+                    forename_is_initial = True
+
+            return forename, lastname, forename_is_initial
         except Exception:
             # If parsing fails, return None
-            return None, None
+            return None, None, None
 
     def parse(self):
         """Main parsing logic with enhanced author data capture"""
@@ -133,9 +142,8 @@ class WorksParserV3(BaseParser):
         works_batch = []
         authorship_batch = []
         authorship_institutions_batch = []
-        authorship_countries_batch = []  # NEW
-        author_names_batch = []  # NEW
-        work_locations_batch = []  # NEW
+        author_names_batch = []  # UPDATED: Now includes country_code and forename_is_initial
+        work_locations_batch = []
         work_topics_batch = []
         work_concepts_batch = []
         work_sources_batch = []
@@ -311,11 +319,15 @@ class WorksParserV3(BaseParser):
                         'author_display_name': author_display_name  # NEW
                     })
 
-                    # NEW: Author names table entry with parsed names
+                    # UPDATED: Author names table entry with parsed names, country, and initial detection
+                    # Get country_code from the authorship (use first country if multiple)
+                    countries = authorship.get('countries', [])
+                    country_code = countries[0] if countries else None
+
                     if author_display_name or raw_author_name:
                         # Prefer display_name for parsing, fallback to raw_author_name
                         name_to_parse = author_display_name or raw_author_name
-                        forename, lastname = self.parse_name(name_to_parse)
+                        forename, lastname, forename_is_initial = self.parse_name(name_to_parse)
 
                         author_names_batch.append({
                             'author_id': author_id,
@@ -324,18 +336,10 @@ class WorksParserV3(BaseParser):
                             'display_name': author_display_name,
                             'publication_year': publication_year,
                             'forename': forename,
-                            'lastname': lastname
+                            'lastname': lastname,
+                            'country_code': country_code,
+                            'forename_is_initial': forename_is_initial
                         })
-
-                    # NEW: Authorship countries
-                    countries = authorship.get('countries', [])
-                    for country_code in countries:
-                        if country_code:
-                            authorship_countries_batch.append({
-                                'work_id': work_id,
-                                'author_id': author_id,
-                                'country_code': country_code
-                            })
 
                     # UPDATED: Authorship institutions with country_code
                     institutions = authorship.get('institutions', [])
@@ -514,11 +518,7 @@ class WorksParserV3(BaseParser):
                     self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
                     authorship_institutions_batch = []
 
-                # NEW batch writes
-                if len(authorship_countries_batch) >= 50000:
-                    self.write_with_copy('authorship_countries', authorship_countries_batch, self.authorship_countries_columns)
-                    authorship_countries_batch = []
-
+                # UPDATED: Author names batch writes
                 if len(author_names_batch) >= 50000:
                     self.write_with_copy('author_names', author_names_batch, self.author_names_columns)
                     author_names_batch = []
@@ -575,9 +575,7 @@ class WorksParserV3(BaseParser):
                 self.write_with_copy('authorship', authorship_batch, self.authorship_columns)
             if authorship_institutions_batch:
                 self.write_with_copy('authorship_institutions', authorship_institutions_batch, self.authorship_institutions_columns)
-            # NEW: Write remaining records for new tables
-            if authorship_countries_batch:
-                self.write_with_copy('authorship_countries', authorship_countries_batch, self.authorship_countries_columns)
+            # UPDATED: Write remaining author_names records
             if author_names_batch:
                 self.write_with_copy('author_names', author_names_batch, self.author_names_columns)
             if work_locations_batch:

@@ -59,9 +59,7 @@ class Orchestrator:
                 'funders': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
                 'sources': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
                 'institutions': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
-                'authors': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
-                'works': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []},
-                'authorship': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []}
+                'works': {'status': 'pending', 'records': 0, 'errors': 0, 'completed_files': []}
             }
 
     def save_state(self):
@@ -310,26 +308,10 @@ class Orchestrator:
                 self.log(f"❌ Pipeline halted due to {entity} failure")
                 return False
 
-        # Phase 3: Authors (large, depends on institutions)
-        self.log("\nPHASE 3: Authors")
-        entity = 'authors'
-        script = 'parse_authors_v2.py'
-        gz_directory = GZ_DIRECTORIES.get('authors')
-
-        if self.state[entity]['status'] not in ['complete']:
-            script_path = SCRIPT_DIR / script
-            if script_path.exists():
-                success = self.run_parser(entity, script_path, gz_directory)
-                if not success:
-                    self.log(f"❌ Pipeline halted due to {entity} failure")
-                    return False
-            else:
-                self.log(f"⚠️  Parser script not found: {script_path}")
-
-        # Phase 4: Works (huge, includes authorship)
-        self.log("\nPHASE 4: Works (includes authorship)")
+        # Phase 3: Works (huge, includes authorship and author data)
+        self.log("\nPHASE 3: Works (includes authorship, author names, and author countries)")
         entity = 'works'
-        script = 'parse_works_v2.py'
+        script = 'parse_works_v3.py'
         gz_directory = GZ_DIRECTORIES.get('works')
 
         if self.state[entity]['status'] not in ['complete']:

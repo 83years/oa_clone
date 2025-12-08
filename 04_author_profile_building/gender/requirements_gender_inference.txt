@@ -1,0 +1,32 @@
+# Gender Inference Tools Requirements
+# Install with: pip install -r requirements_gender_inference.txt
+
+# Core dependencies
+duckdb>=0.9.0
+
+# General purpose gender inference tools
+gender-guesser>=0.4.0
+
+# Population-specific tools
+genderpred-in>=1.0.0          # India-specific gender prediction (LSTM-based)
+persian-gender-detection>=0.1.0  # Iran/Persian names
+genderizer3>=0.1.0            # Turkish/multilingual (Naive Bayesian)
+
+# ML-based tools
+chicksexer>=0.0.3             # Character-level LSTM with cultural context
+namesex>=0.2.5                # Random Forest with word2vec features
+
+# API-based tools (requires API keys)
+openai>=1.0.0                 # For ChatGPT/GPT-5-nano inference
+
+# ML/NLP dependencies
+scikit-learn>=0.24.0,<1.5.0   # Required by namesex (compatibility issues with newer versions)
+tensorflow>=2.0.0             # Required by chicksexer
+numpy>=1.19.0
+scipy>=1.5.0
+
+# Additional dependencies for specific tools
+gensim>=4.0.0                 # Word2vec models (for namesex)
+
+# Note: genderComputer is a local package (in ../genderComputer/)
+# It should be available via sys.path in the scripts
