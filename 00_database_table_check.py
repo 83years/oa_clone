@@ -6,17 +6,12 @@ This is a lightweight, read-only operation that won't impact ongoing parsing.
 
 import psycopg2
 from psycopg2 import sql
-import os
 import sys
+from pathlib import Path
 
-# Database configuration
-DB_CONFIG = {
-    'host': os.getenv('DB_HOST', '192.168.1.100'),
-    'port': int(os.getenv('DB_PORT', '55432')),
-    'database': os.getenv('DB_NAME', 'OADB'),
-    'user': os.getenv('DB_USER', 'admin'),
-    'password': os.getenv('DB_PASSWORD', 'secure_password_123')
-}
+# Import centralized configuration
+sys.path.insert(0, str(Path(__file__).parent))
+from config import DB_CONFIG
 
 
 def get_table_sizes(conn):

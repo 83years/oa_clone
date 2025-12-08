@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 """Check citations_by_year table schema"""
 import psycopg2
-import os
+import sys
+from pathlib import Path
 
-DB_CONFIG = {
-    'host': '192.168.1.100',
-    'port': 55432,
-    'database': 'oadb2',
-    'user': 'admin',
-    'password': os.getenv('ADMIN_PASSWORD', 'secure_password_123')
-}
+# Add parent directory to path for config imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import DB_CONFIG
 
 conn = psycopg2.connect(**DB_CONFIG)
 cur = conn.cursor()
