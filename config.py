@@ -3,6 +3,14 @@
 Global configuration for OpenAlex database parsing
 """
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+# This loads variables from .env into the environment
+# Priority: 1) Already set env vars, 2) .env file, 3) defaults in code
+env_path = Path(__file__).parent / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # Database configuration
 # Can be overridden with environment variables when running in Docker on NAS
@@ -59,5 +67,12 @@ PARALLEL_PARSERS = 4  # Number of parsers to run in parallel for Phase 1
 
 # OpenAI API configuration
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+# Note: OPENAI_API_KEY is only required for scripts that use ChatGPT inference
+# Other scripts can run without it
 if not OPENAI_API_KEY:
-    raise ValueError("OPENAI_API_KEY environment variable must be set")
+    import warnings
+    warnings.warn(
+        "OPENAI_API_KEY not set. ChatGPT-based gender inference will not work. "
+        "Set OPENAI_API_KEY in your .env file if you need this functionality.",
+        UserWarning
+    )

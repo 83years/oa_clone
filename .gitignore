@@ -1,14 +1,71 @@
-# Environment files
+# Environment files - NEVER commit secrets!
 .env
 *.env
 !.env.example
+.env.local
+.env.*.local
 
-# Docker volumes
-docker/volumes/
-pg_data/
-backups/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Log directories
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+.ropeproject
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# R
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Logs
 *.log
 logs/
 03_snapshot_parsing/small_tables/logs/
@@ -16,14 +73,50 @@ logs/
 03_snapshot_parsing/big_tables/authors/logs/
 03_snapshot_parsing/logs/
 03_snapshot_parsing/constraint_building/logs/
+04_author_profile_building/logs/
+04_author_profile_building/gender/logs/
+04_author_profile_building/ethnicity/logs/
+04_author_profile_building/career_trajectory/logs/
 
-# Temporary data
-__pycache__/
-*.pyc
-.DS_Store
-*.swp
-*.swo
-*~
+# Docker volumes and data
+docker/volumes/
+pg_data/
+backups/
+volumes/
 
-# Orchestrator state
+# Database dumps and temporary data
+*.sql
+*.db
+*.sqlite
+*.sqlite3
 orchestrator_state.json
+
+# Data files (uncomment if you don't want to track data)
+# *.csv
+# *.tsv
+# *.json
+# *.parquet
+# *.feather
+
+# Output and results
+outputs/
+results/
+plots/
+figures/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.cover
+.hypothesis/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
